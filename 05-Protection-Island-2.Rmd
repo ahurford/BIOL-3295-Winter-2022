@@ -1,0 +1,53 @@
+# Tues Sept 22: Protection Island 2 {#PE2}
+
+Continuing from last week, today we will try approach ii. to make the graph of the number of pheasants on Protection Island as it changes with time. Under approach ii. we will work with the dates by converting them to the number of days since a reference date. To do this we will use the `julian()` function, which is part of the `chron` package.
+
+Today's questions are due by Tues Sept 29, however, ideally you will have them completed for the next class.
+
+Read Section 4.4 of [Quantitative skills for biology](https://ahurford.github.io/quant-guide-all-courses/) regarding installing packages. Install the package `chron` using either the `Install` button on the `Packages` tab, or by using the command `install.packages("chron")` in the `Console` window. Note that the package is only available for use once you check the box on the `Packages` tab or by running the following command in the `Console`:
+
+```{r,eval=FALSE}
+require("chron")
+```
+
+After the `chron` package is loaded, we can then query the `julian` function,
+
+```{r,eval=FALSE}
+?julian
+```
+
+or use an internet search to better understand how to use it. As the help files can be difficult to understand, another approach to is to try out the function. Try the following:
+
+```{r,eval=FALSE}
+julian(1,1,1970)
+julian(1,2,1970)
+julian(2,1,1970)
+julian(1,1,1971)
+julian(1,1,1969)
+```
+
+Which argument position of the `julian()` function corresponds to the month? Note also that by default the origin (the origin is when the returned value is 0) is set to January 1, 1970. Experiment by running the following lines of code:
+
+```{r,eval=FALSE}
+julian(1,1,2000)
+julian(1,1,2000, origin = c(1,1,1970))
+julian(1,1,2000, origin = c(1,1,2000))
+```
+
+Finally, we need to make our figure. Recall that the plot function requires vectors of equal length for the x- and y-axes. Make a vector of the days since a reference date as follows:
+
+```{r,eval=FALSE}
+ref.day = c(1,1,2000)
+x = c(julian(1,1,2000, origin = ref.day), julian(1,1,2002, origin = ref.day))
+```
+
+If you run into problems you can query the value of `x` in your console, and you can use `length(x)` to check the length of `x`.
+
+## Questions
+
+1. You need to hand in a graph with descriptive axes and with a figure caption. The y-axis on your graph is population size and the x-axis will be created using the `julian()` function. Be sure to label the x-axis differently than you did for the previous assignment. See \@ref(figures) for more information. The figure caption in the solutions for this problem is 2 sentences long. [10 marks]
+
+
+2. You also need to produce an R Script that makes the figure described above. See \@ref(RScript) for more information. Save this file as _protection-island.R_ [5 marks]
+
+
