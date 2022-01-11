@@ -1,4 +1,4 @@
-thurs-sept-10-syllabus
+tues-jan-11-syllabus
 instructor-information
 course-information
 method-of-evaluation
@@ -11,4 +11,10 @@ tentative-course-schedule
 handing-in-your-work
 figures
 RScript
-tues-jan-11-syllabus
+thurs-jan-13-what-is-a-population
+questions
+resources
+fri-jan-14-exponential-growth---discrete-time
+required-reading
+questions-1
+PE1

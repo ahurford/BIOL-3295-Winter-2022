@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Tues Jan 18: Exponential growth - discrete time 2 | BIOL-3295.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Tues Jan 18: Exponential growth - discrete time 2 | BIOL-3295.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Tues Jan 18: Exponential growth - discrete time 2 | BIOL-3295.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="fri-jan-14-exponential-growth-discrete-time.html"/>
+
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Tues Jan 11: Syllabus</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#instructor-information"><i class="fa fa-check"></i><b>1.1</b> Instructor Information</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-information"><i class="fa fa-check"></i><b>1.2</b> Course Information</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#method-of-evaluation"><i class="fa fa-check"></i><b>1.3</b> Method of Evaluation</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#additional-policies"><i class="fa fa-check"></i><b>1.4</b> Additional Policies</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#accommodation-of-students-with-disabilities"><i class="fa fa-check"></i><b>1.4.1</b> Accommodation of students with disabilities</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#academic-misconduct"><i class="fa fa-check"></i><b>1.4.2</b> Academic misconduct</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#equity-and-diversity"><i class="fa fa-check"></i><b>1.4.3</b> Equity and Diversity</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#additional-supports"><i class="fa fa-check"></i><b>1.5</b> Additional Supports</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#tentative-course-schedule"><i class="fa fa-check"></i><b>1.6</b> Tentative course schedule</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#handing-in-your-work"><i class="fa fa-check"></i><b>1.7</b> Handing in your work</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#figures"><i class="fa fa-check"></i><b>1.7.1</b> Making figures to hand-in</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#RScript"><i class="fa fa-check"></i><b>1.7.2</b> Writing R scripts to hand-in</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="thurs-jan-13-what-is-a-population.html"><a href="thurs-jan-13-what-is-a-population.html"><i class="fa fa-check"></i><b>2</b> Thurs Jan 13: What is a population?</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="thurs-jan-13-what-is-a-population.html"><a href="thurs-jan-13-what-is-a-population.html#questions"><i class="fa fa-check"></i><b>2.1</b> Questions</a></li>
+<li class="chapter" data-level="2.2" data-path="thurs-jan-13-what-is-a-population.html"><a href="thurs-jan-13-what-is-a-population.html#resources"><i class="fa fa-check"></i><b>2.2</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html"><i class="fa fa-check"></i><b>3</b> Fri Jan 14: Exponential growth - discrete time</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html#required-reading"><i class="fa fa-check"></i><b>3.1</b> Required reading</a></li>
+<li class="chapter" data-level="3.2" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html#questions-1"><i class="fa fa-check"></i><b>3.2</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="PE1.html"><a href="PE1.html"><i class="fa fa-check"></i><b>4</b> Tues Jan 18: Exponential growth - discrete time 2</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="PE1" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Tues Jan 18: Exponential growth - discrete time 2</h1>
+<!-- 6. It is important to note that all mathematical formulas should have the same units on both sides of the equals sign, and for each term that is added or subtracted. The units of the population size, $N_t$, at time, $t$, are number. The geometric growth rate, $\lambda$ is unitless. Choose an equation from the required reading and give the units for each of the terms to show that both sides of the equals have the same units. For example, for the equation that appears in question 4, we have: -->
+<!-- \begin{eqnarray*} -->
+<!-- N_t & = & N_0 \lambda^t \\ -->
+<!-- \left(\mbox{number}\right)& =&(\mbox{number}) (\mbox{unitless})^{weeks}\\ -->
+<!-- \left(\mbox{number}\right)& =& \left(\mbox{number}\right)\\ -->
+<!-- \end{eqnarray*} -->
+<!-- Note that: -->
+<!-- \begin{eqnarray*} -->
+<!-- (\mbox{unitless}) \times (\mbox{quantity with units}) & = & (\mbox{quantity with units}) \\ (\mbox{unitless})^{(\mbox{quantity})}& =& (\mbox{unitless}) -->
+<!-- \end{eqnarray*} -->
+<!-- [2 marks] -->
+<!-- 7. Although not stated in the reading, $\lambda = 1 + b - d$ where $b$ is the per capita birth rate over one time step (i.e. one week for this example), and $d$ is the fraction of the lilypad population that dies over one time step. The number 1 is considered unitless, what must the units of $b$ and $d$ be? [1 mark] -->
+<!-- 8. In the reading, $\lambda = 2$. Given that $\lambda = 1 + b - d$, what are some possible values of $b$ and $d$. Note that $d$ is a fraction and must be $1 \geq d \geq 0$ and $b>0$. [1 mark] -->
+<!-- 9. [True or False] For discrete time exponential growth (as per the reading), the change in population size from one week to the next depends not so much on the per capita birth rate, but on the difference between the per capita birth rate and the per capita death rate. [1 mark] -->
+<!-- Today's exercise will be challenging. You should aim to complete this exercise before the next class. This exercise is due by Fri Sept 25. There will be a lot of carryover to the next exercise. -->
+<!-- The information below is taken from the following source: -->
+<!-- Newcomb, HR. 1940. [Ring-necked pheasant studies on Protection Island in the Strait of Juan de Fuca](https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/js956j801?locale=en), Washington. MS thesis. Oregon State University. -->
+<!-- a. Pheasant chicks are born during the summer. -->
+<!-- b. In May 1937, 10 pheasants were introduced to the island. Before the next breeding season there were 35 pheasants. -->
+<!-- c. November 10, 1938 a census estimated 110 pheasants. -->
+<!-- d. October 13, 1939 a census estimated 400 pheasants. -->
+<!-- ## Questions -->
+<!-- 1. Read and complete all the exercises in Chapters 4.3 [_Variables and assignment_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#variables-and-assignment) to 4.10 [_R packages_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) and 9 [_Making graphs in R_](https://ahurford.github.io/quant-guide-all-courses/graph.html) of _Quantitative skills for biology_ -->
+<!-- -  Answer all questions marked  HAND IN in the reading [5 marks] -->
+<!-- 2. To make a graph of the data listed in b.-d., we need to learn how to work with dates. We will consider two possible approaches: -->
+<!-- i. Use a built-in `R` function to convert dates to a format that can be plotted (todays class); and -->
+<!-- ii. Convert the dates to number of days since a reference date. Now the dates are numbers and these values can be plotted on the x-axis of a graph (next class). -->
+<!-- In this question, we will proceed with option i. The function we will use is `as.Date()`. You can learn how to use this function using an internet search or by typing the following into your `Console`: -->
+<!-- ```{r,eval=FALSE} -->
+<!-- ?as.Date -->
+<!-- ``` -->
+<!-- These files can be difficult to understand (see [R Help files](https://ahurford.github.io/quant-guide-all-courses/help.html#how-to-interpret-r-help-files). A good way to proceed is to experiment with the function in the `Console`. Try these: -->
+<!-- ```{r,eval=FALSE} -->
+<!-- as.Date(2012-01-31, format = %Y-%m-%d) -->
+<!-- as.Date("2012-01-31", format = "%Y-%m-%d") -->
+<!-- ``` -->
+<!-- Note that only the second command is error-free. The first command fails because the date argument for the `as.Date()` function must be a character string, i.e., must be enclosed in `""` (see `?character`). -->
+<!-- It is also possible to omit the format argument and just code: `as.Date("2012-01-31")`. The help file notes that when the format argument is not specified, that formats will be tried one by one and an error will be returned if none work. It is advisable to specify the format, as allowing the function to infer the format could introduce errors. -->
+<!-- Chapter 6.9 [Data structures](https://ahurford.github.io/quant-guide-all-courses/rintro.html#data-structures) describes how to make a vector (note a vector is a list of numbers rather than just a single number). We need to make a vector of the dates so that we can make our plot. For example, -->
+<!-- ```{r,eval=FALSE} -->
+<!-- x <- as.Date(c("2012-01-31", "2012-03-05", "2013-01-11"), format = "%Y-%m-%d") -->
+<!-- ``` -->
+<!-- Having completed Chapter 11 [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html), and having learned how to work with dates, you should now be able to write an R script to make plot using the information in b.-d. above. -->
+<!-- <strong> HAND IN </strong> -->
+<!-- - <strong> A graph and figure caption. The graph should have dates on the x-axis and the pheasant population size on the y-axis drawing from the information provided in b.-d. You will need to guess the date of 'before the breeding season' as stated in b. and you should disclose the value of this guess in the figure caption. See \@ref(figures) for more information. The solutions to this problem have figure caption that is 2 sentences long. _[Note that the graph will likely have years, not months on the x-axis - changing this is a quite fiddle-y and not worth it at this stage of your R journey]_  [10 marks] -->
+<!-- </strong> -->
+<!-- - <strong> An R Script that produces the figure described above. See \@ref(RScript) for more information. [5 marks] -->
+<!-- </strong> -->
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="fri-jan-14-exponential-growth-discrete-time.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
