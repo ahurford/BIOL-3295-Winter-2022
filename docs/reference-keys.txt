@@ -11,3 +11,4 @@ tentative-course-schedule
 handing-in-your-work
 figures
 RScript
+tues-jan-11-syllabus
