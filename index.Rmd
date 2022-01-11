@@ -20,11 +20,15 @@ TR 12.00-12.50pm\
 F 1-1.50pm\
 WebEx links for lecture times are on the course Brightspace under Announcements.
 
+R Lab 2-5pm 
+
 Course description:\
 Population and Evolutionary Ecology is an introduction to the theory and principles of evolutionary ecology and population dynamics. Pre-requisites: BIOL 2600; at least one of BIOL 2010, 2122 or 2210.\
 	
 Course format:\
 The course has been re-designed for online delivery. Specifically, no exams that require invigilation are part of the grading scheme because these are challenging to deliver remotely. Pre-recorded lectures limit my ability to interact with students. Therefore, I have elected to dedicate all lecture time to interacting with students. For each class there is a list of questions you are required to answer and hand-in. Prior to some classes there may be a _Required Reading_, that if completed will allow you to answer the day's assignment questions. Prior to the day of class you should complete the _Required Reading_. In addition, I can most effectively help you if you have read over the questions ahead of time.
+
+When the university is remote (i.e. lectures are remote), labs will also be remote.
 
 Course expectations:\
 Any students that are disruptive, violating university policies, or acting in a potentially unsafe way will be warned and asked to leave.\
