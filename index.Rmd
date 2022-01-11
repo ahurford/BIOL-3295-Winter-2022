@@ -30,6 +30,20 @@ The course has been re-designed for online delivery. Specifically, no exams that
 
 When the university is remote (i.e. lectures are remote), labs will also be remote.
 
+Labs will be:
+
+- January 20
+
+- February 3
+
+- February 17
+
+- March 3
+
+- March 17
+
+- March 31
+
 Course will follow a similar format if the university returns to in-person lectures. If this is the case, I will give short lectures at the beginning of each class which cover the material in the assigned pre-lecture readings.
 
 Course expectations:\
@@ -43,9 +57,9 @@ The course materials are online at https://ahurford.github.io/BIOL-3295-Winter-2
 
 ## Method of Evaluation
 
-- XX assignments, every lecture (equal weighting) - 50%
+- 38 assignments, every lecture except the first (equal weighting) - 50%
 - 6 labs (equal weighting) - 20%
-- Takehome midterm (due Tuesday February 22 at 12pm) - 10%
+- Takehome midterm (due Thursday March 3 at 9am) - 10%
 - Final Project (due Wednesday April 20 at 9am) - 20%
 
 You should aim to complete each assignment before the next class, but assignments will be accepted, without penalty, up to a week later. You will have 2 weeks to complete the midterm.
