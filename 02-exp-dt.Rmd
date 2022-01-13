@@ -7,13 +7,17 @@ Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Se
 
 ## Questions
 
+1. Given an example of a context when it is important to understand the quantitative characteristics of a population? [1 mark] (you may quote directly from the reading)
+
+1. If lilypads replicate once per week and it takes 1 year for half the pond to be covered, how long until the entire pond is covered? [1 mark]
+
 1. Suppose $\lambda = 4$ in equation (3) (see the required reading). Explain in 1-2 sentences the meaning of $\lambda = 4$. [1 mark]
 
-2. Suppose the number of lilypads during week 7 is 16,384. Let $\lambda = 4$, and assume that the units of $t$ are weeks. Use equation (3) to calculate the number of lilypads in week 8. Show your calculations. [2 marks]
+1. Suppose the number of lilypads during week 7 is 16,384. Let $\lambda = 4$, and assume that the units of $t$ are weeks. Use equation (3) to calculate the number of lilypads in week 8. Show your calculations. [2 marks]
 
-3. Use your answer to question 2. to calculate the number of lilypads in week 9. Show your calculations. [2 marks]
+1. Use your answer to question 2. to calculate the number of lilypads in week 9. Show your calculations. [2 marks]
 
-4. Equation (4) for the required reading assumes that $N_0=1$, however, this formula can be generalized such that
+1. Equation (4) for the required reading assumes that $N_0=1$, however, this formula can be generalized such that
 
 \[
 N_t = N_0\lambda^t
