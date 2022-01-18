@@ -23,6 +23,6 @@ Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Se
 N_t = N_0\lambda^t
 \]
 
-where $N_t$ is the population size at time, $t$. Define time such that $t=0$ is week 7 and $t$ is then the number of weeks since week 7. Use the equation above to answer question 3 and confirm that the answer is the same (i.e., find the population size for week 9, when $\lambda=4$ and the population size for week 7 is 16,384). Show your calculations. [2 marks]
+where $N_t$ is the population size at time, $t$. Define time such that $t=0$ is week 7 and $t$ is then the number of weeks since week 7. Use the equation above to answer question 4 and confirm that the answer is the same (i.e., find the population size for week 9, when $\lambda=4$ and the population size for week 7 is 16,384). Show your calculations. [2 marks]
 
 5. Use the formula from question 4 to find the population size for week 15, where $N_0=1$ and $\lambda=4$. Define time as the number of weeks since week 0. Show your calculations [2 marks]
