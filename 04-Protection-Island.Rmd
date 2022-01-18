@@ -49,7 +49,7 @@ Note that:
 
 3. In the Vandermeer and Gordon (2013) p1-3 reading, $\lambda = 2$. Given that $\lambda = 1 + b - d$, what are some possible values of $b$ and $d$. Note that $d$ is a fraction and must be $1 \geq d \geq 0$ and $b>0$. [1 mark]
 
-4.	Let $d$ be the fraction of the population that dies each year. By considering a. - i. above, estimate $d$ for the ring-tailed pheasant population on Protection Island. Remember $d$ must be a fraction: you need to divide by the number of pheasants that could have died during the time period under consideration. Write down any assumptions you have made. For example, did you assume that the mortality rate for one year is then the same for other years? [3 marks]
+4.	Let $d$ be the fraction of the population that dies each year. By considering a. to i. above, estimate $d$ for the ring-tailed pheasant population on Protection Island. Remember $d$ must be a fraction: you need to divide by the number of pheasants that could have died during the time period under consideration. Write down any assumptions you have made. For example, did you assume that the mortality rate for one year is then the same for other years? [3 marks]
 
 <!-- 9. [True or False] For discrete time exponential growth (as per the reading), the change in population size from one week to the next depends not so much on the per capita birth rate, but on the difference between the per capita birth rate and the per capita death rate. [1 mark] -->
 
