@@ -1,0 +1,56 @@
+<!-- Today's exercise will be challenging. You should aim to complete this exercise before the next class. This exercise is due by Fri Sept 25. There will be a lot of carryover to the next exercise. -->
+
+<!-- The information below is taken from the following source: -->
+<!-- Newcomb, HR. 1940. [Ring-necked pheasant studies on Protection Island in the Strait of Juan de Fuca](https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/js956j801?locale=en), Washington. MS thesis. Oregon State University. -->
+
+<!-- a.	Pheasant chicks are born during the summer. -->
+<!-- b.	In May 1937, 10 pheasants were introduced to the island. Before the next breeding season there were 35 pheasants. -->
+<!-- c.	November 10, 1938 a census estimated 110 pheasants. -->
+<!-- d.	October 13, 1939 a census estimated 400 pheasants. -->
+
+<!-- ## Questions -->
+
+<!-- 1. Read and complete all the exercises in Chapters 4.3 [_Variables and assignment_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#variables-and-assignment) to 4.10 [_R packages_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) and 9 [_Making graphs in R_](https://ahurford.github.io/quant-guide-all-courses/graph.html) of _Quantitative skills for biology_ -->
+
+<!-- -  Answer all questions marked  HAND IN in the reading [5 marks] -->
+
+
+<!-- 2. To make a graph of the data listed in b.-d., we need to learn how to work with dates. We will consider two possible approaches: -->
+
+<!-- i. Use a built-in `R` function to convert dates to a format that can be plotted (todays class); and -->
+
+<!-- ii. Convert the dates to number of days since a reference date. Now the dates are numbers and these values can be plotted on the x-axis of a graph (next class). -->
+
+<!-- In this question, we will proceed with option i. The function we will use is `as.Date()`. You can learn how to use this function using an internet search or by typing the following into your `Console`: -->
+
+<!-- ```{r,eval=FALSE} -->
+<!-- ?as.Date -->
+<!-- ``` -->
+
+<!-- These files can be difficult to understand (see [R Help files](https://ahurford.github.io/quant-guide-all-courses/help.html#how-to-interpret-r-help-files). A good way to proceed is to experiment with the function in the `Console`. Try these: -->
+
+<!-- ```{r,eval=FALSE} -->
+<!-- as.Date(2012-01-31, format = %Y-%m-%d) -->
+<!-- as.Date("2012-01-31", format = "%Y-%m-%d") -->
+<!-- ``` -->
+
+<!-- Note that only the second command is error-free. The first command fails because the date argument for the `as.Date()` function must be a character string, i.e., must be enclosed in `""` (see `?character`). -->
+
+<!-- It is also possible to omit the format argument and just code: `as.Date("2012-01-31")`. The help file notes that when the format argument is not specified, that formats will be tried one by one and an error will be returned if none work. It is advisable to specify the format, as allowing the function to infer the format could introduce errors. -->
+
+<!-- Chapter 6.9 [Data structures](https://ahurford.github.io/quant-guide-all-courses/rintro.html#data-structures) describes how to make a vector (note a vector is a list of numbers rather than just a single number). We need to make a vector of the dates so that we can make our plot. For example, -->
+
+<!-- ```{r,eval=FALSE} -->
+<!-- x <- as.Date(c("2012-01-31", "2012-03-05", "2013-01-11"), format = "%Y-%m-%d") -->
+<!-- ``` -->
+
+<!-- Having completed Chapter 11 [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html), and having learned how to work with dates, you should now be able to write an R script to make plot using the information in b.-d. above. -->
+
+<!-- <strong> HAND IN </strong> -->
+
+<!-- - <strong> A graph and figure caption. The graph should have dates on the x-axis and the pheasant population size on the y-axis drawing from the information provided in b.-d. You will need to guess the date of 'before the breeding season' as stated in b. and you should disclose the value of this guess in the figure caption. See \@ref(figures) for more information. The solutions to this problem have figure caption that is 2 sentences long. _[Note that the graph will likely have years, not months on the x-axis - changing this is a quite fiddle-y and not worth it at this stage of your R journey]_  [10 marks] -->
+<!-- </strong> -->
+
+<!-- - <strong> An R Script that produces the figure described above. See \@ref(RScript) for more information. [5 marks] -->
+<!-- </strong> -->
+
