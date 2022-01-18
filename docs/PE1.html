@@ -96,7 +96,11 @@
 <li class="chapter" data-level="3.1" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html#required-reading"><i class="fa fa-check"></i><b>3.1</b> Required reading</a></li>
 <li class="chapter" data-level="3.2" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html#questions-1"><i class="fa fa-check"></i><b>3.2</b> Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="PE1.html"><a href="PE1.html"><i class="fa fa-check"></i><b>4</b> Tues Jan 18: Exponential growth - discrete time 2</a></li>
+<li class="chapter" data-level="4" data-path="PE1.html"><a href="PE1.html"><i class="fa fa-check"></i><b>4</b> Tues Jan 18: Exponential growth - discrete time 2</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="PE1.html"><a href="PE1.html#required-reading-1"><i class="fa fa-check"></i><b>4.1</b> Required reading</a></li>
+<li class="chapter" data-level="4.2" data-path="PE1.html"><a href="PE1.html#questions-2"><i class="fa fa-check"></i><b>4.2</b> Questions</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -117,14 +121,49 @@
 <div id="PE1" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Tues Jan 18: Exponential growth - discrete time 2</h1>
 <p>For the questions below, submit your answers to Brightspace ideally before the next class. The deadline to submit your answers is Tues Feb 1.</p>
-<p>Today’s exercise will consider:</p>
+<div id="required-reading-1" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Required reading</h2>
+<p>If you have not done so already, please read:</p>
+<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p1-3. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
+<p>Today’s questions help us work towards an application of <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">discrete time exponential growth</a>. Download the .pdf of the MSc thesis below and read the Abstract (the first two pages prior to the title page). Pay specific attention to the number of pheasants at different points in time, these might be <span class="math inline">\(N_{t+1}\)</span> and <span class="math inline">\(N_t\)</span> in the exponential growth formula; and the number of births and deaths that occur, these may help you estimate <span class="math inline">\(\lambda\)</span> in the exponential growth formula. Pay attention to the length of time that births and deaths are reported over, and what time of the year the population size is reported.</p>
 <p>Newcomb, HR. 1940. <a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/js956j801?locale=en">Ring-necked pheasant studies on Protection Island in the Strait of Juan de Fuca</a>, Washington. MS thesis. Oregon State University.</p>
-<p>Download the .pdf of the thesis and read the Abstract (the first two pages prior to the title page).</p>
-<!-- a. Pheasant chicks are born during the summer. -->
-<!-- b. In May 1937, 10 pheasants were introduced to the island. Before the next breeding season there were 35 pheasants. -->
-<!-- c. November 10, 1938 a census estimated 110 pheasants. -->
-<!-- d. October 13, 1939 a census estimated 400 pheasants. -->
-<!-- ## Questions -->
+<p>Noteably,</p>
+<ol style="list-style-type: lower-alpha">
+<li>Pheasant chicks are born during the summer.</li>
+<li>In May 1937, 10 pheasants were introduced to the island. Before the next breeding season there were 35.</li>
+<li>November 10, 1938 a census estimated 110 pheasants.</li>
+<li>October 13, 1939 a census estimated 400 pheasants.</li>
+<li>Between the 1938 and 1939 censuses, Newcomb observed that 17 adult birds died.</li>
+<li>During the 1938 nesting season there were 5.86 eggs/nest. 83.57% of eggs hatched.</li>
+<li>During the 1939 nesting season there were 8.73 eggs/nest. 64.58% hatched.</li>
+<li>During the 1939 nesting season: Average number of chicks per clutch was 6.93.<span class="math inline">\(^1\)</span></li>
+<li>You can assume the sex ratio is 50:50 male to female. Pheasants are a sexually reproducing species.</li>
+</ol>
+<p><span class="math inline">\(^1\)</span> Note that g. and h. appear to be contradictory.</p>
+</div>
+<div id="questions-2" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Questions</h2>
+<p>When considering an application to determine the correct values of <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(N_t\)</span> in the exponential growth formula, it helps to understand that for all mathematical formulas there must be the same units on both sides of the equals sign, and for each term that is added or subtracted.</p>
+<ol style="list-style-type: decimal">
+<li>The units of the population size, <span class="math inline">\(N_t\)</span>, at time, <span class="math inline">\(t\)</span>, are number. The geometric growth rate, <span class="math inline">\(\lambda\)</span> is unitless. Choose an equation from <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Vandermeer and Gordon 2013</a> p1-3 and give the units for each of the terms to show that both sides of the equals have the same units. For example, for the equation from the last assignment:</li>
+</ol>
+<p><span class="math display">\[\begin{eqnarray*}
+N_t &amp; = &amp; N_0 \lambda^t \\
+\left(\mbox{number}\right)&amp; =&amp;(\mbox{number}) (\mbox{unitless})^{weeks}\\
+\left(\mbox{number}\right)&amp; =&amp; \left(\mbox{number}\right)\\
+\end{eqnarray*}\]</span></p>
+<p>Note that:
+<span class="math display">\[\begin{eqnarray*}
+&amp; \bullet &amp; (\mbox{unitless}) \times (\mbox{quantity with units})  =  (\mbox{quantity with units}) \\
+&amp; \bullet &amp; (\mbox{unitless})^{(\mbox{quantity})} = (\mbox{unitless})
+\end{eqnarray*}\]</span>
+[2 marks]</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Although not stated in the Vandermeer and Gordon (2013) p1-3 reading, <span class="math inline">\(\lambda = 1 + b - d\)</span> where <span class="math inline">\(b\)</span> is the per capita birth rate over one time step (i.e. one week for the lilipad example, or 1 year for the pheasant example), and <span class="math inline">\(d\)</span> is the fraction of the population that dies over one time step. The number 1 is considered unitless. What must the units of <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> be? [1 mark]</p></li>
+<li><p>In the Vandermeer and Gordon (2013) p1-3 reading, <span class="math inline">\(\lambda = 2\)</span>. Given that <span class="math inline">\(\lambda = 1 + b - d\)</span>, what are some possible values of <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span>. Note that <span class="math inline">\(d\)</span> is a fraction and must be <span class="math inline">\(1 \geq d \geq 0\)</span> and <span class="math inline">\(b&gt;0\)</span>. [1 mark]</p></li>
+<li><p>Let <span class="math inline">\(d\)</span> be the fraction of the population that dies each year. By considering a. - i. above, estimate <span class="math inline">\(d\)</span> for the ring-tailed pheasant population on Protection Island. Remember <span class="math inline">\(d\)</span> must be a fraction: you need to divide by the number of pheasants that could have died during the time period under consideration. Write down any assumptions you have made. For example, did you assume that the mortality rate for one year is then the same for other years? [3 marks]</p></li>
+</ol>
+<!-- 9. [True or False] For discrete time exponential growth (as per the reading), the change in population size from one week to the next depends not so much on the per capita birth rate, but on the difference between the per capita birth rate and the per capita death rate. [1 mark] -->
 <!-- 1. Read and complete all the exercises in Chapters 4.3 [_Variables and assignment_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#variables-and-assignment) to 4.10 [_R packages_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) and 9 [_Making graphs in R_](https://ahurford.github.io/quant-guide-all-courses/graph.html) of _Quantitative skills for biology_ -->
 <!-- -  Answer all questions marked  HAND IN in the reading [5 marks] -->
 <!-- 2. To make a graph of the data listed in b.-d., we need to learn how to work with dates. We will consider two possible approaches: -->
@@ -151,20 +190,6 @@
 <!-- </strong> -->
 <!-- - <strong> An R Script that produces the figure described above. See \@ref(RScript) for more information. [5 marks] -->
 <!-- </strong> -->
-<!-- 6. It is important to note that all mathematical formulas should have the same units on both sides of the equals sign, and for each term that is added or subtracted. The units of the population size, $N_t$, at time, $t$, are number. The geometric growth rate, $\lambda$ is unitless. Choose an equation from the required reading and give the units for each of the terms to show that both sides of the equals have the same units. For example, for the equation that appears in question 4, we have: -->
-<!-- \begin{eqnarray*} -->
-<!-- N_t & = & N_0 \lambda^t \\ -->
-<!-- \left(\mbox{number}\right)& =&(\mbox{number}) (\mbox{unitless})^{weeks}\\ -->
-<!-- \left(\mbox{number}\right)& =& \left(\mbox{number}\right)\\ -->
-<!-- \end{eqnarray*} -->
-<!-- Note that: -->
-<!-- \begin{eqnarray*} -->
-<!-- (\mbox{unitless}) \times (\mbox{quantity with units}) & = & (\mbox{quantity with units}) \\ (\mbox{unitless})^{(\mbox{quantity})}& =& (\mbox{unitless}) -->
-<!-- \end{eqnarray*} -->
-<!-- [2 marks] -->
-<!-- 7. Although not stated in the reading, $\lambda = 1 + b - d$ where $b$ is the per capita birth rate over one time step (i.e. one week for this example), and $d$ is the fraction of the lilypad population that dies over one time step. The number 1 is considered unitless, what must the units of $b$ and $d$ be? [1 mark] -->
-<!-- 8. In the reading, $\lambda = 2$. Given that $\lambda = 1 + b - d$, what are some possible values of $b$ and $d$. Note that $d$ is a fraction and must be $1 \geq d \geq 0$ and $b>0$. [1 mark] -->
-<!-- 9. [True or False] For discrete time exponential growth (as per the reading), the change in population size from one week to the next depends not so much on the per capita birth rate, but on the difference between the per capita birth rate and the per capita death rate. [1 mark] -->
 <!-- Today's exercise will be challenging. You should aim to complete this exercise before the next class. This exercise is due by Fri Sept 25. There will be a lot of carryover to the next exercise. -->
 <!-- The information below is taken from the following source: -->
 <!-- Newcomb, HR. 1940. [Ring-necked pheasant studies on Protection Island in the Strait of Juan de Fuca](https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/js956j801?locale=en), Washington. MS thesis. Oregon State University. -->
@@ -201,6 +226,7 @@
 <!-- </strong> -->
 
 
+</div>
 </div>
             </section>
 
