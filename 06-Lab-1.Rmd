@@ -61,6 +61,6 @@ plot(data2$time, data2$protection.island, ylab = "Number of pheasants",  xlab = 
 lines(data2$time,data2$model)
 ```
 
-Make sure you label your x- and y- axes as I have done in the code above. You will need to [export](https://ahurford.github.io/quant-guide-all-courses/graph.html#export) your graph, paste it into Microsoft Word and write a figure caption: without a legend, you need to explain what the dots are lines are.
+Make sure you label your x- and y- axes as I have done in the code above. You will need to [export](https://ahurford.github.io/quant-guide-all-courses/graph.html#export) your graph, paste it into Microsoft Word and write a figure caption: without a legend, you need to explain what the dots are lines are. Adjust the value of `lambda`. In your figure caption state the value of `lambda` that you used.
 
 You must also hand in the R script that produces the graph - it will just be a few lines long. All of question 8 is worth [6 marks]
