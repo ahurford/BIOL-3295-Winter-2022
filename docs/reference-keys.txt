@@ -23,3 +23,4 @@ required-reading-1
 PE3
 required-reading-2
 questions-3
+thurs-jan-20-lab-1---introduction-to-r.

@@ -1,0 +1,23 @@
+# Thurs Jan 20: LAB 1 - Introduction to R.
+
+The deadline to submit your answers is Thurs Jan 27.
+
+The goal of today's lab is to make a graph similar to this graph;
+
+```{r,echo = F}
+data = data.frame(time = c(1937, 1938, 1939, 1940), population = c(10,35,110,400))
+plot(data$time, data$population, ylab = "Number of pheasants",  xlab = "year", pch = 19)
+lines(data$time, c(10, 10*3.3, 10*3.3^2, 10*3.3^3))
+```
+
+Where the dots are the Protection Island data for the size of the population for different years, and the lines are the predicted population size if population growth is exponential and the geomteric growth rate is $\lambda$.
+
+1. Install R and R Studio on your computer. See [here](https://ahurford.github.io/quant-guide-all-courses/install.html) for instructions.
+
+2. Read [Finding your way around R Studio](https://ahurford.github.io/quant-guide-all-courses/rstudio.html). Complete the EXERCISES. There are 2. [2 marks]
+
+3. Read [Introduction to R](https://ahurford.github.io/quant-guide-all-courses/rintro.html). Complete the EXERCISES. Where TRY IT appears - try it! Where HAND IN appears, add the answers to your answers (which could be a .R file or an .doc file). There are 6. [6 marks]
+
+4. Read [Getting R help](https://ahurford.github.io/quant-guide-all-courses/help.html)
+
+
