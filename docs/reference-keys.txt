@@ -18,8 +18,8 @@ fri-jan-14-exponential-growth---discrete-time
 required-reading
 questions-1
 PE1
-questions-2
 required-reading-1
+questions-2
 PE3
 required-reading-2
 questions-3
