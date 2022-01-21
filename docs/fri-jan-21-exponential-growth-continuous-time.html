@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Fri Jan 14: Exponential growth - discrete time | BIOL-3295.knit</title>
+  <title>Chapter 7 Fri Jan 21: Exponential growth - continuous time | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Fri Jan 14: Exponential growth - discrete time | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 7 Fri Jan 21: Exponential growth - continuous time | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Fri Jan 14: Exponential growth - discrete time | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 7 Fri Jan 21: Exponential growth - continuous time | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="thurs-jan-13-what-is-a-population.html"/>
-<link rel="next" href="PE1.html"/>
+<link rel="prev" href="thurs-jan-20-lab-1-introduction-to-r-.html"/>
+
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -194,30 +194,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fri-jan-14-exponential-growth---discrete-time" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Fri Jan 14: Exponential growth - discrete time</h1>
-<p>Please submit your answers before the next class. You have until Fri Jan 21 to submit your answers.</p>
-<div id="required-reading" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Required reading</h2>
-<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p1-3. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
-</div>
-<div id="questions-1" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Questions</h2>
+<div id="fri-jan-21-exponential-growth---continuous-time" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Fri Jan 21: Exponential growth - continuous time</h1>
+<p>The deadline to submit your answers is Fri Jan 28.</p>
+<div id="required-reading-3" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Required reading</h2>
+<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p4-8. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
+<p>We now have two ways of describing how population size changes with time whereby each individual has the same average number of offspring per unit time and the same probability of dying.</p>
 <ol style="list-style-type: decimal">
-<li><p>Given an example of a context when it is important to understand the quantitative characteristics of a population? [1 mark] (you may quote directly from the reading)</p></li>
-<li><p>If lilypads replicate once per week and it takes 1 year for half the pond to be covered, how long until the entire pond is covered? [1 mark]</p></li>
-<li><p>Suppose <span class="math inline">\(\lambda = 4\)</span> in equation (3) (see the required reading). Explain in 1-2 sentences the meaning of <span class="math inline">\(\lambda = 4\)</span>. [1 mark]</p></li>
-<li><p>Suppose the number of lilypads during week 7 is 16,384. Let <span class="math inline">\(\lambda = 4\)</span>, and assume that the units of <span class="math inline">\(t\)</span> are weeks. Use equation (3) to calculate the number of lilypads in week 8. Show your calculations. [2 marks]</p></li>
-<li><p>Use your answer to question 2. to calculate the number of lilypads in week 9. Show your calculations. [2 marks]</p></li>
-<li><p>Equation (4) for the required reading assumes that <span class="math inline">\(N_0=1\)</span>, however, this formula can be generalized such that</p></li>
+<li>Discrete time geometric growth:</li>
 </ol>
-<p><span class="math display">\[
+<p><span class="math display" id="eq:Geo">\[\begin{equation}
 N_t = N_0\lambda^t
-\]</span></p>
-<p>where <span class="math inline">\(N_t\)</span> is the population size at time, <span class="math inline">\(t\)</span>. Define time such that <span class="math inline">\(t=0\)</span> is week 7 and <span class="math inline">\(t\)</span> is then the number of weeks since week 7. Use the equation above to answer question 4 and confirm that the answer is the same (i.e., find the population size for week 9, when <span class="math inline">\(\lambda=4\)</span> and the population size for week 7 is 16,384). Show your calculations. [2 marks]</p>
-<ol start="5" style="list-style-type: decimal">
-<li>Use the formula from question 4 to find the population size for week 15, where <span class="math inline">\(N_0=1\)</span> and <span class="math inline">\(\lambda=4\)</span>. Define time as the number of weeks since week 0. Show your calculations [2 marks]</li>
+\tag{7.1}
+\end{equation}\]</span></p>
+<p>and,</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Continuous time exponential growth:</li>
 </ol>
+<p><span class="math display" id="eq:Exp">\[\begin{equation}
+N(t) = N(0)e^{rt}
+\tag{7.2}
+\end{equation}\]</span></p>
+<p>Notably, for both these models the per capita birth and death rates do not change change over time, and do not change with density or age.</p>
+<p>The notation <span class="math inline">\(N_t\)</span> and <span class="math inline">\(N(t)\)</span> is conventional for discrete time versus continuous time formulations respectively, however, these notations both mean the same: the population size at a particular time, <span class="math inline">\(t\)</span>. When <span class="math inline">\(t=0\)</span> we have the population size at time 0: <span class="math inline">\(N_0\)</span> or <span class="math inline">\(N(0)\)</span>.</p>
+<p>As noted in the reading, when <span class="math inline">\(\lambda = e^{r}\)</span> the equations are the same.</p>
+<p>Note that <span class="math inline">\(e\)</span> is the exponential function, <code>exp()</code> or <span class="math inline">\(e^x\)</span>.</p>
+</div>
+<div id="discrete-or-continuous-time-formulations" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Discrete or continuous time formulations</h2>
+<p>Whether it is appropriate to model a population in a discrete time or continous time formulation depends on whether births and deaths are overlapping or neatly partitioned into a distinct time period. For example, for many animals there is a distinct breeding season: a short proportion of the year when offspring are born. As such, there is very little temporal overlap between the times of year when births and deaths occur. Humans are an example of a species that might reasonably be modelled as continuous time because babies are born year round.</p>
+</div>
+<div id="questions-4" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Questions</h2>
+<ol style="list-style-type: decimal">
+<li><p>For what values of <span class="math inline">\(r\)</span> does the population size increase over time? [1 mark]</p></li>
+<li><p>As described in the reading, <span class="math inline">\(b\)</span> is a per capita birth rate, and <span class="math inline">\(d\)</span> is a per capita death rate. For continuous time exponential growth, both <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> must be non-negative and can take any values bigger than 0. Note that this differs from the discrete time model formulation where <span class="math inline">\(0 \leq d \leq 1\)</span>. When <span class="math inline">\(d &gt; 1\)</span> in the continuous time formulation, this means that the average lifespan is less than one time step (i.e., the average life span is <span class="math inline">\(1/d\)</span>). For example, when <span class="math inline">\(d = 2\)</span> this means that the average life expectancy for an individual is 1/2 a time step (i.e., days or year, however, the time unit is defined in the model). When the population size increases over time, what is true of <span class="math inline">\(b\)</span> relative to <span class="math inline">\(d\)</span>? [1 mark]</p></li>
+<li><p>For what value of <span class="math inline">\(r\)</span> does <span class="math inline">\(N(t)\)</span> not change over time? Hint: if <span class="math inline">\(N(t)\)</span> is not changing then <span class="math inline">\(N(t)=N(0)\)</span> for all <span class="math inline">\(t\)</span>. [1 mark]</p></li>
+<li><p>Consider the equation:
+<span class="math display">\[
+\frac{dN(t)}{dt} = rN(t).
+\]</span>
+As described in the reading, this is an alternative way to write the continuous time exponential growth equation. The quantity <span class="math inline">\(\frac{dN(t)}{dt}\)</span> can be understood as the slope of a graph where population size is on the vertical axis and time is on the horizontal axis. As such, if the slope is zero, <span class="math inline">\(\frac{dN(t)}{dt}=0\)</span>, then the population size is not changing. If <span class="math inline">\(\frac{dN(t)}{dt}&lt;0\)</span>, then the population size is decreasing. For what value of <span class="math inline">\(r\)</span> does the population size decrease? What is true about <span class="math inline">\(b\)</span> relative to <span class="math inline">\(d\)</span> in this instance? [2 marks]</p></li>
+<li><p>Which population would be more appropriate to be modelled as a continuous time formulation: <em>E. coli</em> bacteria or moose? [1 mark]</p></li>
+</ol>
+<!-- 7. Calculate the formula for the doubling time for continuous time exponential growth (equation \@ref(eq:Exp)). This is the time for the population to double in size. The value of $N(0)$, the population size at $t=0$ doesn't matter as long as it is a positive number. When the population has doubled, $N(t) = 2N(0)$. To answer this question you need to find $t$ such that $N(t) = 2N(0)$. You may need to revisit some rules about working with logarithms to complete this question (i.e. see [here](https://en.wikipedia.org/wiki/Logarithm), specifically the _Product, Quotient, Power, and Root_ table. Also recall, $Ln(e^x) = x$). Please show your work. [2 marks] -->
+<!-- 8. Consider the following plot: -->
+<!-- ```{r doublingtime, echo=FALSE, fig.cap="An example of a very well thought out data visualation where the data might demonstrate exponential growth", out.width="95%", purl=FALSE} -->
+<!-- knitr::include_graphics("figures/doublingtime.jpg") -->
+<!-- ``` -->
+<!-- In this question, we will find the equation for 'doubles every day'. Our model is equation \@ref(eq:Exp). This means that we will calculate the equation for 'doubles every day' under the assumption that cumulative COVID-19 deaths grow exponentially over time. -->
+<!-- To begin, we choose the time step for our model as days. The first problem we should consider is what is the value of $r$ if the population doubles every 1 day? Make the appropriate substitutions and re-arrange equation \@ref(eq:Exp) to find the value of $r$. -->
+<!-- Now, note that the y-axis on the above graph is on a logarithmic scale. We will assume this is a base $e$ logarithmic scale. Take the natural logarithm of both sides of equation \@ref(eq:Exp). Note that the result should be the formula for a straight line, i.e., $y = mx + c$, but where $y$ is $Ln(N(t))$ and $x$ is $t$ (to match the axes of Figure \@ref(fig:doublingtime)). The questions we are left to solve are: what is the slope of the line (i.e., $m$, or the value of the coefficient that multiplies $t$), and what is the value of the intercept (i.e., $c$ or the remaining terms on the opposite side of the equals to $Ln(N(t))$ and which are not multiplied by $t$)? -->
+<!-- Show all your work. Your answer is complete when you provide the numerical values of the slope and the intercept for the straight line corresponding to a doubling time of 1 day. Assume $N(0)=10$. Your answers must be numbers - you will need to substitute the value of $r$ that you calculated in the early part of this question. [2 marks] -->
+<!-- 9. Provide the values of the slope and the intercept for doubling times of 2, 3, and 7 days. Again assume $N(0)=10$. You do not need to show your work. [2 marks] -->
 
 </div>
 </div>
@@ -226,8 +256,8 @@ N_t = N_0\lambda^t
           </div>
         </div>
       </div>
-<a href="thurs-jan-13-what-is-a-population.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="PE1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="thurs-jan-20-lab-1-introduction-to-r-.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -10,7 +10,7 @@ plot(data$time, data$population, ylab = "Number of pheasants",  xlab = "year", p
 lines(data$time, c(10, 10*3.3, 10*3.3^2, 10*3.3^3))
 ```
 
-Where the dots are the Protection Island data for the size of the population for different years, and the lines are the predicted population size if population growth is exponential and the geomteric growth rate is $\lambda$.
+Where the dots are the Protection Island data for the size of the population for different years, and the lines are the predicted population size if population growth is exponential and the geometric growth rate is $\lambda$.
 
 1. Install R and R Studio on your computer. See [here](https://ahurford.github.io/quant-guide-all-courses/install.html) for instructions.
 

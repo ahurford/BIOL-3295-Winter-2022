@@ -1,3 +1,5 @@
+eq:Geo
+eq:Exp
 tues-jan-11-syllabus
 instructor-information
 course-information
@@ -24,3 +26,7 @@ PE3
 required-reading-2
 questions-3
 thurs-jan-20-lab-1---introduction-to-r.
+fri-jan-21-exponential-growth---continuous-time
+required-reading-3
+discrete-or-continuous-time-formulations
+questions-4
