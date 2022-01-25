@@ -19,8 +19,10 @@ I will try to reply to emails within 24 hours (excluding evenings, weekends and 
 TR 12.00-12.50pm\
 F 1-1.50pm\
 WebEx links for lecture times are on the course Brightspace under Announcements.
+Classroom: SN3060
 
-R Lab 2-5pm 
+R Lab 2-5pm \
+Labs when the university is in person labs will be in CSF 2218 (capacity is 9 computers provided) and 2342 (bring your own laptop). 
 
 Course description:\
 Population and Evolutionary Ecology is an introduction to the theory and principles of evolutionary ecology and population dynamics. Pre-requisites: BIOL 2600; at least one of BIOL 2010, 2122 or 2210.\
@@ -57,7 +59,7 @@ The course materials are online at https://ahurford.github.io/BIOL-3295-Winter-2
 
 ## Method of Evaluation
 
-- 38 assignments, every lecture except the first (equal weighting) - 50%
+- 35 assignments, every lecture except the first (equal weighting) - 50%
 - 6 labs (equal weighting) - 20%
 - Takehome midterm (due Thursday March 3 at 9am) - 10%
 - Final Project (due Wednesday April 20 at 9am) - 20%
