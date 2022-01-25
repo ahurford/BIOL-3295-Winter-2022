@@ -30,3 +30,6 @@ fri-jan-21-exponential-growth---continuous-time
 required-reading-3
 discrete-or-continuous-time-formulations
 questions-4
+tues-jan-24-exponential-growth---continuous-time
+required-reading-4
+questions-5
