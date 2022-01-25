@@ -18,11 +18,14 @@ I will try to reply to emails within 24 hours (excluding evenings, weekends and 
 ## Course Information	
 TR 12.00-12.50pm\
 F 1-1.50pm\
-WebEx links for lecture times are on the course Brightspace under Announcements.
-Classroom: SN3060
+
+- When the university is online: See course Brightspace under Announcements for WebEx link.
+- When the university is in-person: SN3060
 
 R Lab 2-5pm \
-Labs when the university is in person labs will be in CSF 2218 (capacity is 9 computers provided) and 2342 (bring your own laptop). 
+
+- When the university is online: See course Brightspace under Announcements for WebEx link.\
+- When the university is in-person: CSF 2218 (capacity is 9 computers provided) and 2342 (bring your own laptop). 
 
 Course description:\
 Population and Evolutionary Ecology is an introduction to the theory and principles of evolutionary ecology and population dynamics. Pre-requisites: BIOL 2600; at least one of BIOL 2010, 2122 or 2210.\
