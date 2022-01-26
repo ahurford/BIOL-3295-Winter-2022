@@ -33,3 +33,6 @@ questions-4
 tues-jan-25-exponential-growth---continuous-time
 required-reading-4
 questions-5
+thurs-jan-27-density-dependence-and-logistic-growth
+required-reading-5
+questions-6
