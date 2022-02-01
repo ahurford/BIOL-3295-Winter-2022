@@ -36,7 +36,7 @@ questions-5
 thurs-jan-27-density-dependence-and-logistic-growth
 required-reading-5
 questions-6
-fri-feb-1-density-dependence-and-logistic-growth
+tues-feb-1-density-dependence-and-logistic-growth
 required-reading-6
 questions-7
 fri-jan-28-density-dependence-and-logistic-growth

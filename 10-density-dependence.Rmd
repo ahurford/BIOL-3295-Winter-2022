@@ -1,6 +1,6 @@
-# Fri Feb 1: Density dependence and logistic growth
+# Tues Feb 1: Density dependence and logistic growth
 
-The deadline to submit your answers is Friday Feb 8.
+The deadline to submit your answers is Tuesday Feb 8.
 
 ## Required reading
 Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p1-17. [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619)
