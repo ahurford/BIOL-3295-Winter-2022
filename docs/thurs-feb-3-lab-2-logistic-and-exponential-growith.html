@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Tues Jan 11: Syllabus | BIOL-3295.knit</title>
+  <title>Chapter 12 Thurs Feb 3: LAB 2 - Logistic and exponential growith | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Tues Jan 11: Syllabus | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 12 Thurs Feb 3: LAB 2 - Logistic and exponential growith | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Tues Jan 11: Syllabus | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 12 Thurs Feb 3: LAB 2 - Logistic and exponential growith | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="tues-feb-1-density-dependence-and-logistic-growth.html"/>
 
-<link rel="next" href="thurs-jan-13-what-is-a-population.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -222,114 +222,114 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="tues-jan-11-syllabus" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Tues Jan 11: Syllabus</h1>
-<div id="instructor-information" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Instructor Information</h2>
-<p>Instructor: Dr. Amy Hurford<br />
-Office: Teaching remotely<br />
-Email: <a href="mailto:ahurford@mun.ca" class="email">ahurford@mun.ca</a><br />
-I will try to reply to emails within 24 hours (excluding evenings, weekends and holidays). I am always available during the lecture times. Please email to request a meeting for a different time. Please check my <a href="https://ahurford.github.io/website/#dr.-amy-hurford">schedule</a> and suggest a time I am free that works for you.</p>
+<div id="thurs-feb-3-lab-2---logistic-and-exponential-growith" class="section level1" number="12">
+<h1><span class="header-section-number">Chapter 12</span> Thurs Feb 3: LAB 2 - Logistic and exponential growith</h1>
+<p>The deadline to submit your answers is Thurs Feb 10.</p>
+<p>The goal of Lab 2 is to understand exponential growth and logistic growth in more depth and to solve ordinary differential equations using a computer.</p>
+<div id="change-in-population-size-and-population-size" class="section level2" number="12.1">
+<h2><span class="header-section-number">12.1</span> Change in population size, and population size</h2>
+<p>Recall that for continuous time exponential growth there were two ways that the equation might be written. Firstly, as a <em>change</em> in population size over time,</p>
+<p><span class="math display" id="eq:Exp1">\[\begin{equation}
+\frac{dN(t)}{dt} = rN(t),
+\tag{12.1}
+\end{equation}\]</span></p>
+<p>such that if <span class="math inline">\(\frac{dN(t)}{dt}&gt;0\)</span>, the population size, <span class="math inline">\(N(t)\)</span> is increasing over time, and if <span class="math inline">\(\frac{dN(t)}{dt}&lt;0\)</span>, the population size is decreasing over time. Alternatively, we can write continuous time exponential growth as,</p>
+<p><span class="math display" id="eq:Exp2">\[\begin{equation}
+N(t) = N(0)e^{rt},
+\tag{12.2}
+\end{equation}\]</span></p>
+<p>where the lefthand side of equation <a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#eq:Exp2">(12.2)</a> states the <em>size</em> of the population, <span class="math inline">\(N(t)\)</span>, at time <span class="math inline">\(t\)</span>, rather than the <em>change</em> in the size of the population, as it did in equation <a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#eq:Exp1">(12.1)</a>.</p>
+<p>For logistic growth, we have:</p>
+<p><span class="math display" id="eq:Log1">\[\begin{equation}
+\frac{dN(t)}{dt} = rN(t)\left(1 - \frac{N(t)}{K} \right).
+\tag{12.3}
+\end{equation}\]</span></p>
+<p>How might we find the equivalent of equation <a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#eq:Exp2">(12.2)</a> for logistic growth? i.e., for logistic growth, what is the equation for the <em>size</em> of the population at a particular time, <span class="math inline">\(t\)</span>? If you are great at math, you might integrate equation <a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#eq:Log1">(12.3)</a> using <a href="https://math.usu.edu/~powell/ysa-html/node8.html">separation of variables</a>. However, another option is to numerically integrate equation <a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#eq:Log1">(12.3)</a> using a computer.</p>
 </div>
-<div id="course-information" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Course Information</h2>
-<p>TR 12.00-12.50pm<br />
-F 1-1.50pm<br />
-</p>
+<div id="what-is-an-ordinary-differential-equation" class="section level2" number="12.2">
+<h2><span class="header-section-number">12.2</span> What is an ordinary differential equation?</h2>
+<p>In an introductory calculus course that covers integration, most often you are solving problems of the type:</p>
+<p><span class="math display" id="eq:e1">\[\begin{eqnarray}
+\frac{dy(x)}{dx} &amp;=&amp; x^2, \\
+\int \frac{dy(x)}{dx} &amp;=&amp; \int x^2 \ dx, \\
+y(x) &amp;=&amp; \frac{1}{3}x^3 + c.
+\tag{12.4}
+\end{eqnarray}\]</span></p>
+<p>Note that in the above calculations, we are able to use integration to find <span class="math inline">\(y(x)\)</span> when we are given the rate of change equation, <span class="math inline">\(\frac{dy(x)}{dx}\)</span>. In the above equations:</p>
 <ul>
-<li>When the university is online: See course Brightspace under Announcements for WebEx link. Lecture times are for help, lectures will not be recorded.</li>
-<li>When the university is in-person: SN3060. I will give a 20 minute lecture that will be recorded and uploaded to BrightSpace.</li>
+<li><span class="math inline">\(x\)</span> is the independent variable, and</li>
+<li><span class="math inline">\(y(x)\)</span> is the dependent variable.</li>
 </ul>
-<p>R Lab 2-5pm<br />
-</p>
+<p>The derivative of <span class="math inline">\(y(x)\)</span> is with respect to <span class="math inline">\(x\)</span>, and <span class="math inline">\(x\)</span> appears on the opposite side of the <code>=</code> to the derivative of the dependent variable. In the notation of population biology, where <span class="math inline">\(N(t)\)</span> is conventional for the dependent variable, a similar problem might look like this:</p>
+<p><span class="math display" id="eq:e2">\[\begin{eqnarray}
+\int \frac{dN(t)}{dt} &amp;=&amp; \int rt \ dt, \\ \nonumber
+N(t) &amp;=&amp; \frac{1}{2}rt^2 + c. 
+\tag{12.5}
+\end{eqnarray}\]</span></p>
+<p>We have not seen any equations like equation <a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#eq:e2">(12.5)</a> in BIOL 3295 so far: usually, our equations for the <em>change</em> in the population size, <span class="math inline">\(\frac{dN(t)}{dt}\)</span>, have a dependency on the population size, <span class="math inline">\(N(t)\)</span> (the dependent variable), rather than a sole dependency on <span class="math inline">\(t\)</span> (the independent variable).</p>
+<p>The equations that are models for population biology are sometimes ODEs. While some ODEs can be solved using math, commonly the ODEs that are used to model population dynamics need to be integrated numerically; that is, using a computer.</p>
+</div>
+<div id="numerically-integrating-an-ordinary-differential-equation-in-r" class="section level2" number="12.3">
+<h2><span class="header-section-number">12.3</span> Numerically integrating an ordinary differential equation in R</h2>
+<p>Numerical integration in <code>R</code> can be performed by installing this package:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;deSolve&quot;</span>)</span></code></pre></div>
+<p>To integrate our ODE, we use the function <code>ode()</code> from the <code>deSolve</code> package. Let’s look at the structure of this function. The mandatory arguments to the function are:</p>
+<p><code>ode(y,times,parms,func)</code></p>
+<p>where,</p>
+<p><code>y</code> is a vector of the initial values of the dependent variable (i.e., those which correspond to the initial time).</p>
+<p><code>times</code> is a sequence of time points that we will calculate the values of the variables; the first value of times is the initial time.</p>
+<p><code>func</code> is a function that computes the values of the derivatives of the dependent variables. <code>func</code> must be defined as: <code>func &lt;- function(t, y, parms,...)</code>. <code>t</code> is the current time point in the integration, and <code>y</code> is the current estimate of the variables in the ODE system.</p>
+<p>Given what we have learned in BIOL 3295 so far, <code>y</code> and <code>times</code> are not so tricky, but the <code>func</code> argument requires us to write our own function, and so far we have only used functions written by other people: we have yet to write our own custom functions. In preparation for numerically integrating the logistic growth equation, we will now learn how to write custom functions.</p>
+</div>
+<div id="writing-custom-functions" class="section level2" number="12.4">
+<h2><span class="header-section-number">12.4</span> Writing custom functions</h2>
+<p>Generally, your code can still work without writing custom functions, however writing functions makes your code modular and more organized.</p>
+<p>Consider the following code:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Celcius</span></span>
+<span id="cb7-2"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb7-2" aria-hidden="true" tabindex="-1"></a>temp.min.C <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb7-3"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb7-3" aria-hidden="true" tabindex="-1"></a>temp.max.C <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb7-4"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Farenheit</span></span>
+<span id="cb7-6"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb7-6" aria-hidden="true" tabindex="-1"></a>temp.min.F <span class="ot">&lt;-</span> temp.min.C<span class="sc">*</span><span class="dv">9</span><span class="sc">/</span><span class="dv">5</span><span class="sc">+</span><span class="dv">32</span></span>
+<span id="cb7-7"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb7-7" aria-hidden="true" tabindex="-1"></a>temp.max.F <span class="ot">&lt;-</span> temp.max.C<span class="sc">*</span><span class="dv">9</span><span class="sc">/</span><span class="dv">5</span><span class="sc">+</span><span class="dv">32</span> </span></code></pre></div>
+<p>The above code is fine, but since the same calculation is performed twice (conversion of Celcius to Farenheit), just with a different number, we might consider writing a custom function. Let’s re-write the above code so that it now uses a custom function:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A function that converts Celcius to Farenheit</span></span>
+<span id="cb8-2"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-2" aria-hidden="true" tabindex="-1"></a>C.to.F <span class="ot">&lt;-</span> <span class="cf">function</span>(C){</span>
+<span id="cb8-3"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  F <span class="ot">&lt;-</span> C<span class="sc">*</span><span class="dv">9</span><span class="sc">/</span><span class="dv">5</span> <span class="sc">+</span><span class="dv">32</span></span>
+<span id="cb8-4"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(F)</span>
+<span id="cb8-5"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Celcius</span></span>
+<span id="cb8-8"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-8" aria-hidden="true" tabindex="-1"></a>temp.min.C <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb8-9"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-9" aria-hidden="true" tabindex="-1"></a>temp.max.C <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb8-10"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Farenheit</span></span>
+<span id="cb8-12"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-12" aria-hidden="true" tabindex="-1"></a>temp.min.F <span class="ot">&lt;-</span> <span class="fu">C.to.F</span>(temp.min.C)</span>
+<span id="cb8-13"><a href="thurs-feb-3-lab-2-logistic-and-exponential-growith.html#cb8-13" aria-hidden="true" tabindex="-1"></a>temp.max.F <span class="ot">&lt;-</span> <span class="fu">C.to.F</span>(temp.max.C)</span></code></pre></div>
+<p>Note that the above code consists of the <em>function definition</em> and the <em>function call</em>. The function definition uses the function <code>function()</code>.</p>
+<p><img src="figures/function.png" width="120%" /></p>
+<p>In the example, note the following:</p>
 <ul>
-<li>When the university is online: See course Brightspace under Announcements for WebEx link.<br />
-</li>
-<li>When the university is in-person: CSF 2218 (capacity is 9 computers provided) and 2342 (bring your own laptop).</li>
-</ul>
-<p>Course description:<br />
-Population and Evolutionary Ecology is an introduction to the theory and principles of evolutionary ecology and population dynamics. Pre-requisites: BIOL 2600; at least one of BIOL 2010, 2122 or 2210.<br />
-</p>
-<p>Course format:<br />
-The course has been re-designed for online delivery. Specifically, no exams that require invigilation are part of the grading scheme because these are challenging to deliver remotely. Pre-recorded lectures limit my ability to interact with students. Therefore, I have elected to dedicate all lecture time to interacting with students. For each class there is a list of questions you are required to answer and hand-in. Prior to some classes there may be a <em>Required Reading</em>, that if completed will allow you to answer the day’s assignment questions. Prior to the day of class you should complete the <em>Required Reading</em>. In addition, I can most effectively help you if you have read over the questions ahead of time.</p>
-<p>When the university is remote (i.e. lectures are remote), labs will also be remote.</p>
-<p>Labs will be:</p>
-<ul>
-<li><p>January 20</p></li>
-<li><p>February 3</p></li>
-<li><p>February 17</p></li>
-<li><p>March 3</p></li>
-<li><p>March 17</p></li>
-<li><p>March 31</p></li>
-</ul>
-<p>Course will follow a similar format if the university returns to in-person lectures. If this is the case, I will give short lectures at the beginning of each class which cover the material in the assigned pre-lecture readings.</p>
-<p>Course expectations:<br />
-Any students that are disruptive, violating university policies, or acting in a potentially unsafe way will be warned and asked to leave.<br />
-</p>
-<p>Learning goals:<br />
-I consider your completed assignments to be a portfolio of your knowledge in population and evolutionary ecology. You will also get some exposure to coding in <code>R</code>. It takes time to become proficient in a programming language, but the time you will spend coding in this class will help you towards becoming more proficient. The course content emphasizes a deeper understanding of fewer concepts. You have the opportunity to further explore a topic of interest to you for the final project.</p>
-<p>Required Text and Resources:<br />
-The course materials are online at <a href="https://ahurford.github.io/BIOL-3295-Winter-2022/" class="uri">https://ahurford.github.io/BIOL-3295-Winter-2022/</a>. In addition you will need a computer to install <code>R</code> and <code>RStudio</code>. This will be covered on Thursday January 20 in lab (see also <a href="https://ahurford.github.io/quant-guide-all-courses/install.html">here</a>). Class announcements and WebEx links will be provided on the course BrightSpace and your assignments are to be submitted to BrightSpace.</p>
-</div>
-<div id="method-of-evaluation" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Method of Evaluation</h2>
-<ul>
-<li>32 assignments, every lecture except the first (equal weighting) - 50%</li>
-<li>6 labs (equal weighting) - 20%</li>
-<li>Takehome midterm (due Thursday March 3 at 9am) - 10%</li>
-<li>Final Project (due Wednesday April 20 at 9am) - 20%</li>
-</ul>
-<p>You should aim to complete each assignment before the next class, but assignments will be accepted, without penalty, up to a week later. You will have 2 weeks to complete the midterm.</p>
-<p>Late assignments, labs, and missed midterms, and final exams will be accommodated as described by University Regulation 6.7.3 and 6.7.5 (see <a href="https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474">https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474</a> for Regulations).</p>
-</div>
-<div id="additional-policies" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Additional Policies</h2>
-<div id="accommodation-of-students-with-disabilities" class="section level3" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> Accommodation of students with disabilities</h3>
-<p>Memorial University of Newfoundland is committed to supporting inclusive education based on the principles of equity, accessibility and collaboration. Accommodations are provided within the scope of the University Policies for the Accommodations for Students with Disabilities see <a href="www.mun.ca/policy/site/policy.php?id=239">www.mun.ca/policy/site/policy.php?id=239</a>. Students who may need an academic accommodation are asked to initiate the request with the Glenn Roy Blundon Centre at the earliest opportunity (see <a href="www.mun.ca/blundon">www.mun.ca/blundon</a> for more information).</p>
-</div>
-<div id="academic-misconduct" class="section level3" number="1.4.2">
-<h3><span class="header-section-number">1.4.2</span> Academic misconduct</h3>
-<p>Students are expected to adhere to those principles, which constitute proper academic conduct. A student has the responsibility to know which actions, as described under Academic Offences in the University Regulations, could be construed as dishonest or improper. Students found guilty of an academic offence may be subject to a number of penalties commensurate with the offence including reprimand, reduction of grade, probation, suspension or expulsion from the University. For more information regarding this policy, students should refer to University Regulation 6.12.</p>
-</div>
-<div id="equity-and-diversity" class="section level3" number="1.4.3">
-<h3><span class="header-section-number">1.4.3</span> Equity and Diversity</h3>
-<p>A safe learning environment will be provided for all students regardless of race, colour, nationality, ethnic origin, social origin, religious creed, religion, age, disability, disfigurement, sex (including pregnancy), sexual orientation, gender identity, gender expression, marital status, family status, source of income or political opinion.</p>
-<p>You should not photograph or record myself, teaching assistants, or other students in the class without first obtaining permission. Accommodation will be made for students with special needs.</p>
-<p>The sound should be turned off on phones and computers during class.</p>
-</div>
-</div>
-<div id="additional-supports" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Additional Supports</h2>
-<p>Resources for additional support can be found at:</p>
-<ul>
-<li><p><a href="www.mun.ca/currentstudents/student/">www.mun.ca/currentstudents/student/</a></p></li>
-<li><p><a href="https://munsu.ca/resource-centres/">https://munsu.ca/resource-centres/</a></p></li>
-</ul>
-</div>
-<div id="tentative-course-schedule" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Tentative course schedule</h2>
-<p>The course schedule is found in the toolbar of the class materials, see <a href="https://ahurford.github.io/BIOL-3295-Fall-2020/" class="uri">https://ahurford.github.io/BIOL-3295-Fall-2020/</a>.</p>
-<p>The last day to drop the course without academic prejudice is Wednesday Nov. 4.</p>
-</div>
-<div id="handing-in-your-work" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> Handing in your work</h2>
-<div id="figures" class="section level3" number="1.7.1">
-<h3><span class="header-section-number">1.7.1</span> Making figures to hand-in</h3>
-<p>The graphs you hand in need to have descriptive axeses and a figure caption. You may put these elements together using a word processing software such as <em>Microsoft Word</em>. Elements of a good figure caption:</p>
-<ul>
-<li><p>Has a label, i.e., “Figure 1”,</p></li>
-<li><p>The first sentences provides a summary of what the figure shows, i.e., “The price of oranges has increased steadily since 1964”,</p></li>
-<li><p>Provide all necessary information to understand everything in the figure, i.e., if the figure has no legend, but multiple line types/symbols, be sure to indicate what is represented by the different symbols. If the axes labels are overly brief due to space constraints in the graph, provide a more thorough description in the figure caption. If any assumptions have been made in making the figure, disclose these, i.e., a point that was excluded from the analysis due to being considered an outlier.</p></li>
+<li><p><code>arglist</code> is just one value: <code>C</code>. Generally, several values might be provided to the function where each should be separated by commas and enclosed within the <code>()</code>.</p></li>
+<li><p><code>expression</code> can be any set of commands and should be enclosed within the <code>{}</code>.</p></li>
+<li><p>The function is assigned a name: <code>C.to.F</code>. We give the function a name so that we can use it later during a function call.</p></li>
 </ul>
 </div>
-<div id="RScript" class="section level3" number="1.7.2">
-<h3><span class="header-section-number">1.7.2</span> Writing R scripts to hand-in</h3>
-<p>To write your own R scripts follow the guidelines described in Chapter 7 <a href="https://ahurford.github.io/quant-guide-all-courses/style.html">Best Practices</a> of <em>Quantitative training in Biology</em>. If you are asked to hand in your R script this means you need to submit an <code>.R</code> file on Brightspace.</p>
+<div id="questions-9" class="section level2" number="12.5">
+<h2><span class="header-section-number">12.5</span> Questions</h2>
+<ol style="list-style-type: decimal">
+<li>The following is an equation for exponential population growth with a constant immigration rate, <span class="math inline">\(m&gt;0\)</span>, into the population:</li>
+</ol>
+<p><span class="math display">\[
+\frac{dN(t)}{dt}= rN(t) + m
+\]</span></p>
+<p>where <span class="math inline">\(r\)</span> is the net reproductive rate, and <span class="math inline">\(N(t)\)</span> is the population size at time, <span class="math inline">\(t\)</span>.</p>
+<p>Is this equation an ordinary differential equation (ODE)? Give 1 sentence explaining your reasoning [2 marks].</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Write a function that adds 123 to a user supplied argument, and then write the line of code that calls the function to evaluate 123+1, and assigns the result the variable name <code>y</code>. You are to hand in your R script. [5 marks]</li>
+</ol>
+<p>[To be continued]</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -337,8 +337,8 @@ The course materials are online at <a href="https://ahurford.github.io/BIOL-3295
           </div>
         </div>
       </div>
+<a href="tues-feb-1-density-dependence-and-logistic-growth.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="thurs-jan-13-what-is-a-population.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

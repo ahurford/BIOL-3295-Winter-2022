@@ -1,5 +1,10 @@
 eq:Geo
 eq:Exp
+eq:Exp1
+eq:Exp2
+eq:Log1
+eq:e1
+eq:e2
 tues-jan-11-syllabus
 instructor-information
 course-information
@@ -42,3 +47,9 @@ questions-7
 tues-feb-1-density-dependence-and-logistic-growth
 required-reading-7
 questions-8
+thurs-feb-3-lab-2---logistic-and-exponential-growith
+change-in-population-size-and-population-size
+what-is-an-ordinary-differential-equation
+numerically-integrating-an-ordinary-differential-equation-in-r
+writing-custom-functions
+questions-9
