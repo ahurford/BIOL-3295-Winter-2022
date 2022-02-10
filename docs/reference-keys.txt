@@ -68,3 +68,6 @@ questions-12
 tues-feb-8-age-structured-population-dynamics
 required-reading-10
 questions-13
+thurs-feb-10-age-structured-population-dynamics
+required-reading-11
+questions-14
