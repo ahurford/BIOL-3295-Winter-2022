@@ -252,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p37-39. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
 <p>Today we will learn how to determine if a population with age- or stage-structure is expected to increase or decrease over time. Recall, that for discrete time, without age- or stage-structure, and for exponential (also called geometric) growth we had:</p>
 <p><span class="math display">\[N_{t+1} = \lambda N_t\]</span></p>
-<p>where the population size, <span class="math inline">\(N_t\)</span>, increases over time if <span class="math inline">\(\lambda &gt; 1\)</span>. For age- and stage- structured populations, rather than a scalar (just one number), <span class="math inline">\(\lambda\)</span>, we have a matrix, <span class="math inline">\(\mathbb{P}\)</span>, containing many numbers:</p>
+<p>where the population size, <span class="math inline">\(N_t\)</span>, increases over time if <span class="math inline">\(\lambda &gt; 1\)</span>. For age- and stage-structured populations, rather than a scalar (just one number), <span class="math inline">\(\lambda\)</span>, we have a matrix, <span class="math inline">\(\mathbb{P}\)</span>, containing many numbers:</p>
 <p><span class="math display">\[\begin{equation}
 \mathbb{P} = 
 \left[
@@ -314,8 +314,8 @@ N_{n,t}
 \right]
 ,
 \end{eqnarray}\]</span></p>
-<p>and <span class="math inline">\(\lambda\)</span> can be substituted for the matrix <span class="math inline">\(\mathbb{P}\)</span>, and the population sizes in each age- and stage- in the future are projected to be the same?</p>
-<p>The answer to this question, in general, is no because the different stage classes increase by different amounts, however, for special values of the population sizes in each stage class at time, <span class="math inline">\(t\)</span>, the equivalent relationship between <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mathbb{P}\)</span> does hold. These special values are called the <em>stable stage structure</em> (or <em>stable age structure</em> if the population is grouped by age). When the stable age structure is reached, all stages increase by the same factor, <span class="math inline">\(\lambda\)</span>, each time step, such that:</p>
+<p>and <span class="math inline">\(\lambda\)</span> can be substituted for the matrix <span class="math inline">\(\mathbb{P}\)</span>, and the population sizes in each age and stage in the future are projected to be the same?</p>
+<p>The answer to this question, in general, is ‘no’ because the different stage classes increase by different amounts, however, for special values of the population sizes in each stage class at time, <span class="math inline">\(t\)</span>, the equivalence relationship between <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\mathbb{P}\)</span> does hold. These special values are called the <em>stable stage structure</em> (or <em>stable age structure</em> if the population is grouped by age). When the stable age structure is reached, all stages increase by the same factor, <span class="math inline">\(\lambda\)</span>, each time step, such that:</p>
 <p><span class="math display">\[\begin{eqnarray}
 \lambda \left[
 \begin{array}{c}
@@ -340,7 +340,7 @@ a_{21} &amp; a_{22} \\
 \right]
 ,
 \end{eqnarray}\]</span></p>
-<p>where the hat notation, <span class="math inline">\([\hat{N}_{1,t}, \hat{N}_{2,t}]^T\)</span>, is to indicate that the population sizes for each of the stage are that of the stable stage structure. The matrix elements have been written as <span class="math inline">\(a_{ij}\)</span> because as we continue with this example, we will consider two stages, rather then <span class="math inline">\(n\)</span>, to make the example clearer.</p>
+<p>where the hat notation, <span class="math inline">\([\hat{N}_{1,t}, \hat{N}_{2,t}]^T\)</span>, is to indicate that the population sizes for each of the stages are that of the stable stage structure. The matrix elements have been written as <span class="math inline">\(a_{ij}\)</span> because as we continue with this example, we will consider two stages, rather then <span class="math inline">\(n\)</span>, to make the calculation simpler.</p>
 <p>For a 2 <span class="math inline">\(\times\)</span> 2 matrix (i.e., two stages in a stage structured population), <span class="math inline">\(\lambda\)</span> is calculated as,</p>
 <p><span class="math display">\[\begin{equation}
 Det \left[
@@ -367,7 +367,7 @@ a_{21} &amp; a_{22}-\lambda \\
 <div id="questions-14" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> Questions</h2>
 <ol style="list-style-type: decimal">
-<li>The Leslie matrix for a stage-structured population is:</li>
+<li>The Leslie matrix for a frog population is:</li>
 </ol>
 <p><span class="math display">\[\begin{equation}
 \left[

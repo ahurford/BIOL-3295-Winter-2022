@@ -9,7 +9,7 @@ Today we will learn how to determine if a population with age- or stage-structur
 
 \[N_{t+1} = \lambda N_t\]
 
-where the population size, $N_t$, increases over time if $\lambda > 1$. For age- and stage- structured populations, rather than a scalar (just one number), $\lambda$, we have a matrix, $\mathbb{P}$,  containing many numbers:
+where the population size, $N_t$, increases over time if $\lambda > 1$. For age- and stage-structured populations, rather than a scalar (just one number), $\lambda$, we have a matrix, $\mathbb{P}$,  containing many numbers:
 
 \begin{equation}
 \mathbb{P} = 
@@ -78,9 +78,9 @@ N_{n,t}
 ,
 \end{eqnarray}
 
-and $\lambda$ can be substituted for the matrix $\mathbb{P}$, and the population sizes in each age- and stage- in the future are projected to be the same?
+and $\lambda$ can be substituted for the matrix $\mathbb{P}$, and the population sizes in each age and stage in the future are projected to be the same?
 
-The answer to this question, in general, is no because the different stage classes increase by different amounts, however, for special values of the population sizes in each stage class at time, $t$, the equivalent relationship between $\lambda$ and $\mathbb{P}$ does hold. These special values are called the _stable stage structure_ (or _stable age structure_ if the population is grouped by age). When the stable age structure is reached, all stages increase by the same factor, $\lambda$, each time step, such that:
+The answer to this question, in general, is 'no' because the different stage classes increase by different amounts, however, for special values of the population sizes in each stage class at time, $t$, the equivalence relationship between $\lambda$ and $\mathbb{P}$ does hold. These special values are called the _stable stage structure_ (or _stable age structure_ if the population is grouped by age). When the stable age structure is reached, all stages increase by the same factor, $\lambda$, each time step, such that:
 
 
 \begin{eqnarray}
@@ -108,7 +108,7 @@ a_{21} & a_{22} \\
 ,
 \end{eqnarray}
 
-where the hat notation, $[\hat{N}_{1,t}, \hat{N}_{2,t}]^T$, is to indicate that the population sizes for each of the stage are that of the stable stage structure. The matrix elements have been written as $a_{ij}$ because as we continue with this example, we will consider two stages, rather then $n$, to make the example clearer.
+where the hat notation, $[\hat{N}_{1,t}, \hat{N}_{2,t}]^T$, is to indicate that the population sizes for each of the stages are that of the stable stage structure. The matrix elements have been written as $a_{ij}$ because as we continue with this example, we will consider two stages, rather then $n$, to make the calculation simpler.
 
 For a 2 $\times$ 2 matrix (i.e., two stages in a stage structured population), $\lambda$ is calculated as,
 
@@ -139,7 +139,7 @@ This gives two solutions. The _dominant eigenvalue_ is the solution for $\lambda
 - If the absolute value of the dominant eigenvalue is less than 1, the population will decrease.
 
 ## Questions
-1. The Leslie matrix for a stage-structured population is:
+1. The Leslie matrix for a frog population is:
 
 \begin{equation}
 \left[
