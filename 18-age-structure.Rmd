@@ -19,7 +19,7 @@ Read over yesterdays material
 \right]
 \end{equation}
 
-the stable stage distribution is: $[0.312, 0.688]^T$, which means that when the population has 31.2% young-of-the-year frogs, and 68.8% frogs one year or older, each year both age classes will increase by a fixed amount which is the dominant eigenvalue that you calculated for yesterday's question 1.
+the stable stage distribution is: $[0.644, 0.356]^T$, which means that when the population has 64.4% young-of-the-year frogs, and 35.6% frogs one year or older, each year both age classes will increase by a fixed amount which is the dominant eigenvalue that you calculated for yesterday's question 1.
 
 Check that this is true. Let,
 
@@ -27,15 +27,15 @@ Check that this is true. Let,
 \vec{N}_t = 
 \left[
 \begin{array}{c}
-31.2\\
-68.8\\
+64.4\\
+35.6\\
 \end{array}
 \right].
 \end{equation}
 
 a. Calculate $\vec{N}_{t+1} = \mathbb{A}\vec{N}_{t}$ (remember to use matrix multiplication). [1 mark]
 
-b. Calculate the increase from $t$ to $t+1$ for both stages, i.e., $f_1 = N_{1,t+1}/31.2$ and $f_2 = N_{2,t+1}/68.8$. How do $f_1$ and $f_2$ compare to the dominant eigenvalue that you calculated for yesterday's question 1? [2 marks]
+b. Calculate the increase from $t$ to $t+1$ for both stages, i.e., $f_1 = N_{1,t+1}/64.4$ and $f_2 = N_{2,t+1}/35.6$. How do $f_1$ and $f_2$ compare to the dominant eigenvalue that you calculated for yesterday's question 1? [2 marks]
 
 2. Now let's choose $\vec{N}_t$ such that it is not the stable stage structure values. Let, $\vec{N}_0 = [50 50]$. Using the same Leslie matrix, $\mathbb{A}$, do the matrix multiplication to calculate $\vec{N}_1$, $\vec{N}_2$, and $\vec{N}_3$ (remember that $\vec{N}_t$ is a vector containing two values). [3 marks]
 
