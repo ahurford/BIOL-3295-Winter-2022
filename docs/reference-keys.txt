@@ -71,3 +71,6 @@ questions-13
 thurs-feb-10-age-structured-population-dynamics
 required-reading-11
 questions-14
+fri-feb-11-age-structured-population-dynamics
+required-reading-12
+questions-15
