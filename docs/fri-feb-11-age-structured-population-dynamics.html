@@ -270,7 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \end{array}
 \right]
 \end{equation}\]</span></p>
-<p>the stable stage distribution is: <span class="math inline">\([0.312, 0.688]^T\)</span>, which means that when the population has 31.2% young-of-the-year frogs, and 68.8% frogs one year or older, each year both age classes will increase by a fixed amount which is the dominant eigenvalue that you calculate for yesterday’s question.</p>
+<p>the stable stage distribution is: <span class="math inline">\([0.312, 0.688]^T\)</span>, which means that when the population has 31.2% young-of-the-year frogs, and 68.8% frogs one year or older, each year both age classes will increase by a fixed amount which is the dominant eigenvalue that you calculated for yesterday’s question 1.</p>
 <p>Check that this is true. Let,</p>
 <p><span class="math display">\[\begin{equation}
 \vec{N}_t = 
@@ -283,11 +283,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \end{equation}\]</span></p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Calculate <span class="math inline">\(\vec{N}_{t+1} = \mathbb{A}\vec{N}_{t}\)</span> (remember to use matrix multiplication). [1 mark]</p></li>
-<li><p>Calculate the increase from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+1\)</span> for both stages, i.e., <span class="math inline">\(f_1 = N_{1,t+1}/31.2\)</span> and <span class="math inline">\(f_2 = N_{2,t+1}/68.8\)</span>. How to <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> compare to the dominant eigenvalue that you calculated for yesterday’s question? [2 marks]</p></li>
+<li><p>Calculate the increase from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+1\)</span> for both stages, i.e., <span class="math inline">\(f_1 = N_{1,t+1}/31.2\)</span> and <span class="math inline">\(f_2 = N_{2,t+1}/68.8\)</span>. How do <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> compare to the dominant eigenvalue that you calculated for yesterday’s question 1? [2 marks]</p></li>
 </ol>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Now let’s choose <span class="math inline">\(\vec{N}_t\)</span> such that it is not the stable stage structure value. Let, <span class="math inline">\(\vec{N}_0 = [50 50]\)</span>. Using the same Leslie matrix, <span class="math inline">\(\mathbb{A}\)</span>, do the matrix multiplication to calculate <span class="math inline">\(\vec{N}_1\)</span>, <span class="math inline">\(\vec{N}_2\)</span>, and <span class="math inline">\(\vec{N}_3\)</span>. [3 marks]</p></li>
-<li><p>For you answer to 2. calculate <span class="math inline">\(f_{1,t} = N_{1,t+1}/N_{1,t}\)</span> and <span class="math inline">\(f_{2,t} = N_{2,t+1}/N_{2,t}\)</span> for <span class="math inline">\(t=0,1,2\)</span>. Are these values getting closer to the dominant eigenvalue of <span class="math inline">\(\mathbb{A}\)</span>? [2 marks]</p></li>
+<li><p>Now let’s choose <span class="math inline">\(\vec{N}_t\)</span> such that it is not the stable stage structure values. Let, <span class="math inline">\(\vec{N}_0 = [50 50]\)</span>. Using the same Leslie matrix, <span class="math inline">\(\mathbb{A}\)</span>, do the matrix multiplication to calculate <span class="math inline">\(\vec{N}_1\)</span>, <span class="math inline">\(\vec{N}_2\)</span>, and <span class="math inline">\(\vec{N}_3\)</span> (remember that <span class="math inline">\(\vec{N}_t\)</span> is a vector containing two values). [3 marks]</p></li>
+<li><p>For you answer to 2. calculate <span class="math inline">\(f_{1,t} = N_{1,t+1}/N_{1,t}\)</span> and <span class="math inline">\(f_{2,t} = N_{2,t+1}/N_{2,t}\)</span> for <span class="math inline">\(t=0,1,2\)</span>. Are these values getting closer to the dominant eigenvalue of <span class="math inline">\(\mathbb{A}\)</span> as <span class="math inline">\(t\)</span> gets larger? [2 marks]</p></li>
 </ol>
 
 </div>
