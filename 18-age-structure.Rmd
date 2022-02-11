@@ -37,6 +37,6 @@ a. Calculate $\vec{N}_{t+1} = \mathbb{A}\vec{N}_{t}$ (remember to use matrix mul
 
 b. Calculate the increase from $t$ to $t+1$ for both stages, i.e., $f_1 = N_{1,t+1}/64.4$ and $f_2 = N_{2,t+1}/35.6$. How do $f_1$ and $f_2$ compare to the dominant eigenvalue that you calculated for yesterday's question 1? [2 marks]
 
-2. Now let's choose $\vec{N}_t$ such that it is not the stable stage structure values. Let, $\vec{N}_0 = [50 50]$. Using the same Leslie matrix, $\mathbb{A}$, do the matrix multiplication to calculate $\vec{N}_1$, $\vec{N}_2$, and $\vec{N}_3$ (remember that $\vec{N}_t$ is a vector containing two values). [3 marks]
+2. Now let's choose $\vec{N}_t$ such that it is not the stable stage structure values. Let, $\vec{N}_0 = [50, 50]$. Using the same Leslie matrix, $\mathbb{A}$, do the matrix multiplication to calculate $\vec{N}_1$, $\vec{N}_2$, and $\vec{N}_3$ (remember that $\vec{N}_t$ is a vector containing two values). [3 marks]
 
 3. For you answer to 2. calculate $f_{1,t} = N_{1,t+1}/N_{1,t}$ and $f_{2,t} = N_{2,t+1}/N_{2,t}$ for $t=0,1,2$. Are these values getting closer to the dominant eigenvalue of $\mathbb{A}$ as $t$ gets larger? [2 marks]
