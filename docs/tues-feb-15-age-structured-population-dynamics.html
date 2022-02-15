@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Tues Jan 25: Exponential growth - continuous time | BIOL-3295.knit</title>
+  <title>Chapter 18 Tues Feb 15: Age-structured population dynamics | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Tues Jan 25: Exponential growth - continuous time | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 18 Tues Feb 15: Age-structured population dynamics | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Tues Jan 25: Exponential growth - continuous time | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 18 Tues Feb 15: Age-structured population dynamics | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="fri-jan-21-exponential-growth-continuous-time.html"/>
-<link rel="next" href="thurs-jan-27-density-dependence-and-logistic-growth.html"/>
+<link rel="prev" href="fri-feb-11-age-structured-population-dynamics.html"/>
+
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -254,31 +254,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tues-jan-25-exponential-growth---continuous-time" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Tues Jan 25: Exponential growth - continuous time</h1>
-<p>The deadline to submit your answers is Tues Jan 31.</p>
-<div id="required-reading-4" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Required reading</h2>
-<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p4-8. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
-<p>Recall the equation for exponential growth:</p>
-<p><span class="math display" id="eq:Exp">\[\begin{equation}
-N(t) = N(0)e^{rt}
-\tag{7.2}
-\end{equation}\]</span></p>
+<div id="tues-feb-15-age-structured-population-dynamics" class="section level1" number="18">
+<h1><span class="header-section-number">Chapter 18</span> Tues Feb 15: Age-structured population dynamics</h1>
+<p>DUE DATE: Feb 22</p>
+<div id="required-reading-13" class="section level2" number="18.1">
+<h2><span class="header-section-number">18.1</span> Required Reading</h2>
+<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p45-48. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
 </div>
-<div id="questions-5" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Questions</h2>
+<div id="questions-16" class="section level2" number="18.2">
+<h2><span class="header-section-number">18.2</span> Questions</h2>
 <ol style="list-style-type: decimal">
-<li>Calculate the formula for the doubling time for continuous time exponential growth (equation <a href="fri-jan-21-exponential-growth-continuous-time.html#eq:Exp">(7.2)</a>). This is the time for the population to double in size. The value of <span class="math inline">\(N(0)\)</span>, the population size at <span class="math inline">\(t=0\)</span> doesn’t matter as long as it is a positive number. When the population has doubled, <span class="math inline">\(N(t) = 2N(0)\)</span>. To answer this question you need to find <span class="math inline">\(t\)</span> such that <span class="math inline">\(N(t) = 2N(0)\)</span>. You may need to revisit some rules about working with logarithms to complete this question (i.e. see <a href="https://en.wikipedia.org/wiki/Logarithm">here</a>, specifically the <em>Product, Quotient, Power, and Root</em> table. Also recall, <span class="math inline">\(Ln(e^x) = x\)</span>). Please show your work. [2 marks]</li>
+<li><p>What is the name of the information that can be determined from the left eigenvector of a population matrix? [1 mark]</p></li>
+<li><p>What is the name of the information that can be determined from the right eigenvector of a population matrix? [1 mark]</p></li>
+<li><p>What is a reason to calculate elasticity rather than sensitivity? [1 mark]</p></li>
+<li><p>What is sensitivity? [1 mark]</p></li>
+<li><p>What elasticity? [1 mark]</p></li>
+<li><p>For the matrix:</p></li>
 </ol>
-<p><img src="figures/doublingtime.jpg" width="95%" /></p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Consider the plot above. Let <span class="math inline">\(N(0) = 10\)</span>. Using the formula <a href="fri-jan-21-exponential-growth-continuous-time.html#eq:Exp">(7.2)</a>, with the value of <span class="math inline">\(r\)</span> such that deaths double every day, when <span class="math inline">\(t\)</span> = 10 days later, what is the value of <span class="math inline">\(N(t)\)</span>? [check your answer matches the graph]
-[1 mark]</p></li>
-<li><p>Let <span class="math inline">\(N(0) = 10\)</span>. Using the formula <a href="fri-jan-21-exponential-growth-continuous-time.html#eq:Exp">(7.2)</a>, with the value of <span class="math inline">\(r\)</span> such that deaths double every 3 days, when <span class="math inline">\(t\)</span> = 30 days later, what is the value of <span class="math inline">\(N(t)\)</span>? [check your answer matches the graph]
-[1 mark]</p></li>
-<li><p>Let <span class="math inline">\(N(0) = 10\)</span>. Using the formula <a href="fri-jan-21-exponential-growth-continuous-time.html#eq:Exp">(7.2)</a>, with the value of <span class="math inline">\(r\)</span> such that deaths double every 7 days, when <span class="math inline">\(t\)</span> = 35 days later, what is the value of <span class="math inline">\(N(t)\)</span>? [check your answer matches the graph]
-[1 mark]</p></li>
+<p><span class="math display">\[\begin{equation}
+\mathbb{A}=
+\left[
+\begin{array}{cc}
+1 &amp; 2\\
+0.5 &amp; 0.2\\
+\end{array}
+\right]
+\end{equation}\]</span></p>
+<p>the dominant eigenvalue is 1.67, the left eigenvector is [1,1.35] and the right eigenvector is [0.75,0.25]. Calculate the sensitivities and elasticities of <span class="math inline">\(\mathbb{A}\)</span>. [3 marks]</p>
+<ol start="5" style="list-style-type: decimal">
+<li>If you wanted to eradicate the population whose growth is described by <span class="math inline">\(\mathbb{A}\)</span>, what aspect of the organisms life history might be most cost effective to target? Explain your reasoning. [2 marks]</li>
 </ol>
 
 </div>
@@ -288,8 +292,8 @@ N(t) = N(0)e^{rt}
           </div>
         </div>
       </div>
-<a href="fri-jan-21-exponential-growth-continuous-time.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="thurs-jan-27-density-dependence-and-logistic-growth.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="fri-feb-11-age-structured-population-dynamics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
