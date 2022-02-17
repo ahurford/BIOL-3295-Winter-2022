@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Tues Jan 18: Exponential growth - discrete time 2 | BIOL-3295.knit</title>
+  <title>Chapter 20 LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Tues Jan 18: Exponential growth - discrete time 2 | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 20 LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Tues Jan 18: Exponential growth - discrete time 2 | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 20 LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="fri-jan-14-exponential-growth-discrete-time.html"/>
-<link rel="next" href="PE3.html"/>
+<link rel="prev" href="thurs-feb-17-age-structured-population-dynamics.html"/>
+
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -256,122 +256,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="PE1" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Tues Jan 18: Exponential growth - discrete time 2</h1>
-<p>For the questions below, submit your answers to Brightspace ideally before the next class. The deadline to submit your answers is Tues Jan 25.</p>
-<div id="required-reading-1" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Required reading</h2>
-<p>If you have not done so already, please read:</p>
-<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p1-3. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
-<p>Today’s questions help us work towards an application of <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">discrete time exponential growth</a>. Download the .pdf of the MSc thesis below and read the Abstract (the first two pages prior to the title page). Pay specific attention to the number of pheasants at different points in time, these might be <span class="math inline">\(N_{t+1}\)</span> and <span class="math inline">\(N_t\)</span> in the exponential growth formula; and the number of births and deaths that occur, these may help you estimate <span class="math inline">\(\lambda\)</span> in the exponential growth formula. Pay attention to the length of time that births and deaths are reported over, and what time of the year the population size is reported.</p>
-<p>Newcomb, HR. 1940. <a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/js956j801?locale=en">Ring-necked pheasant studies on Protection Island in the Strait of Juan de Fuca</a>, Washington. MS thesis. Oregon State University.</p>
-<p>Noteably,</p>
-<ol style="list-style-type: lower-alpha">
-<li>Pheasant chicks are born during the summer.</li>
-<li>In May 1937, 10 pheasants were introduced to the island. Before the next breeding season there were 35.</li>
-<li>November 10, 1938 a census estimated 110 pheasants.</li>
-<li>October 13, 1939 a census estimated 400 pheasants.</li>
-<li>Between the 1938 and 1939 censuses, Newcomb observed that 17 adult birds died.</li>
-<li>During the 1938 nesting season there were 5.86 eggs/nest. 83.57% of eggs hatched.</li>
-<li>During the 1939 nesting season there were 8.73 eggs/nest. 64.58% hatched.</li>
-<li>During the 1939 nesting season: Average number of chicks per clutch was 6.93.<span class="math inline">\(^1\)</span></li>
-<li>You can assume the sex ratio is 50:50 male to female. Pheasants are a sexually reproducing species.</li>
-</ol>
-<p><span class="math inline">\(^1\)</span> Note that g. and h. appear to be contradictory.</p>
-</div>
-<div id="questions-2" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Questions</h2>
-<p>When considering an application to determine the correct values of <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(N_t\)</span> in the exponential growth formula, it helps to understand that for all mathematical formulas there must be the same units on both sides of the equals sign, and for each term that is added or subtracted.</p>
+<div id="lab-3---thurs-feb-17-computational-analysis-of-yellow-columbines-aquilegia-chrysantha-stage-structured-model" class="section level1" number="20">
+<h1><span class="header-section-number">Chapter 20</span> LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model</h1>
+<p>Due Thurs Feb 24</p>
+<p>To hand in:
+You will hand in a report summarizing your analysis of the yellow columbine population. Details of what the report should include can be found at the end of these instructions.</p>
 <ol style="list-style-type: decimal">
-<li>The units of the population size, <span class="math inline">\(N_t\)</span>, at time, <span class="math inline">\(t\)</span>, are number. The geometric growth rate, <span class="math inline">\(\lambda\)</span> is unitless. Choose an equation from <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Vandermeer and Gordon 2013</a> p1-3 and give the units for each of the terms to show that both sides of the equals have the same units. For example, for the equation from the last assignment:</li>
+<li><p>Open R Studio and Install the package <code>popbio</code>.</p></li>
+<li><p>Download and run the file Lab 3.R (found on BrightSpace). This code will produce 2 graphs: 1) the number of seeds over time, and 2) the number of the different types of plants over time.</p></li>
+<li><p>Into the R console type: <code>head(aq.trans)</code></p></li>
 </ol>
-<p><span class="math display">\[\begin{eqnarray*}
-N_t &amp; = &amp; N_0 \lambda^t \\
-\left(\mbox{number}\right)&amp; =&amp;(\mbox{number}) (\mbox{unitless})^{weeks}\\
-\left(\mbox{number}\right)&amp; =&amp; \left(\mbox{number}\right)\\
-\end{eqnarray*}\]</span></p>
-<p>Note that:
-<span class="math display">\[\begin{eqnarray*}
-&amp; \bullet &amp; (\mbox{unitless}) \times (\mbox{quantity with units})  =  (\mbox{quantity with units}) \\
-&amp; \bullet &amp; (\mbox{unitless})^{(\mbox{quantity})} = (\mbox{unitless})
-\end{eqnarray*}\]</span>
-[2 marks]</p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Although not stated in the Vandermeer and Gordon (2013) p1-3 reading, <span class="math inline">\(\lambda = 1 + b - d\)</span> where <span class="math inline">\(b\)</span> is the per capita birth rate over one time step (i.e. one week for the lilipad example, or 1 year for the pheasant example), and <span class="math inline">\(d\)</span> is the fraction of the population that dies over one time step. The number 1 is considered unitless. What must the units of <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> be? [1 mark]</p></li>
-<li><p>In the Vandermeer and Gordon (2013) p1-3 reading, <span class="math inline">\(\lambda = 2\)</span>. Given that <span class="math inline">\(\lambda = 1 + b - d\)</span>, what are some possible values of <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span>. Note that <span class="math inline">\(d\)</span> is a fraction and must be <span class="math inline">\(1 \geq d \geq 0\)</span> and <span class="math inline">\(b&gt;0\)</span>. [1 mark]</p></li>
-<li><p>Let <span class="math inline">\(d\)</span> be the fraction of the population that dies each year. By considering a. to i. above, estimate <span class="math inline">\(d\)</span> for the ring-tailed pheasant population on Protection Island. Remember <span class="math inline">\(d\)</span> must be a fraction: you need to divide by the number of pheasants that could have died during the time period under consideration. Write down any assumptions you have made. For example, did you assume that the mortality rate for one year is then the same for other years? [3 marks]</p></li>
+<p>This command lists the first six data entries. To understand the meaning of the columns in the dataframe, click the Packages tab, click <code>popbio</code> and then scroll down to <code>aq.trans</code> and click on that. Does the dataset contain any information on the number of seeds produced each year?</p>
+<p>To determine how many different plots are recorded in this dataset, into the R console type: <code>table(aq.trans$plot)</code></p>
+<p>Modify this command to generate summary statistics for other variables that you are interested in.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>The code uses a subset of the data: only year 1998 and plot 909. To see the data subset, type: <code>sf</code></li>
 </ol>
-<!-- 9. [True or False] For discrete time exponential growth (as per the reading), the change in population size from one week to the next depends not so much on the per capita birth rate, but on the difference between the per capita birth rate and the per capita death rate. [1 mark] -->
-<!-- 1. Read and complete all the exercises in Chapters 4.3 [_Variables and assignment_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#variables-and-assignment) to 4.10 [_R packages_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) and 9 [_Making graphs in R_](https://ahurford.github.io/quant-guide-all-courses/graph.html) of _Quantitative skills for biology_ -->
-<!-- -  Answer all questions marked  HAND IN in the reading [5 marks] -->
-<!-- 2. To make a graph of the data listed in b.-d., we need to learn how to work with dates. We will consider two possible approaches: -->
-<!-- i. Use a built-in `R` function to convert dates to a format that can be plotted (todays class); and -->
-<!-- ii. Convert the dates to number of days since a reference date. Now the dates are numbers and these values can be plotted on the x-axis of a graph (next class). -->
-<!-- In this question, we will proceed with option i. The function we will use is `as.Date()`. You can learn how to use this function using an internet search or by typing the following into your `Console`: -->
-<!-- ```{r,eval=FALSE} -->
-<!-- ?as.Date -->
-<!-- ``` -->
-<!-- These files can be difficult to understand (see [R Help files](https://ahurford.github.io/quant-guide-all-courses/help.html#how-to-interpret-r-help-files). A good way to proceed is to experiment with the function in the `Console`. Try these: -->
-<!-- ```{r,eval=FALSE} -->
-<!-- as.Date(2012-01-31, format = %Y-%m-%d) -->
-<!-- as.Date("2012-01-31", format = "%Y-%m-%d") -->
-<!-- ``` -->
-<!-- Note that only the second command is error-free. The first command fails because the date argument for the `as.Date()` function must be a character string, i.e., must be enclosed in `""` (see `?character`). -->
-<!-- It is also possible to omit the format argument and just code: `as.Date("2012-01-31")`. The help file notes that when the format argument is not specified, that formats will be tried one by one and an error will be returned if none work. It is advisable to specify the format, as allowing the function to infer the format could introduce errors. -->
-<!-- Chapter 6.9 [Data structures](https://ahurford.github.io/quant-guide-all-courses/rintro.html#data-structures) describes how to make a vector (note a vector is a list of numbers rather than just a single number). We need to make a vector of the dates so that we can make our plot. For example, -->
-<!-- ```{r,eval=FALSE} -->
-<!-- x <- as.Date(c("2012-01-31", "2012-03-05", "2013-01-11"), format = "%Y-%m-%d") -->
-<!-- ``` -->
-<!-- Having completed Chapter 11 [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html), and having learned how to work with dates, you should now be able to write an R script to make plot using the information in b.-d. above. -->
-<!-- <strong> HAND IN </strong> -->
-<!-- - <strong> A graph and figure caption. The graph should have dates on the x-axis and the pheasant population size on the y-axis drawing from the information provided in b.-d. You will need to guess the date of 'before the breeding season' as stated in b. and you should disclose the value of this guess in the figure caption. See \@ref(figures) for more information. The solutions to this problem have figure caption that is 2 sentences long. _[Note that the graph will likely have years, not months on the x-axis - changing this is a quite fiddle-y and not worth it at this stage of your R journey]_  [10 marks] -->
-<!-- </strong> -->
-<!-- - <strong> An R Script that produces the figure described above. See \@ref(RScript) for more information. [5 marks] -->
-<!-- </strong> -->
-<!-- Today's exercise will be challenging. You should aim to complete this exercise before the next class. This exercise is due by Fri Sept 25. There will be a lot of carryover to the next exercise. -->
-<!-- The information below is taken from the following source: -->
-<!-- Newcomb, HR. 1940. [Ring-necked pheasant studies on Protection Island in the Strait of Juan de Fuca](https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/js956j801?locale=en), Washington. MS thesis. Oregon State University. -->
-<!-- a. Pheasant chicks are born during the summer. -->
-<!-- b. In May 1937, 10 pheasants were introduced to the island. Before the next breeding season there were 35 pheasants. -->
-<!-- c. November 10, 1938 a census estimated 110 pheasants. -->
-<!-- d. October 13, 1939 a census estimated 400 pheasants. -->
-<!-- ## Questions -->
-<!-- 1. Read and complete all the exercises in Chapters 4.3 [_Variables and assignment_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#variables-and-assignment) to 4.10 [_R packages_](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) and 9 [_Making graphs in R_](https://ahurford.github.io/quant-guide-all-courses/graph.html) of _Quantitative skills for biology_ -->
-<!-- -  Answer all questions marked  HAND IN in the reading [5 marks] -->
-<!-- 2. To make a graph of the data listed in b.-d., we need to learn how to work with dates. We will consider two possible approaches: -->
-<!-- i. Use a built-in `R` function to convert dates to a format that can be plotted (todays class); and -->
-<!-- ii. Convert the dates to number of days since a reference date. Now the dates are numbers and these values can be plotted on the x-axis of a graph (next class). -->
-<!-- In this question, we will proceed with option i. The function we will use is `as.Date()`. You can learn how to use this function using an internet search or by typing the following into your `Console`: -->
-<!-- ```{r,eval=FALSE} -->
-<!-- ?as.Date -->
-<!-- ``` -->
-<!-- These files can be difficult to understand (see [R Help files](https://ahurford.github.io/quant-guide-all-courses/help.html#how-to-interpret-r-help-files). A good way to proceed is to experiment with the function in the `Console`. Try these: -->
-<!-- ```{r,eval=FALSE} -->
-<!-- as.Date(2012-01-31, format = %Y-%m-%d) -->
-<!-- as.Date("2012-01-31", format = "%Y-%m-%d") -->
-<!-- ``` -->
-<!-- Note that only the second command is error-free. The first command fails because the date argument for the `as.Date()` function must be a character string, i.e., must be enclosed in `""` (see `?character`). -->
-<!-- It is also possible to omit the format argument and just code: `as.Date("2012-01-31")`. The help file notes that when the format argument is not specified, that formats will be tried one by one and an error will be returned if none work. It is advisable to specify the format, as allowing the function to infer the format could introduce errors. -->
-<!-- Chapter 6.9 [Data structures](https://ahurford.github.io/quant-guide-all-courses/rintro.html#data-structures) describes how to make a vector (note a vector is a list of numbers rather than just a single number). We need to make a vector of the dates so that we can make our plot. For example, -->
-<!-- ```{r,eval=FALSE} -->
-<!-- x <- as.Date(c("2012-01-31", "2012-03-05", "2013-01-11"), format = "%Y-%m-%d") -->
-<!-- ``` -->
-<!-- Having completed Chapter 11 [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html), and having learned how to work with dates, you should now be able to write an R script to make plot using the information in b.-d. above. -->
-<!-- <strong> HAND IN </strong> -->
-<!-- - <strong> A graph and figure caption. The graph should have dates on the x-axis and the pheasant population size on the y-axis drawing from the information provided in b.-d. You will need to guess the date of 'before the breeding season' as stated in b. and you should disclose the value of this guess in the figure caption. See \@ref(figures) for more information. The solutions to this problem have figure caption that is 2 sentences long. _[Note that the graph will likely have years, not months on the x-axis - changing this is a quite fiddle-y and not worth it at this stage of your R journey]_  [10 marks] -->
-<!-- </strong> -->
-<!-- - <strong> An R Script that produces the figure described above. See \@ref(RScript) for more information. [5 marks] -->
-<!-- </strong> -->
+<p>into the R console. Does every flowering plant produce fruit?</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>The dataset does not contain any information on the number of seeds. In the code, what assumptions are made to estimate the size of the seed bank in 1999?</p></li>
+<li><p>Type, <code>A</code> into the R console. This is the projection matrix. Where i is an index for the row number (top to bottom) and j is an index for the column (left to right), the elements of the projection matrix are the number of i that will be produced by each j over the course of a year.</p></li>
+</ol>
+<p>Try it out – the number of seeds produced per seed is 0.4. This means that each seed has a 0.4 probability of surviving a year. How many small plants is each small plant expected to produce? How many large? How many with flowers?</p>
+<p>If a small plant, next year, can only be a small plant, a large plant a flowering plant, or dead, what must be the probability that the small plant dies? What is the probability a large plant dies? A flower?</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Type <code>nt</code> into the R console. The intrinsic rate of growth of the population is the dominant eigenvalue of the projection matrix, A. If the dominant eigenvalue is bigger than 1, the population will grow. If the dominant eigenvalue is less than 1, the population will eventually go extinct. The dominant eigenvalue of our projection matrix, A, is calculated as, <code>nt$lambda</code>.</li>
+</ol>
+<p>Will the population of yellow columbines in plot 909 grow?</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Type the command, <code>nt=pop.projection(A,n,20)</code> into the R console. This command starts with an initial population size of n and uses the projection matrix A, to calculate the size of the population for the next 19 years. Note that in the code <code>n = c(10000, 100, 100, 100, 100)</code> means that we start with 10,000 seeds and 100 of each type of plant. The predicted number of yellow columbine in each stage each year is <code>nt$stage.vectors</code>.</li>
+</ol>
+<p>After 19 years, which stages have increased in prevalence? Consult the graphs (be sure to figure out which lines correspond to which stages – you will need to consult the R code). Does it look like the population will persist? Increase the number of years that you predict the size of the population for. Were you correct that the population will go extinct?</p>
+<ol start="9" style="list-style-type: decimal">
+<li>For this model, eventually the fraction of the population that is in each stage will be unchanging. The relative abundance of each stage (providing that sufficient time has passed) is predicted by the right eigenvalue of the projection matrix, A. Type <code>stable.stage(A)</code> into the R console. Reset the number of years into the future that you predict the population abundance to 19 (i.e., the command from 8.) and re-run Lab6.R (using the Source button). Now, we wish to test whether the predicted relative of abundance of each stage is achieved on the 19th year into the future. Type, <code>nt$stage.vectors[,19]/sum(nt$stage.vectors[,19])</code>.</li>
+</ol>
+<p>The stable stage distribution is dominated by the abundance of seeds. To calculate the relative abundance of just the plant stages type <code>nt$stage.vectors[2:5,19]/sum(nt$stage.vectors[2:5,19])</code></p>
+<p>About what percentage of plants would we expect to be flowering?</p>
+<p>If the population does not start at the stable stage distribution it may take some time to reach the stable distribution. Is the stable stage distribution reached on the 5th year? Modify the commands form above to determine this.</p>
+<ol start="10" style="list-style-type: decimal">
+<li>Suppose it were possible to increase any non-zero entry of the projection matrix by a fixed amount. Increasing the value of which entry by a fixed amount would have the biggest affect the intrinsic growth rate, lambda?</li>
+</ol>
+<p>To answer this question type, <code>sensitivity(A, zero=TRUE)</code></p>
+<p>The results of this command tells us that increasing the fraction of seeds that germinate each year would most substantially increase the intrinsic growth rate. How this information help us to figure out how best to promote the growth of yellow columbine?</p>
+<ol start="11" style="list-style-type: decimal">
+<li>Currently, the population of yellow columbines is destined to go extinct. Change the value of seed.survival until the population is just able to persist. What is this value?</li>
+</ol>
+<p>Write a report describing the results of your analysis of the yellow columbine population. Your report should include the following:</p>
+<p>• In the Introduction section, write one sentence (with a citation) describing yellow columbine (Aquilegia chrysantha). The citation may be from the Internet or from the peer-reviewed literature.</p>
+<p>• In the Data section, describe the data that was used to parameterize the projection matrix. Be sure to mention that only a subset of the data was used in the analysis. Be sure to mention the assumptions that were made regarding the seed bank.</p>
+<p>• In the Results section, describe the findings of your analysis. What was the intrinsic rate of growth? Write out the projection matrix and explain what the elements of the projection matrix mean. What is the stable stage distribution? What does it mean? Include a graph of the population dynamics of the different plant stages of yellow columbine. In the figure caption, make sure you mention what each of the different line types represents.</p>
+<p>• In the Discussion section, you should address the following questions: How might your conclusions change if your assumptions were different? What was a limitation of your analysis? What are the implications of the sensitivity analysis results for suggested measures to help protect yellow columbine?</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fri-jan-14-exponential-growth-discrete-time.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="PE3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="thurs-feb-17-age-structured-population-dynamics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

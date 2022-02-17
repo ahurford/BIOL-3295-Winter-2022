@@ -78,3 +78,4 @@ tues-feb-15-age-structured-population-dynamics
 required-reading-13
 questions-16
 thurs-feb-17-age-structured-population-dynamics
+lab-3---thurs-feb-17-computational-analysis-of-yellow-columbines-aquilegia-chrysantha-stage-structured-model
