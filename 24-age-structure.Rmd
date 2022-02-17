@@ -1,0 +1,34 @@
+# Fri Feb 18: Density dependence in age-structured models 
+
+DUE: Fri Feb 25
+
+## Required Reading
+Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p48-50. [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619)
+
+All of the population models that we have seen to date give exponential growth or decay because they do not have any density dependence. However, it is possible to include density dependence in models with stage structure.
+
+Consider the model described in the required reading. For today's lab we will write an R Script to solve this model and reproduce the graph figure 2.4.
+
+```{r, include=FALSE}
+r<-3.3
+p<-0.95
+i=1
+times = seq(0,30,1)
+T = length(times)
+X = rep(0,T)
+Y = rep(0,T)
+X[1] = 0.01
+Y[1] = 0.01
+for(t in head(times,-1)){
+  X[i+1]=r*Y[i]*(1-Y[i]/r)
+  Y[i+1]=p*X[i]
+  i=i+1
+}
+plot(times,X, typ = "l")
+lines(times,Y,typ="l")
+```
+
+## Questions
+1. What is true about exponential growth relative to density-dependent growth for a stage structured  model? When are they the same [1 mark]
+
+[more questions to be added]

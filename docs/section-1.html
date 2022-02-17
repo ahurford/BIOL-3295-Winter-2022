@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Tues Feb 1: Density dependence and logistic growth | BIOL-3295.knit</title>
+  <title>Chapter 27  | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Tues Feb 1: Density dependence and logistic growth | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 27  | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Tues Feb 1: Density dependence and logistic growth | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 27  | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="fri-jan-28-density-dependence-and-logistic-growth.html"/>
-<link rel="next" href="thurs-feb-3-density-yield-and-the-discrete-time-density-dependence.html"/>
+<link rel="prev" href="what-is-true-about-exponential-growth-relative-to-density-dependent-growth-when-are-they-the-same-1-mark.html"/>
+<link rel="next" href="how-does-density-de.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -250,8 +250,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="22" data-path="fri-feb-18-density-dependence-in-age-structured-models.html"><a href="fri-feb-18-density-dependence-in-age-structured-models.html"><i class="fa fa-check"></i><b>22</b> Fri Feb 18: Density dependence in age-structured models</a>
 <ul>
 <li class="chapter" data-level="22.1" data-path="fri-feb-18-density-dependence-in-age-structured-models.html"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#required-reading-14"><i class="fa fa-check"></i><b>22.1</b> Required Reading</a></li>
-<li class="chapter" data-level="22.2" data-path="fri-feb-18-density-dependence-in-age-structured-models.html"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#questions-17"><i class="fa fa-check"></i><b>22.2</b> Questions</a></li>
 </ul></li>
+<li class="chapter" data-level="23" data-path="r-includefalse-r-3-3-p-0-95-i1-times-seq0301-t-lengthtimes-x-rep0t-y-rep0t-x1-0-01-y1-0-01-fort-in-headtimes-1-xi1ryi1-yir-yi1pxi-ii1-plottimesx-typ-l-linestimesytypl.html"><a href="r-includefalse-r-3-3-p-0-95-i1-times-seq0301-t-lengthtimes-x-rep0t-y-rep0t-x1-0-01-y1-0-01-fort-in-headtimes-1-xi1ryi1-yir-yi1pxi-ii1-plottimesx-typ-l-linestimesytypl.html"><i class="fa fa-check"></i><b>23</b> <code>{r, include=FALSE} # r&lt;-3.3 # p&lt;-0.95 # i=1 # times = seq(0,30,1) # T = length(times) # X = rep(0,T) # Y = rep(0,T) # X[1] = 0.01 # Y[1] = 0.01 # for(t in head(times,-1)){ #   X[i+1]=r*Y[i]*(1-Y[i]/r) #   Y[i+1]=p*X[i] #   i=i+1 # } # plot(times,X, typ = "l") # lines(times,Y,typ="l") #</code></a></li>
+<li class="chapter" data-level="24" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>24</b> </a></li>
+<li class="chapter" data-level="25" data-path="questions-17.html"><a href="questions-17.html"><i class="fa fa-check"></i><b>25</b> ## Questions</a></li>
+<li class="chapter" data-level="26" data-path="what-is-true-about-exponential-growth-relative-to-density-dependent-growth-when-are-they-the-same-1-mark.html"><a href="what-is-true-about-exponential-growth-relative-to-density-dependent-growth-when-are-they-the-same-1-mark.html"><i class="fa fa-check"></i><b>26</b> 1. What is true about exponential growth relative to density-dependent growth? When are they the same [1 mark]</a></li>
+<li class="chapter" data-level="27" data-path="section-1.html"><a href="section-1.html"><i class="fa fa-check"></i><b>27</b> </a></li>
+<li class="chapter" data-level="28" data-path="how-does-density-de.html"><a href="how-does-density-de.html"><i class="fa fa-check"></i><b>28</b> 2. How does density de</a></li>
 </ul>
 
       </nav>
@@ -269,42 +274,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tues-feb-1-density-dependence-and-logistic-growth" class="section level1" number="11">
-<h1><span class="header-section-number">Chapter 11</span> Tues Feb 1: Density dependence and logistic growth</h1>
-<p>The deadline to submit your answers is Tuesday Feb 8.</p>
-<div id="required-reading-7" class="section level2" number="11.1">
-<h2><span class="header-section-number">11.1</span> Required reading</h2>
-<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p1-17. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
-<p>Today is the first day of in-person learning. The classroom is SN-3060. The lecture will be live at the usual WebEx (see BrightSpace). I will record and upload to BrightSpace.</p>
-</div>
-<div id="questions-8" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> Questions</h2>
-<ol style="list-style-type: decimal">
-<li>Sketch a graph of the logistic growth equation, <span class="math inline">\(\frac{dN(t)}{dt} = rN(t)\left(1 - \frac{N(t)}{K}\right)\)</span>, with time, <span class="math inline">\(t\)</span>, on the horizontal axis (x-axis), and population size <span class="math inline">\(N(t)\)</span>, on the vertical (y-axis).</li>
-</ol>
-<ol style="list-style-type: lower-alpha">
-<li>Add to your graph a dashed line corresponding to the carrying capacity, <span class="math inline">\(N(t) = K\)</span>.</li>
-<li>Label on your graph, <span class="math inline">\(N(0)\)</span>: the population size at <span class="math inline">\(t=0\)</span>.</li>
-<li>As drawn in your graph, is <span class="math inline">\(N(0)&lt;K\)</span>? i.e. is the population size at <span class="math inline">\(t=0\)</span> less than the carrying capacity, <span class="math inline">\(K\)</span>?</li>
-<li>As drawn, is <span class="math inline">\(r &gt; 0\)</span>? i.e. is the net reproductive rate when the population size is small, positive?</li>
-<li>What does it mean if <span class="math inline">\(r&lt;0\)</span> in terms of the per capita birth rate when the population size is small, <span class="math inline">\(b\)</span>, relative to the per capita death rate when the population size is small, <span class="math inline">\(d\)</span>?</li>
-<li>If you answered ‘yes’ to c. add another line for <span class="math inline">\(N(t)\)</span>, but when <span class="math inline">\(N(0)&gt;K\)</span> (assume <span class="math inline">\(r&gt;0\)</span>). Note that <span class="math inline">\(N(0)&gt;K\)</span> means that at time <span class="math inline">\(t=0\)</span> the population size, <span class="math inline">\(N(0)\)</span>, is greater than the carrying capacity, <span class="math inline">\(K\)</span>.</li>
-</ol>
-<p>[3 marks]</p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Draw a graph of a. exponential growth, <span class="math inline">\(N(t) = N(0)e^{rt}\)</span> or <span class="math inline">\(\frac{dN(t)}{dt} = rN(t)\)</span> (both are the same equation), and b. logistic growth <span class="math inline">\(\frac{dN(t)}{dt} = rN(t)\left(1 - \frac{N(t)}{K}\right)\)</span>, where the value of <span class="math inline">\(r\)</span> is the same for both a. and b. [1 mark]</p></li>
-<li><p>Draw a graph of logistic growth, where the population size is decreasing <span class="math inline">\(\frac{dN(t)}{dt}&lt;0\)</span>, but positive <span class="math inline">\(N(t)&gt;0\)</span>. Give a condition on the initial value of <span class="math inline">\(N(0)\)</span> or the per capita net reproductive rate when the population size is small, <span class="math inline">\(r\)</span>, such that the population size is decreasing, <span class="math inline">\(\frac{dN(t)}{dt}&lt;0\)</span>, but positive, <span class="math inline">\(N(t)&gt;0\)</span>. [2 marks]</p></li>
-</ol>
-
-</div>
+<div id="section-1" class="section level1" number="27">
+<h1><span class="header-section-number">Chapter 27</span> </h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="fri-jan-28-density-dependence-and-logistic-growth.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="thurs-feb-3-density-yield-and-the-discrete-time-density-dependence.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="what-is-true-about-exponential-growth-relative-to-density-dependent-growth-when-are-they-the-same-1-mark.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-does-density-de.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
