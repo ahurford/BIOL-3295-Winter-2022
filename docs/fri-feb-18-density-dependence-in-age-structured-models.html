@@ -277,13 +277,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p48-50. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
 <p>All of the population models that we have seen to date give exponential growth or decay because they do not have any density dependence. However, it is possible to include density dependence in models with stage structure.</p>
 <p>Consider the model described in the required reading. For today’s lab we will write an R Script to solve this model and reproduce the graph figure 2.4.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Upper limit on reproduction</span></span>
+<span id="cb15-2"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-2" aria-hidden="true" tabindex="-1"></a>r<span class="ot">&lt;-</span><span class="fl">3.3</span></span>
+<span id="cb15-3"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Proportion of larvae that become adults</span></span>
+<span id="cb15-4"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-4" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fl">0.95</span></span>
+<span id="cb15-5"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># index corresponding to a position in a vector (as list)</span></span>
+<span id="cb15-6"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-6" aria-hidden="true" tabindex="-1"></a>i<span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb15-7"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># time values</span></span>
+<span id="cb15-8"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-8" aria-hidden="true" tabindex="-1"></a>times <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">30</span>,<span class="dv">1</span>)</span>
+<span id="cb15-9"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-9" aria-hidden="true" tabindex="-1"></a>T <span class="ot">=</span> <span class="fu">length</span>(times)</span>
+<span id="cb15-10"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Preallocation of X: larvae, and Y: adults</span></span>
+<span id="cb15-11"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-11" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">rep</span>(<span class="dv">0</span>,T)</span>
+<span id="cb15-12"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-12" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">=</span> <span class="fu">rep</span>(<span class="dv">0</span>,T)</span>
+<span id="cb15-13"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Initial values at t=0</span></span>
+<span id="cb15-14"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-14" aria-hidden="true" tabindex="-1"></a>X[<span class="dv">1</span>] <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb15-15"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-15" aria-hidden="true" tabindex="-1"></a>Y[<span class="dv">1</span>] <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb15-16"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co"># The for loop calculations the next values: X[t+1] and Y[t+1] from</span></span>
+<span id="cb15-17"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co"># the current values, X[t] and Y[t], for each of the values of time, t,</span></span>
+<span id="cb15-18"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co"># sequentially</span></span>
+<span id="cb15-19"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(t <span class="cf">in</span> <span class="fu">head</span>(times,<span class="sc">-</span><span class="dv">1</span>)){</span>
+<span id="cb15-20"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Equations 28a and 28b in Vandermeer and Goldbert</span></span>
+<span id="cb15-21"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-21" aria-hidden="true" tabindex="-1"></a>  X[i<span class="sc">+</span><span class="dv">1</span>]<span class="ot">=</span>r<span class="sc">*</span>Y[i]<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>Y[i]<span class="sc">/</span>r)</span>
+<span id="cb15-22"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-22" aria-hidden="true" tabindex="-1"></a>  Y[i<span class="sc">+</span><span class="dv">1</span>]<span class="ot">=</span>p<span class="sc">*</span>X[i]</span>
+<span id="cb15-23"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># advance to the next value of time</span></span>
+<span id="cb15-24"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-24" aria-hidden="true" tabindex="-1"></a>  i<span class="ot">=</span>i<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb15-25"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-26"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="co"># graph the results</span></span>
+<span id="cb15-27"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(times,X+Y, typ = &quot;l&quot;)</span></span>
+<span id="cb15-28"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(times,X, typ = &quot;l&quot;)</span></span>
+<span id="cb15-29"><a href="fri-feb-18-density-dependence-in-age-structured-models.html#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="co">#lines(times,Y,typ=&quot;l&quot;, lwd=2)</span></span></code></pre></div>
 </div>
 <div id="questions-17" class="section level2" number="22.2">
 <h2><span class="header-section-number">22.2</span> Questions</h2>
 <ol style="list-style-type: decimal">
-<li>What is true about exponential growth relative to density-dependent growth for a stage structured model? When are they the same [1 mark]</li>
+<li><p>What is true about exponential growth relative to density-dependent growth for a stage structured model? When are they the same [1 mark]</p></li>
+<li><p>Explain how density dependence affects the larvae-adult population as described by equations 28a and b: is the production of larvae or adults affected by density dependence? Does resource competition affect fecundity, mortality, or maturation, of larvae or adults? [2 marks]</p></li>
+<li><p>When do equations 28a and b produce cyclic population dynamics? [1 mark]</p></li>
+<li><p>Run the code above in R or watch Dr. Hurford’s lecture. When the population cycles, how to the larvae and adults cycle relative to each other? [1 mark]</p></li>
 </ol>
-<p>[more questions to be added]</p>
 
 </div>
 </div>
