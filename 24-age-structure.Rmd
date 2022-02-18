@@ -46,6 +46,6 @@ for(t in head(times,-1)){
 
 2. Explain how density dependence affects the larvae-adult population as described by equations 28a and b: is the production of larvae or adults affected by density dependence? Does resource competition affect fecundity, mortality, or maturation, of larvae or adults? [2 marks]
 
-3. When do equations 28a and b produce cyclic population dynamics? [1 mark]
+3. Give a value of $r$ where equations 28a and b produce cyclic population dynamics? [1 mark]
 
 4. Run the code above in R or watch Dr. Hurford's lecture. When the population cycles, how to the larvae and adults cycle relative to each other? [1 mark]
