@@ -88,3 +88,6 @@ numerical-solutions-of-an-ordinary-differential-equation.
 fri-feb-18-density-dependence-in-age-structured-models
 required-reading-14
 questions-17
+tues-mar-1-density-dependence-in-age-structured-models
+required-reading-15
+questions-18
