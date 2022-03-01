@@ -18,4 +18,4 @@ Otto, Sarah P., and Troy Day. 2007. A Biologist's Guide to Mathematical Modeling
 
 6. What are $n_A(t)$ and $n_a(t)$ in equations 3.6a and b? [1 mark]
 
-7. What formula would you use to calculate the frequency of the $A$ allele at time, $t$? [1 mark]
+7. What formula would you use to calculate the frequency of the $A$ allele at time, $t+1$ (discrete time) or $t$ (continuous time)? [1 mark]
