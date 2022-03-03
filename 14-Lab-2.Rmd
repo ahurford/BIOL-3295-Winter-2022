@@ -1,4 +1,4 @@
-# Thurs Feb 3: LAB 2 - Logistic and exponential growith
+# Thurs Feb 3: LAB 2 - Logistic and exponential growth {#lab-2}
 
 The deadline to submit your answers is Thurs Feb 10.
 

@@ -54,7 +54,7 @@ questions-8
 thurs-feb-3-density-yield-and-the-discrete-time-density-dependence
 required-reading-8
 questions-9
-thurs-feb-3-lab-2---logistic-and-exponential-growith
+lab-2
 change-in-population-size-and-population-size
 what-is-an-ordinary-differential-equation
 numerically-integrating-an-ordinary-differential-equation-in-r

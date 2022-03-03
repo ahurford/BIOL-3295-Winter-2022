@@ -104,4 +104,4 @@ Consider the following equation which is similar to logistic growth except that 
 
 Here, $N(t)$ is the population density, $b>0$ is a per captia birth rate when $N(t)$ is small, $d > 0$ is the per capita mortality rate, and $\delta >0$ is a coefficient affecting the strength of density dependence.
 
-1. Solve this ordinary differential equation in `R`. You are to hand in your R Script and a figure of the population density (y-axis) versus time (x-axis) with a figure caption. See \@ref(figures) and \@ref(RScript) for expectations for `R` scripts, figures and captions. You may want to refer to Chapter \@ref(NumSolve2) for a template for how this problem could be solved. [7 marks]
+1. Solve this ordinary differential equation in `R`. You are to hand in your R Script and a figure of the population density (y-axis) versus time (x-axis) with a figure caption. See \@ref(figures) and \@ref(RScript) for expectations for `R` scripts, figures and captions. You may want to refer to Lab 2 (i.e. Chapter \@ref(lab-2)) for a template for how this problem could be solved. [7 marks]
