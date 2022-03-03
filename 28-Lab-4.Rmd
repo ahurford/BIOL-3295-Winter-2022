@@ -1,0 +1,20 @@
+# Thurs Feb 4: LAB 4 - Data manipulation
+
+The deadline to submit your work is Thurs Feb 10.
+
+In this lab you will practice writing your own script to load and clean data and to make a graph.
+
+Read:
+
+- [Loading or importing  data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html#loading-or-importing-data)
+
+- [Handling data](https://ahurford.github.io/quant-guide-all-courses/handling-data.html)
+
+and if you need to rememember how to make a graph read:
+
+- [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html)
+
+From the [Our World in data website](https://ourworldindata.org/future-population-growth) some of the charts have a download option in the bottom row. Choose a data set to download as a `.csv`. 
+
+
+
