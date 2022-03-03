@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 17 Fri Feb 11: Age-structured population dynamics | BIOL-3295.knit</title>
+  <title>Chapter 24 Thursday Mar 3: Evolutionary ecology | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 17 Fri Feb 11: Age-structured population dynamics | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 24 Thursday Mar 3: Evolutionary ecology | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 17 Fri Feb 11: Age-structured population dynamics | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 24 Thursday Mar 3: Evolutionary ecology | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="thurs-feb-10-age-structured-population-dynamics.html"/>
-<link rel="next" href="tues-feb-15-age-structured-population-dynamics.html"/>
+<link rel="prev" href="tues-mar-1-evolutionary-ecology.html"/>
+<link rel="next" href="thurs-feb-4-lab-4-data-manipulation.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -291,45 +291,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fri-feb-11-age-structured-population-dynamics" class="section level1" number="17">
-<h1><span class="header-section-number">Chapter 17</span> Fri Feb 11: Age-structured population dynamics</h1>
-<p>DUE DATE: Feb 18</p>
-<div id="required-reading-12" class="section level2" number="17.1">
-<h2><span class="header-section-number">17.1</span> Required Reading</h2>
-<p>Read over yesterdays material</p>
+<div id="thursday-mar-3-evolutionary-ecology" class="section level1" number="24">
+<h1><span class="header-section-number">Chapter 24</span> Thursday Mar 3: Evolutionary ecology</h1>
+<p>DUE: Tues Mar 10</p>
+<div id="required-readings" class="section level2" number="24.1">
+<h2><span class="header-section-number">24.1</span> Required Readings</h2>
+<ul>
+<li><p><a href="https://www.gov.uk/government/publications/long-term-evolution-of-sars-cov-2-26-july-2021/long-term-evolution-of-sars-cov-2-26-july-2021">Long term evolution of SARS-CoV-2, 26 July 2021</a><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1007566/S1335_Long_term_evolution_of_SARS-CoV-2.pdf">[PDF]</a></p></li>
+<li><p><a href="https://www.science.org/content/article/new-sars-cov-2-variants-have-changed-pandemic-what-will-virus-do-next">Kai Kuperfschimdt. Evolving threat. Science. Aug 2021</a></p></li>
+</ul>
+<p>In the previous class, we explored some simple connections between population dynamics and evolutionary ecology. For the next few classes we will consider the evolutionary ecology of COVID-19. Take the time to read the above two articles.</p>
 </div>
-<div id="questions-15" class="section level2" number="17.2">
-<h2><span class="header-section-number">17.2</span> Questions</h2>
+<div id="questions-19" class="section level2" number="24.2">
+<h2><span class="header-section-number">24.2</span> Questions</h2>
 <ol style="list-style-type: decimal">
-<li>For the Leslie matrix from last class:</li>
-</ol>
-<p><span class="math display">\[\begin{equation}
-\mathbb{A}=
-\left[
-\begin{array}{cc}
-0 &amp; 2\\
-0.5 &amp; 0.2\\
-\end{array}
-\right]
-\end{equation}\]</span></p>
-<p>the stable stage distribution is: <span class="math inline">\([0.644, 0.356]^T\)</span>, which means that when the population has 64.4% young-of-the-year frogs, and 35.6% frogs one year or older, each year both age classes will increase by a fixed amount which is the dominant eigenvalue that you calculated for yesterday’s question 1.</p>
-<p>Check that this is true. Let,</p>
-<p><span class="math display">\[\begin{equation}
-\vec{N}_t = 
-\left[
-\begin{array}{c}
-64.4\\
-35.6\\
-\end{array}
-\right].
-\end{equation}\]</span></p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Calculate <span class="math inline">\(\vec{N}_{t+1} = \mathbb{A}\vec{N}_{t}\)</span> (remember to use matrix multiplication). [1 mark]</p></li>
-<li><p>Calculate the increase from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+1\)</span> for both stages, i.e., <span class="math inline">\(f_1 = N_{1,t+1}/64.4\)</span> and <span class="math inline">\(f_2 = N_{2,t+1}/35.6\)</span>. How do <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> compare to the dominant eigenvalue that you calculated for yesterday’s question 1? [2 marks]</p></li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Now let’s choose <span class="math inline">\(\vec{N}_t\)</span> such that it is not the stable stage structure values. Let, <span class="math inline">\(\vec{N}_0 = [50, 50]\)</span>. Using the same Leslie matrix, <span class="math inline">\(\mathbb{A}\)</span>, do the matrix multiplication to calculate <span class="math inline">\(\vec{N}_1\)</span>, <span class="math inline">\(\vec{N}_2\)</span>, and <span class="math inline">\(\vec{N}_3\)</span> (remember that <span class="math inline">\(\vec{N}_t\)</span> is a vector containing two values). [3 marks]</p></li>
-<li><p>For you answer to 2. calculate <span class="math inline">\(f_{1,t} = N_{1,t+1}/N_{1,t}\)</span> and <span class="math inline">\(f_{2,t} = N_{2,t+1}/N_{2,t}\)</span> for <span class="math inline">\(t=0,1,2\)</span>. Are these values getting closer to the dominant eigenvalue of <span class="math inline">\(\mathbb{A}\)</span> as <span class="math inline">\(t\)</span> gets larger? [2 marks]</p></li>
+<li><p>Will new COVID-19 variants likely emerge? [1 mark]</p></li>
+<li><p>Describe a characteristic of the beta variant mentioned in one of the readings. [1 mark]</p></li>
+<li><p>Write a paragraph describing whether COVID-19 will likely evolve to cause more severe disease. Be sure to reference statements made in both readings [4 marks]</p></li>
+<li><p>Make a table that lists the 4 variant scenarios (rows) and the likelihood and impact of each (two columns; where available, from the Long-term evolution reading) [2 marks]</p></li>
 </ol>
 
 </div>
@@ -339,8 +318,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="thurs-feb-10-age-structured-population-dynamics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tues-feb-15-age-structured-population-dynamics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tues-mar-1-evolutionary-ecology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="thurs-feb-4-lab-4-data-manipulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -91,7 +91,7 @@ questions-17
 tues-mar-1-evolutionary-ecology
 required-reading-15
 questions-18
-thursday-mar-2-evolutionary-ecology
+thursday-mar-3-evolutionary-ecology
 required-readings
 questions-19
 thurs-feb-4-lab-4---data-manipulation
