@@ -294,17 +294,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="thurs-feb-4-lab-4---data-manipulation" class="section level1" number="25">
 <h1><span class="header-section-number">Chapter 25</span> Thurs Feb 4: LAB 4 - Data manipulation</h1>
 <p>The deadline to submit your work is Thurs Feb 10.</p>
-<p>In this lab you will practice writing your own script to load and clean data and to make a graph.</p>
-<p>Read:</p>
+<p><strong>HAND-IN: You are to make a line graph using the data from the <a href="https://ourworldindata.org/future-population-growth">Our World in data website</a> with <code>Year</code> on the x-axis, and two lines each representing different data. Hand in your R Script that makes your graph. Remember to use <a href="https://ahurford.github.io/quant-guide-all-courses/style.html">Best Practices</a> for writing your script.</strong></p>
+<p>Get started by reading:</p>
 <ul>
 <li><p><a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html#loading-or-importing-data">Loading or importing data</a></p></li>
 <li><p><a href="https://ahurford.github.io/quant-guide-all-courses/handling-data.html">Handling data</a></p></li>
 </ul>
-<p>and if you need to rememember how to make a graph read:</p>
+<p>and if you need to remember how to make a graph:</p>
 <ul>
 <li><a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a></li>
 </ul>
 <p>From the <a href="https://ourworldindata.org/future-population-growth">Our World in data website</a> some of the charts have a download option in the bottom row. Choose a data set to download as a <code>.csv</code>.</p>
+<p>Below is an example solution to this lab that may help you. There are many solutions to this lab. You should use the code below as a guide, but your solution should plot different data. If you are able to use the <code>dplyr</code> package, you will likely find it easier. If you cannot load <code>dplyr</code>, then you may complete this lab in base R.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load dplypr - this is a package that makes data handling easier</span></span>
+<span id="cb16-2"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(dplyr)</span>
+<span id="cb16-3"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Import the data</span></span>
+<span id="cb16-5"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># (Download and save the .csv data (change the name of the file if you need too). Make sure the data is saved as a .csv, and you know the location where it is saved. You might also use the &quot;Import Dataset&quot; button.)</span></span>
+<span id="cb16-6"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-6" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;~/Desktop/population.csv&quot;</span>)</span>
+<span id="cb16-7"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># In the console, now, I would query head(population) to see that the</span></span>
+<span id="cb16-8"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># data has loaded</span></span>
+<span id="cb16-9"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Change column names to more sensible names</span></span>
+<span id="cb16-11"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># (I typed population$ in the console, let the column names autofill, and then I copied the long column name)</span></span>
+<span id="cb16-12"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># The code below is using pipes %&gt;% which are useful if working with the dplyr package.</span></span>
+<span id="cb16-13"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">#[If you are working in base R, you will just need to write this out as several lines of code and write out the variable names that you are applying your manipulations too each time]</span></span>
+<span id="cb16-14"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-14" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> population <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">Estimate=</span>Estimates..<span class="dv">1950</span>...<span class="dv">2020</span>..Total.population.by.broad.age.group..both.sexes.combined..thousands....Total, <span class="at">Fertility =</span> Medium.fertility.variant..<span class="dv">2020</span>...<span class="dv">2100</span>..Total.population.by.broad.age.group..both.sexes.combined..thousands....Total)</span>
+<span id="cb16-15"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="do">## Filter for &#39;Afganistan&#39; as a country, select columns Year and Estimate, remove entries that are NA in the Estimate column</span></span>
+<span id="cb16-17"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-17" aria-hidden="true" tabindex="-1"></a>AFG <span class="ot">&lt;-</span> population <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Code<span class="sc">==</span><span class="st">&quot;AFG&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(Year,Estimate) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Estimate))</span>
+<span id="cb16-18"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for &#39;Argentina&#39; as a country, select columns Year and Estimate, remove entries that are NA in the Estimate column</span></span>
+<span id="cb16-20"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-20" aria-hidden="true" tabindex="-1"></a>ARG <span class="ot">&lt;-</span> population <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Code<span class="sc">==</span><span class="st">&quot;ARG&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(Year,Estimate) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Estimate))</span>
+<span id="cb16-21"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-22"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Below is a command that I ran in the console to see what my data looked like - particularly, I am interested in if the same years occur for both AFG and ARG</span></span>
+<span id="cb16-23"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(AFG$Year, AFG$Estimate)</span></span>
+<span id="cb16-24"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(ARG$Year, ARG$Estimate)</span></span>
+<span id="cb16-25"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-26"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="co"># How many entries in the columns of ARG and AFG?</span></span>
+<span id="cb16-27"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="co"># length(ARG$Year)</span></span>
+<span id="cb16-28"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="co"># length(AFG$Year)</span></span>
+<span id="cb16-29"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the start year?</span></span>
+<span id="cb16-30"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="co"># AFG$Year[1]</span></span>
+<span id="cb16-31"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="co"># ARG$Year[1]</span></span>
+<span id="cb16-32"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the last year?</span></span>
+<span id="cb16-33"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="co"># tail(AFG$Year,1)</span></span>
+<span id="cb16-34"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-34" aria-hidden="true" tabindex="-1"></a><span class="co"># tail(ARG$Year,1)</span></span>
+<span id="cb16-35"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-36"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-37"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Both the Argentina and Afganistan data have the same years. I would like to combine the data I have columns: Year, ARG, and AFG:</span></span>
+<span id="cb16-38"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="co"># [But first I need to change the column name &#39;Estimate&#39; to either &#39;ARG&#39; or &#39;AFG&#39;]</span></span>
+<span id="cb16-39"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-39" aria-hidden="true" tabindex="-1"></a>ARG<span class="ot">&lt;-</span>ARG <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">ARG=</span>Estimate)</span>
+<span id="cb16-40"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-40" aria-hidden="true" tabindex="-1"></a>AFG<span class="ot">&lt;-</span>AFG <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">AFG=</span>Estimate)</span>
+<span id="cb16-41"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-41" aria-hidden="true" tabindex="-1"></a><span class="do">## Join the two different datasets into one data set called &#39;data&#39;</span></span>
+<span id="cb16-42"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-42" aria-hidden="true" tabindex="-1"></a>data<span class="ot">&lt;-</span><span class="fu">left_join</span>(ARG, AFG)</span>
+<span id="cb16-43"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-44"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="co"># I would like to change the units to millions (so that the y-axis of my graph is nice)</span></span>
+<span id="cb16-45"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-45" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">ARG=</span>ARG<span class="sc">/</span><span class="fl">1e6</span>,<span class="at">AFG=</span>AFG<span class="sc">/</span><span class="fl">1e6</span>)</span>
+<span id="cb16-46"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-47"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="do">## Plotting</span></span>
+<span id="cb16-48"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-48" aria-hidden="true" tabindex="-1"></a><span class="co"># To get a good y-axis I set the limits as starting at 0 and whichever is the maximum value of the y-axis data for ARG or AFG.</span></span>
+<span id="cb16-49"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-49" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>Year, data<span class="sc">$</span>ARG, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">typ =</span> <span class="st">&quot;l&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fu">max</span>(data<span class="sc">$</span>ARG, data<span class="sc">$</span>AFG)), <span class="at">ylab =</span> <span class="st">&quot;Estimate (in millions)&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Year&quot;</span>)</span>
+<span id="cb16-50"><a href="thurs-feb-4-lab-4-data-manipulation.html#cb16-50" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(data<span class="sc">$</span>Year, data<span class="sc">$</span>AFG, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="BIOL-3295_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>There are many ways of going about this assignment - good luck! And please ask if you need help.</p>
 
 </div>
             </section>
