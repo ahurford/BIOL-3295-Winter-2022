@@ -1,0 +1,19 @@
+# Thursday Mar 2: Evolutionary ecology 
+
+DUE: Tues Mar 10
+
+## Required Readings
+- [Long term evolution of SARS-CoV-2, 26 July 2021](https://www.gov.uk/government/publications/long-term-evolution-of-sars-cov-2-26-july-2021/long-term-evolution-of-sars-cov-2-26-july-2021)[[PDF]](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1007566/S1335_Long_term_evolution_of_SARS-CoV-2.pdf) 
+
+- [Kai Kuperfschimdt. Evolving threat. Science. Aug 2021](https://www.science.org/content/article/new-sars-cov-2-variants-have-changed-pandemic-what-will-virus-do-next)
+
+In the previous class, we explored some simple connections between population dynamics and evolutionary ecology. For the next few classes we will consider the evolutionary ecology of COVID-19. Take the time to read the above two articles.
+
+## Questions
+1. Will new COVID-19 variants likely emerge? [1 mark]
+
+2. Describe a characteristic of the beta variant mentioned in one of the readings. [1 mark]
+
+3. Write a paragraph describing whether COVID-19 will likely evolve to cause more severe disease. Be sure to reference statements made in both readings [4 marks]
+
+4. Make a table that lists the 4 variant scenarios (rows) and the likelihood and impact of each (two columns; where available, from the Long-term evolution reading) [2 marks]

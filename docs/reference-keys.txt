@@ -91,6 +91,9 @@ questions-17
 tues-mar-1-evolutionary-ecology
 required-reading-15
 questions-18
+thursday-mar-2-evolutionary-ecology
+required-readings
+questions-19
 final-project
 option-1-review-paper
 option-2-analysis
