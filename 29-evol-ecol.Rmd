@@ -2,10 +2,11 @@
 
 DUE: Tues Mar 11
 
+Today we will study a population model for disease spread to better understand _fitness_, and the meaning of the net reproductive rate, for different infectious disease variants.
+
 ## Required Reading
 Otto, Sarah P., and Troy Day. 2007. A Biologist's Guide to Mathematical Modeling in Ecology and Evolution, Princeton University Press. Section 3.5 p93-95 and Section 8.2 p327-329.  [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551).
 
-Today we will study a population model for disease spread to better understand _fitness_, and the meaning of the net reproductive rate, for different infectious disease variants.
 
 ## Questions
 1. What does it mean if dynamics are at equilibrium? [1 mark]
