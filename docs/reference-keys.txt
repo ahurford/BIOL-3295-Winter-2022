@@ -98,6 +98,9 @@ thurs-mar-3-lab-4---data-manipulation
 fri-mar-4-evolutionary-ecology
 required-reading-16
 questions-20
+tues-mar-8-evolutionary-ecology
+required-reading-17
+questions-21
 final-project
 option-1-review-paper
 option-2-analysis

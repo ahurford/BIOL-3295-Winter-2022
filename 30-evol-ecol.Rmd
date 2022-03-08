@@ -1,0 +1,21 @@
+# Tues Mar 8: Evolutionary ecology 
+
+DUE: Tues Mar 19
+
+Today we will study the stability of an equilibrium, working towards characterizing an evolutionarily stable strategy for next class.
+
+## Required Reading
+Otto, Sarah P., and Troy Day. 2007. A Biologist's Guide to Mathematical Modeling in Ecology and Evolution, Princeton University Press. Section 3.5 p93-95 and Section 8.2 p173.  [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551).
+
+
+## Questions
+1. What does it mean for an equilibrium to be stable? [1 mark]
+
+2. What is the stability criterion for the disease-free equilibrium for the model below? [2 marks]
+
+\begin{equation}
+\frac{dS}{dt} = \theta - d S(t) - (1-p)\beta S(t)I(t) - pz\beta S(t)I(t)\\
+\frac{dI}{dt} = (1-p)\beta S(t)I(t) + pz\beta S(t)I(t)-\delta I(t) - \gamma I(t)
+\end{equation}
+
+3. What is the herd immunity threshold for the model from question 2? [1 mark]
