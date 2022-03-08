@@ -2,7 +2,7 @@
 
 The deadline to submit your work is Thurs Mar 10.
 
-**HAND-IN: You are to make a line graph using the data from the [Our World in data website](https://ourworldindata.org/future-population-growth) with `Year` on the x-axis, and two lines each representing different data. Hand in your R Script that makes your graph. Remember to use [Best Practices](https://ahurford.github.io/quant-guide-all-courses/style.html) for writing your script.**
+**HAND-IN: You are to make a line graph using the data from the [Our World in data website](https://ourworldindata.org/future-population-growth) with `Year` on the x-axis, and two lines each representing different data. Hand in your: (1) R Script that makes your graph; (2) the graph; and (3) the .csv file. Remember to use [Best Practices](https://ahurford.github.io/quant-guide-all-courses/style.html) for writing your script.**
 
 Get started by reading:
 
