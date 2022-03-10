@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 20 LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model | BIOL-3295.knit</title>
+  <title>Chapter 28 Thurs Mar 10: Evolutionary ecology | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 20 LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 28 Thurs Mar 10: Evolutionary ecology | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 20 LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 28 Thurs Mar 10: Evolutionary ecology | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="thurs-feb-17-age-structured-population-dynamics.html"/>
-<link rel="next" href="midterm.html"/>
+<link rel="prev" href="tues-mar-8-evolutionary-ecology.html"/>
+<link rel="next" href="final-project.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -306,65 +306,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lab-3---thurs-feb-17-computational-analysis-of-yellow-columbines-aquilegia-chrysantha-stage-structured-model" class="section level1" number="20">
-<h1><span class="header-section-number">Chapter 20</span> LAB 3 - Thurs Feb 17: Computational analysis of yellow columbines (Aquilegia chrysantha) stage-structured model</h1>
-<p>Due Thurs Feb 24</p>
-<p>To hand in:
-You will hand in a report summarizing your analysis of the yellow columbine population. Details of what the report should include can be found at the end of these instructions.</p>
+<div id="thurs-mar-10-evolutionary-ecology" class="section level1" number="28">
+<h1><span class="header-section-number">Chapter 28</span> Thurs Mar 10: Evolutionary ecology</h1>
+<p>DUE: Tues Mar 17</p>
+<p>The most relevant material for today’s class is the lecture which is available on the Brightspace.</p>
+<div id="relevant-reading" class="section level2" number="28.1">
+<h2><span class="header-section-number">28.1</span> Relevant Reading</h2>
+<p>Otto, Sarah P., and Troy Day. 2007. A Biologist’s Guide to Mathematical Modeling in Ecology and Evolution, Princeton University Press. Section 12.3 p506-512 and Section 12.4 p521-525 (<strong>Example: Evolution of pathogen virulence</strong>). <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551">Link</a>.</p>
+</div>
+<div id="questions-22" class="section level2" number="28.2">
+<h2><span class="header-section-number">28.2</span> Questions</h2>
 <ol style="list-style-type: decimal">
-<li><p>Open R Studio and Install the package <code>popbio</code>.</p></li>
-<li><p>Download and run the file Lab 3.R (found on BrightSpace). This code will produce 2 graphs: 1) the number of seeds over time, and 2) the number of the different types of plants over time.</p></li>
-<li><p>Into the R console type: <code>head(aq.trans)</code></p></li>
+<li><p>What is an evolutionarily stable strategy (or trait)? [1 mark]</p></li>
+<li><p>Write down a system of equations that describes the number of individuals with a mutant and a resident trait. [1 mark]</p></li>
+<li><p>Describe the equilibrium that we are interested in, when determining if a strategy (or trait) is evolutionarily stable. How many individuals are each of the resident and mutant trait at the equilibrium of interest? [1 mark]</p></li>
+<li><p>In absence of any life history trade-offs, how will viral disease severity evolve?</p></li>
 </ol>
-<p>This command lists the first six data entries. To understand the meaning of the columns in the dataframe, click the Packages tab, click <code>popbio</code> and then scroll down to <code>aq.trans</code> and click on that. Does the dataset contain any information on the number of seeds produced each year?</p>
-<p>To determine how many different plots are recorded in this dataset, into the R console type: <code>table(aq.trans$plot)</code></p>
-<p>Modify this command to generate summary statistics for other variables that you are interested in.</p>
-<ol start="4" style="list-style-type: decimal">
-<li>The code uses a subset of the data: only year 1998 and plot 909. To see the data subset, type: <code>sf</code></li>
-</ol>
-<p>into the R console. Does every flowering plant produce fruit?</p>
-<ol start="5" style="list-style-type: decimal">
-<li><p>The dataset does not contain any information on the number of seeds. In the code, what assumptions are made to estimate the size of the seed bank in 1999?</p></li>
-<li><p>Type, <code>A</code> into the R console. This is the projection matrix. Where i is an index for the row number (top to bottom) and j is an index for the column (left to right), the elements of the projection matrix are the number of i that will be produced by each j over the course of a year.</p></li>
-</ol>
-<p>Try it out – the number of seeds produced per seed is 0.4. This means that each seed has a 0.4 probability of surviving a year. How many small plants is each small plant expected to produce? How many large? How many with flowers?</p>
-<p>If a small plant, next year, can only be a small plant, a large plant a flowering plant, or dead, what must be the probability that the small plant dies? What is the probability a large plant dies? A flower?</p>
-<ol start="7" style="list-style-type: decimal">
-<li>Type <code>nt</code> into the R console. The intrinsic rate of growth of the population is the dominant eigenvalue of the projection matrix, A. If the dominant eigenvalue is bigger than 1, the population will grow. If the dominant eigenvalue is less than 1, the population will eventually go extinct. The dominant eigenvalue of our projection matrix, A, is calculated as, <code>nt$lambda</code>.</li>
-</ol>
-<p>Will the population of yellow columbines in plot 909 grow?</p>
-<ol start="8" style="list-style-type: decimal">
-<li>Type the command, <code>nt=pop.projection(A,n,20)</code> into the R console. This command starts with an initial population size of n and uses the projection matrix A, to calculate the size of the population for the next 19 years. Note that in the code <code>n = c(10000, 100, 100, 100, 100)</code> means that we start with 10,000 seeds and 100 of each type of plant. The predicted number of yellow columbine in each stage each year is <code>nt$stage.vectors</code>.</li>
-</ol>
-<p>After 19 years, which stages have increased in prevalence? Consult the graphs (be sure to figure out which lines correspond to which stages – you will need to consult the R code). Does it look like the population will persist? Increase the number of years that you predict the size of the population for. Were you correct that the population will go extinct?</p>
-<ol start="9" style="list-style-type: decimal">
-<li>For this model, eventually the fraction of the population that is in each stage will be unchanging. The relative abundance of each stage (providing that sufficient time has passed) is predicted by the right eigenvalue of the projection matrix, A. Type <code>stable.stage(A)</code> into the R console. Reset the number of years into the future that you predict the population abundance to 19 (i.e., the command from 8.) and re-run Lab6.R (using the Source button). Now, we wish to test whether the predicted relative of abundance of each stage is achieved on the 19th year into the future. Type, <code>nt$stage.vectors[,19]/sum(nt$stage.vectors[,19])</code>.</li>
-</ol>
-<p>The stable stage distribution is dominated by the abundance of seeds. To calculate the relative abundance of just the plant stages type <code>nt$stage.vectors[2:5,19]/sum(nt$stage.vectors[2:5,19])</code></p>
-<p>About what percentage of plants would we expect to be flowering?</p>
-<p>If the population does not start at the stable stage distribution it may take some time to reach the stable distribution. Is the stable stage distribution reached on the 5th year? Modify the commands form above to determine this.</p>
-<ol start="10" style="list-style-type: decimal">
-<li>Suppose it were possible to increase any non-zero entry of the projection matrix by a fixed amount. Increasing the value of which entry by a fixed amount would have the biggest affect the intrinsic growth rate, lambda?</li>
-</ol>
-<p>To answer this question type, <code>sensitivity(A, zero=TRUE)</code></p>
-<p>The results of this command tells us that increasing the fraction of seeds that germinate each year would most substantially increase the intrinsic growth rate. How this information help us to figure out how best to promote the growth of yellow columbine?</p>
-<ol start="11" style="list-style-type: decimal">
-<li>Currently, the population of yellow columbines is destined to go extinct. Change the value of seed.survival until the population is just able to persist. What is this value?</li>
-</ol>
-<p>Write a report describing the results of your analysis of the yellow columbine population. Your report should include the following:</p>
-<p>• In the Introduction section, write one sentence (with a citation) describing yellow columbine (Aquilegia chrysantha). The citation may be from the Internet or from the peer-reviewed literature.</p>
-<p>• In the Data section, describe the data that was used to parameterize the projection matrix. Be sure to mention that only a subset of the data was used in the analysis. Be sure to mention the assumptions that were made regarding the seed bank.</p>
-<p>• In the Results section, describe the findings of your analysis. What was the intrinsic rate of growth? Write out the projection matrix and explain what the elements of the projection matrix mean. What is the stable stage distribution? What does it mean? Include a graph of the population dynamics of the different plant stages of yellow columbine. In the figure caption, make sure you mention what each of the different line types represents.</p>
-<p>• In the Discussion section, you should address the following questions: How might your conclusions change if your assumptions were different? What was a limitation of your analysis? What are the implications of the sensitivity analysis results for suggested measures to help protect yellow columbine?</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="thurs-feb-17-age-structured-population-dynamics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="midterm.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tues-mar-8-evolutionary-ecology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
