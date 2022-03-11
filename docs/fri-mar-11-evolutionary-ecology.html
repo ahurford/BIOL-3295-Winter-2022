@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Thurs Jan 20: LAB 1 - Introduction to R. | BIOL-3295.knit</title>
+  <title>Chapter 29 Fri Mar 11: Evolutionary ecology | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Thurs Jan 20: LAB 1 - Introduction to R. | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 29 Fri Mar 11: Evolutionary ecology | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Thurs Jan 20: LAB 1 - Introduction to R. | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 29 Fri Mar 11: Evolutionary ecology | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="PE3.html"/>
-<link rel="next" href="fri-jan-21-exponential-growth-continuous-time.html"/>
+<link rel="prev" href="thurs-mar-10-evolutionary-ecology.html"/>
+<link rel="next" href="final-project.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -311,53 +311,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="thurs-jan-20-lab-1---introduction-to-r." class="section level1" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Thurs Jan 20: LAB 1 - Introduction to R.</h1>
-<p>The deadline to submit your answers is Thurs Jan 27.</p>
-<p>The goal of today’s lab is to make a graph similar to this graph;</p>
-<p><img src="BIOL-3295_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>Where the dots are the Protection Island data for the size of the population for different years, and the lines are the predicted population size if population growth is exponential and the geometric growth rate is <span class="math inline">\(\lambda\)</span>.</p>
+<div id="fri-mar-11-evolutionary-ecology" class="section level1" number="29">
+<h1><span class="header-section-number">Chapter 29</span> Fri Mar 11: Evolutionary ecology</h1>
+<p>DUE DATE: Fri Mar 18.</p>
+<p>This <a href="https://www.zoology.ubc.ca/~bio418/">link</a> contains the course information for an evolutionary ecology class at UBC.</p>
+<div id="questions-23" class="section level2" number="29.1">
+<h2><span class="header-section-number">29.1</span> Questions</h2>
 <ol style="list-style-type: decimal">
-<li><p>Install R and R Studio on your computer. See <a href="https://ahurford.github.io/quant-guide-all-courses/install.html">here</a> for instructions.</p></li>
-<li><p>Read <a href="https://ahurford.github.io/quant-guide-all-courses/rstudio.html">Finding your way around R Studio</a>. Complete the EXERCISES. There are 2. [2 marks]</p></li>
-<li><p>Read <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html">Introduction to R</a>. Complete the EXERCISES. Where TRY IT appears - try it! Where HAND IN appears, add the answers to your answers (which could be a .R file or an .doc file). There are 6. [6 marks]</p></li>
-<li><p>Read <a href="https://ahurford.github.io/quant-guide-all-courses/help.html">Getting R help</a>.</p></li>
-<li><p>Read <a href="https://ahurford.github.io/quant-guide-all-courses/style.html">Best practices</a>. Neither 4. or 5. have marks assigned, they will just make working easier on future assignments.</p></li>
-<li><p>Read 9.1 <a href="https://ahurford.github.io/quant-guide-all-courses/handling-data.html">Handling data - Base R</a>. Complete the TRY IT exercises.</p></li>
-<li><p>Read 10 <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a>. Complete the excerises HAND IN. There are 3. [3 marks]</p></li>
+<li>Choose one of the topics and read enough about that topic to be able to write 1 paragraph explaining what that topic is about. Please make sure that your paragraph includes clear definitions of the relevant terms.</li>
 </ol>
-<p>8a. Now you are ready to make the graph at the top of the page. Making a new R Script and enter your name, title, and data following the Best practices. Make a data frame for the Protection Island pheasant population population sizes. If you’ve done it correctly it should be like this:</p>
-<pre><code>##   time protection.island
-## 1 1937                10
-## 2 1938                35
-## 3 1939               110
-## 4 1940               400</code></pre>
-<p>These are that data that will be the points in your plot. You could plot them now with <code>plot(data$time, data$protection.island)</code>, but lets work on the line part next.</p>
-<p>8b. Assign a value of to a variable <code>lambda</code>, i.e., <code>lambda &lt;- 1.5</code>. Assign <code>N0&lt;-10</code>. Make a sequence of the population sizes that would arise from exponential population growth and assign this sequence a variable name:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="thurs-jan-20-lab-1-introduction-to-r-.html#cb2-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">c</span>(N0<span class="sc">*</span>lambda<span class="sc">^</span><span class="dv">0</span>, N0<span class="sc">*</span>lambda<span class="sc">^</span><span class="dv">1</span>,N0<span class="sc">*</span>lambda<span class="sc">^</span><span class="dv">2</span>,N0<span class="sc">*</span>lambda<span class="sc">^</span><span class="dv">3</span>)</span></code></pre></div>
-<p>Check the length of <code>model</code> using <code>length(model)</code> in your console. Is it the same as <code>data$time</code>? If so we can column bind:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="thurs-jan-20-lab-1-introduction-to-r-.html#cb3-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(data,<span class="at">model=</span>model)</span>
-<span id="cb3-2"><a href="thurs-jan-20-lab-1-introduction-to-r-.html#cb3-2" aria-hidden="true" tabindex="-1"></a>data2</span></code></pre></div>
-<pre><code>##   time protection.island model
-## 1 1937                10 10.00
-## 2 1938                35 15.00
-## 3 1939               110 22.50
-## 4 1940               400 33.75</code></pre>
-<p>8c. Now we can make our plot:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="thurs-jan-20-lab-1-introduction-to-r-.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data2<span class="sc">$</span>time, data2<span class="sc">$</span>protection.island, <span class="at">ylab =</span> <span class="st">&quot;Number of pheasants&quot;</span>,  <span class="at">xlab =</span> <span class="st">&quot;year&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span>
-<span id="cb5-2"><a href="thurs-jan-20-lab-1-introduction-to-r-.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(data2<span class="sc">$</span>time,data2<span class="sc">$</span>model)</span></code></pre></div>
-<p><img src="BIOL-3295_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>Make sure you label your x- and y- axes as I have done in the code above. You will need to <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html#export">export</a> your graph, paste it into Microsoft Word and write a figure caption: without a legend, you need to explain what the dots are lines are. Adjust the value of <code>lambda</code>. In your figure caption state the value of <code>lambda</code> that you used.</p>
-<p>You must also hand in the R script that produces the graph - it will just be a few lines long. All of question 8 is worth [6 marks]</p>
+<p>List the sources of information that you read to learn about the topic. You may choose the UBC lecture slides, the UBC readings, Wikipedia, books from the library on evolutionary ecology, or peer-reviewed journal articles.</p>
+<p>[10 marks]</p>
+</div>
+<div id="some-relevant-textbooks" class="section level2" number="29.2">
+<h2><span class="header-section-number">29.2</span> Some relevant textbooks</h2>
+<p>Big problems in ecology and evolution by Sherratt and Wilkinson. <a href="https://ebookcentral.proquest.com/lib/mun/reader.action?docID=430616&amp;ppg=136">Link</a>.</p>
+<p>Evolutionary ecology: concepts and case studies by Fox, Roff, and Fairbairn <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=430289">Link</a></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="PE3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fri-jan-21-exponential-growth-continuous-time.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="thurs-mar-10-evolutionary-ecology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
