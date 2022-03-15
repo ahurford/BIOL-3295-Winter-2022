@@ -107,6 +107,9 @@ questions-22
 fri-mar-11-evolutionary-ecology
 questions-23
 some-relevant-textbooks
+tues-mar-15-evolutionary-ecology
+required-readingviewing
+questions-24
 final-project
 option-1-review-paper
 option-2-analysis
