@@ -1,18 +1,15 @@
 # Thurs Mar 17: Evolutionary ecology
 
 DUE DATE: Thurs Mar 24.
-Chapter 31 Thurs Mar 17: Evolutionary ecology
-
-DUE DATE: Thurs Mar 24.
-31.1 Required Reading/Viewing
 
 In Course Content on BrightSpace review the recorded lecture or the March 17 Life History Evolution.pdf file containing the lecture slides.
 
 For the questions that ask you to make graphs, note that you can do this in R as,
-
+```{r, fig.show=F}
 x <- c(0.1, 0,3, 0.4, 0.8)
 y <- c(0.9, 0,8, 0.6, 0.4)
 plot(x,y)
+```
 
 31.2 Questions
 

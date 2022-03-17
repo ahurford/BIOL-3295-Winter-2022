@@ -12,11 +12,8 @@ For today's lab your are to hand in a 1 page outline of your final project. Your
 1. What might your main point be? (it is okay if it changes between now and when you finish your final report) [1 mark]
 1. What are 2-3 key references relevant to your topic (please use the _American Naturalist_ citation format as described in the Final project description, see \@ref(final))? [5 marks]
 1. Draft 1 or more figures that might appear in your final report. If you are doing a review, see the guidelines for a conceptual figure in \@ref(review).
++ For the analysis option, list or draw what will be on the x- and y-axes of your graphs: will it be a line graph, a bar graph, a scatterplot, or other? Will there be multiple line or symbol types? Will there be different colored bar, lines, or points? What data will be represented by the different lines, symbols or colors? You do not necessarily have to answer these questions explicitly, but these are examples of questions you might consider in drafting your figure. [5 marks]
++ Note that R can do many fancy type of graphs, and if you would like help making your data visualization idea a reality, Dr. Hurford and Levi are happy to help!
 
-For the analysis option, list or draw what will be on the x- and y-axes of your graphs: will it be a line graph, a bar graph, a scatterplot, or other? Will there be multiple line or symbol types? Will there be different colored bar, lines, or points? What data will be represented by the different lines, symbols or colors? You do not necessarily have to answer these questions explicitly, but these are examples of questions you might consider in drafting your figure. [5 marks]
+5. Review paper only: what will be the sections of your review? Analysis only: what are the data sources that you will be using for your analysis? Describe the characteristics of the data. [1 mark]
 
-Note that R can do many fancy type of graphs, and if you would like help making your data visualization idea a reality, Dr. Hurford and Levi are happy to help!
-
-1. Review paper only: what will be the sections of your review? Analysis only: what are the data sources that you will be using for your analysis? Describe the characteristics of the data. [1 mark]
-
-cc
