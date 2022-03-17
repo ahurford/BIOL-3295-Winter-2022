@@ -110,6 +110,9 @@ some-relevant-textbooks
 tues-mar-15-evolutionary-ecology
 required-readingviewing
 questions-24
+thurs-mar-17-evolutionary-ecology
+required-readingviewing-1
+questions-25
 final-project
 option-1-review-paper
 option-2-analysis
