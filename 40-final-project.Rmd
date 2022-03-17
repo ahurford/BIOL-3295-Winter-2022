@@ -1,8 +1,8 @@
-# Final project
+# Final project {#final}
 
 For your final project you may choose either option:
 
-1. Review paper: Read and synthesize information on a new topic in population and evolutionary ecology.
+1. Review paper: Read and synthesize information on a topic in population and evolutionary ecology.
 
 or,
 
@@ -31,7 +31,7 @@ Topic ideas:
 - Any of your own ideas, that are approved by Dr. Hurford or a teaching assistant.
 
 ## Option 2: Analysis
-If you choose to do a final project that is an _Analysis_ you should use some of the exercises we have completed for class as a guide (for example, the Doubling time or Protection Island analyses - note that you will need to write your final project as a report, rather than a series of questions as the assignments typically are). You are expected to subset the data and make a graph. Be sure to decide on a principle from population biology or evolutionary ecology to discuss your analysis with respect to. For ideas you may wish to consult textbooks in these subject areas.
+If you choose to do a final project that is an _Analysis_ you should use some of the exercises we have completed for class as a guide (for example, the Protection Island and the Yellow columbine analyses - note that you will need to write your final project as a report, rather than a series of questions as the assignments typically are). You are expected to subset the data and make a graph. Be sure to decide on a principle from population biology or evolutionary ecology to discuss your analysis with respect to. For ideas you may wish to consult textbooks in these subject areas.
 
 The style of your write up will be that of a regular scientific paper that includes an analysis, for example, [Suweis et al. 2013](https://www.pnas.org/content/110/11/4230): _The water-controlled wealth of nations_.
 
@@ -66,7 +66,7 @@ Please consult [How to Read a Scientific Paper (2014)](https://www.research4life
 
 1. The abstract follows [this](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjH9pDIya_sAhXig-AKHcB3BusQFjAAegQIBhAC&url=http%3A%2F%2Fwww.cbs.umn.edu%2Fsites%2Fdefault%2Ffiles%2Fpublic%2Fdownloads%2FAnnotated_Nature_abstract.pdf&usg=AOvVaw2FzVPRcUQOUX2zEJXld9LQ) format. [5 marks]
 
-1. There is at least one paragraph towards the beginning of manuscript the overviews that main points that will be made. [5 marks]
+1. There is at least one paragraph towards the beginning of manuscript that overviews the main points that will be made. [5 marks]
 
 1. At least 6 peer-reviewed articles are cited. [5 marks]
 
@@ -78,7 +78,7 @@ Please consult [How to Read a Scientific Paper (2014)](https://www.research4life
 
 1. There is at least one figure or table, and these include a figure caption (for Review papers see further instructions below). [20 marks]
 
-### Grading Rubric: Review only [55 marks]
+### Grading Rubric: Review only [55 marks] {#review}
 
 1. The report is organized into sections. Each section has a clear point. [5 marks]
 

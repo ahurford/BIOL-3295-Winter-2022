@@ -113,10 +113,12 @@ questions-24
 thurs-mar-17-evolutionary-ecology
 required-readingviewing-1
 questions-25
-final-project
+thurs-mar-17-lab-5
+required-readingviewing-2
+final
 option-1-review-paper
 option-2-analysis
 how-to-read-scientific-papers
 grading-rubric-both-review-and-analysis-55-marks
-grading-rubric-review-only-55-marks
+review
 grading-rubric-analysis-only-55-marks
