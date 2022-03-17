@@ -1,0 +1,66 @@
+# Thurs Jan 20: LAB 1 - Introduction to R.
+
+The deadline to submit your answers is Thurs Jan 27.
+
+The goal of today's lab is to make a graph similar to this graph;
+
+```{r,echo = F}
+data = data.frame(time = c(1937, 1938, 1939, 1940), population = c(10,35,110,400))
+plot(data$time, data$population, ylab = "Number of pheasants",  xlab = "year", pch = 19)
+lines(data$time, c(10, 10*3.3, 10*3.3^2, 10*3.3^3))
+```
+
+Where the dots are the Protection Island data for the size of the population for different years, and the lines are the predicted population size if population growth is exponential and the geometric growth rate is $\lambda$.
+
+1. Install R and R Studio on your computer. See [here](https://ahurford.github.io/quant-guide-all-courses/install.html) for instructions.
+
+2. Read [Finding your way around R Studio](https://ahurford.github.io/quant-guide-all-courses/rstudio.html). Complete the EXERCISES. There are 2. [2 marks]
+
+3. Read [Introduction to R](https://ahurford.github.io/quant-guide-all-courses/rintro.html). Complete the EXERCISES. Where TRY IT appears - try it! Where HAND IN appears, add the answers to your answers (which could be a .R file or an .doc file). There are 6. [6 marks]
+
+4. Read [Getting R help](https://ahurford.github.io/quant-guide-all-courses/help.html).
+
+5. Read [Best practices](https://ahurford.github.io/quant-guide-all-courses/style.html). Neither 4. or 5. have marks assigned, they will just make working easier on future assignments.
+
+6. Read 9.1 [Handling data - Base R](https://ahurford.github.io/quant-guide-all-courses/handling-data.html). Complete the TRY IT exercises.
+
+7. Read 10 [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html). Complete the excerises HAND IN. There are 3. [3 marks]
+
+8a. Now you are ready to make the graph at the top of the page. Making a new R Script and enter your name, title, and data following the Best practices. Make a data frame for the Protection Island pheasant population population sizes. If you've done it correctly it should be like this:
+
+```{r, echo=FALSE}
+data = data.frame(time = c(1937, 1938, 1939, 1940), protection.island = c(10,35,110,400))
+data
+```
+
+These are that data that will be the points in your plot. You could plot them now with `plot(data$time, data$protection.island)`, but lets work on the line part next.
+
+8b. Assign a value of to a variable `lambda`, i.e., `lambda <- 1.5`. Assign `N0<-10`. Make a sequence of the population sizes that would arise from exponential population growth and assign this sequence a variable name:
+
+```{r, include = FALSE}
+lambda <- 1.5
+N0 <- 10
+```
+
+
+```{r}
+model <- c(N0*lambda^0, N0*lambda^1,N0*lambda^2,N0*lambda^3)
+```
+
+Check the length of `model` using `length(model)` in your console. Is it the same as `data$time`? If so we can column bind:
+
+```{r}
+data2 <- cbind(data,model=model)
+data2
+```
+
+8c. Now we can make our plot:
+
+```{r}
+plot(data2$time, data2$protection.island, ylab = "Number of pheasants",  xlab = "year", pch = 19)
+lines(data2$time,data2$model)
+```
+
+Make sure you label your x- and y- axes as I have done in the code above. You will need to [export](https://ahurford.github.io/quant-guide-all-courses/graph.html#export) your graph, paste it into Microsoft Word and write a figure caption: without a legend, you need to explain what the dots are lines are. Adjust the value of `lambda`. In your figure caption state the value of `lambda` that you used.
+
+You must also hand in the R script that produces the graph - it will just be a few lines long. All of question 8 is worth [6 marks]

@@ -1,0 +1,28 @@
+# Fri Jan 14: Exponential growth - discrete time
+
+Please submit your answers before the next class. You have until Fri Jan 21 to submit your answers.
+
+## Required reading
+Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p1-3. [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619)
+
+## Questions
+
+1. Given an example of a context when it is important to understand the quantitative characteristics of a population? [1 mark] (you may quote directly from the reading)
+
+1. If lilypads replicate once per week and it takes 1 year for half the pond to be covered, how long until the entire pond is covered? [1 mark]
+
+1. Suppose $\lambda = 4$ in equation (3) (see the required reading). Explain in 1-2 sentences the meaning of $\lambda = 4$. [1 mark]
+
+1. Suppose the number of lilypads during week 7 is 16,384. Let $\lambda = 4$, and assume that the units of $t$ are weeks. Use equation (3) to calculate the number of lilypads in week 8. Show your calculations. [2 marks]
+
+1. Use your answer to question 2. to calculate the number of lilypads in week 9. Show your calculations. [2 marks]
+
+1. Equation (4) for the required reading assumes that $N_0=1$, however, this formula can be generalized such that
+
+\[
+N_t = N_0\lambda^t
+\]
+
+where $N_t$ is the population size at time, $t$. Define time such that $t=0$ is week 7 and $t$ is then the number of weeks since week 7. Use the equation above to answer question 4 and confirm that the answer is the same (i.e., find the population size for week 9, when $\lambda=4$ and the population size for week 7 is 16,384). Show your calculations. [2 marks]
+
+5. Use the formula from question 4 to find the population size for week 15, where $N_0=1$ and $\lambda=4$. Define time as the number of weeks since week 0. Show your calculations [2 marks]

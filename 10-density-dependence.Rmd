@@ -1,0 +1,14 @@
+# Fri Jan 28: Density dependence and logistic growth
+
+The deadline to submit your answers is Friday Feb 3.
+
+## Required reading
+Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p9-17. [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619)
+
+[Optional] Watch my derivation of logistic growth from Vandermeer and Goldberg. [Link](https://www.youtube.com/watch?v=UisbkgNlaOE&t=118s)
+
+## Questions
+
+1. Give your own written derivation of the logistic growth equation where it arises due to food limitation. You might watch the video and write out the steps, or you might work through the reading, writing out the steps in your own words. You should start with the first equation in the video (or equation 12 in the reading) and end with the last equation in the video (or equation 17 in the video). You need to end with expressions for $r$ and $K$ in terms of the food/resource related parameters, $F_T$, $c$, and $b$. You should write explanations such as "then, by substituting equation 1" or "then, by substituting $r = bF$. You should give written descriptions of all the parameters, i.e., "where $F$ is the amount of food/resources". [6 marks]
+
+2. Write one paragraph (3 to 5 sentences) explaining what has been the most important point about population dynamics that you have come to understand during the first few weeks of class. Anyone who attempts this question, and reflects on their experience in class to date will receive full marks. [2 marks]

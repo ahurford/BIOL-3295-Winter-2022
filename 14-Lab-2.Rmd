@@ -1,0 +1,229 @@
+# Thurs Feb 3: LAB 2 - Logistic and exponential growth {#lab-2}
+
+The deadline to submit your answers is Thurs Feb 10.
+
+The goal of Lab 2 is to understand exponential growth and logistic growth in more depth and to solve ordinary differential equations using a computer.
+
+## Change in population size, and population size
+Recall that for continuous time exponential growth there were two ways that the equation might be written. Firstly, as a _change_ in population size over time,
+
+\begin{equation}
+\frac{dN(t)}{dt} = rN(t),
+(\#eq:Exp1)
+\end{equation}
+
+such that if $\frac{dN(t)}{dt}>0$, the population size, $N(t)$ is increasing over time, and if $\frac{dN(t)}{dt}<0$, the population size is decreasing over time. Alternatively, we can write continuous time exponential growth as,
+
+\begin{equation}
+N(t) = N(0)e^{rt},
+(\#eq:Exp2)
+\end{equation}
+
+where the lefthand side of equation \@ref(eq:Exp2) states the _size_ of the population, $N(t)$, at time $t$, rather than the _change_ in the size of the population, as it did in equation \@ref(eq:Exp1). 
+
+For logistic growth, we have:
+
+\begin{equation}
+\frac{dN(t)}{dt} = rN(t)\left(1 - \frac{N(t)}{K} \right).
+(\#eq:Log1)
+\end{equation}
+
+How might we find the equivalent of equation \@ref(eq:Exp2) for logistic growth? i.e., for logistic growth, what is the equation for the _size_ of the population at a particular time, $t$? If you are great at math, you might integrate equation \@ref(eq:Log1) using [separation of variables](https://math.usu.edu/~powell/ysa-html/node8.html). However, another option is to numerically integrate equation \@ref(eq:Log1) using a computer.
+
+
+## What is an ordinary differential equation?
+In an introductory calculus course that covers integration, most often you are solving problems of the type:
+
+\begin{eqnarray}
+\frac{dy(x)}{dx} &=& x^2, \\
+\int \frac{dy(x)}{dx} &=& \int x^2 \ dx, \\
+y(x) &=& \frac{1}{3}x^3 + c.
+(\#eq:e1)
+\end{eqnarray}
+
+Note that in the above calculations, we are able to use integration to find $y(x)$ when we are given the rate of change equation, $\frac{dy(x)}{dx}$. In the above equations:
+
+- $x$ is the independent variable, and
+- $y(x)$ is the dependent variable.
+
+The derivative of $y(x)$ is with respect to $x$, and $x$ appears on the opposite side of the `=` to the derivative of the dependent variable. In the notation of population biology, where $N(t)$ is conventional for the dependent variable, a similar problem might look like this:
+
+\begin{eqnarray}
+\int \frac{dN(t)}{dt} &=& \int rt \ dt, \\ \nonumber
+N(t) &=& \frac{1}{2}rt^2 + c. 
+(\#eq:e2)
+\end{eqnarray}
+
+We have not seen any equations like equation \@ref(eq:e2) in BIOL 3295 so far: usually, our equations for the _change_ in the population size, $\frac{dN(t)}{dt}$, have a dependency on the population size, $N(t)$ (the dependent variable), rather than a sole dependency on $t$ (the independent variable).
+
+The equations that are models for population biology are sometimes ODEs. While some ODEs can be solved using math, commonly the ODEs that are used to model population dynamics need to be integrated numerically; that is, using a computer. 
+
+## Numerically integrating an ordinary differential equation in R
+
+Numerical integration in `R` can be performed by installing this package:
+
+```{r, eval=F}
+install.packages("deSolve")
+```
+
+Alternatively, you might install the package using the [Packages tab](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages). To integrate our ODE, we use the function `ode()` from the `deSolve` package. Let's look at the structure of this function. The mandatory arguments to the function are:
+
+`ode(y,times,parms,func)`
+
+where,
+
+`y` is a vector of the initial values of the dependent variable (i.e., those which correspond to the initial time).
+
+`times` is a sequence of time points that we will calculate the values of the variables; the first value of times is the initial time.
+
+`func` is a function that computes the values of the derivatives of the dependent variables. `func` must be defined as: `func <- function(t, y, parms,...)`. `t` is the current time point in the integration, and `y` is the current estimate of the variables in the ODE system.
+
+Given what we have learned in BIOL 3295 so far, `y` and `times` are not so tricky, but the `func` argument requires us to write our own function, and so far we have only used functions written by other people (i.e., the `plot()` function): we have yet to write our own custom functions. In preparation for numerically integrating the logistic growth equation, we will now learn how to write custom functions.
+
+## Writing custom functions
+Generally, your code can still work without writing custom functions, however writing functions makes your code modular and more organized.
+
+Consider the following code:
+
+```{r, eval=F}
+# Temperatures in Celcius
+temp.min.C <- 10
+temp.max.C <- 20
+
+# Temperatures in Farenheit
+temp.min.F <- temp.min.C*9/5+32
+temp.max.F <- temp.max.C*9/5+32 
+```
+
+The above code is fine, but since the same calculation is performed twice (conversion of Celcius to Farenheit), just with a different number, we might consider writing a custom function. Let's re-write the above code so that it now uses a custom function:
+
+```{r, eval=F}
+# A function that converts Celcius to Farenheit
+C.to.F <- function(C){
+  F <- C*9/5 +32
+  return(F)
+}
+
+# Temperatures in Celcius
+temp.min.C <- 10
+temp.max.C <- 20
+
+# Temperatures in Farenheit
+temp.min.F <- C.to.F(temp.min.C)
+temp.max.F <- C.to.F(temp.max.C)
+```
+
+Note that the above code consists of the _function definition_ and the _function call_. The function definition uses the function `function()`.
+
+```{r function, echo=FALSE, out.width="120%", purl=FALSE}
+knitr::include_graphics("figures/function.png")
+```
+
+In the example, note the following:
+
+- `arglist` is just one value: `C`. Generally, several values might be provided to the function where each should be separated by commas and enclosed within the `()`.
+
+- `expression` can be any set of commands and should be enclosed within the `{}`.
+
+- The function is assigned a name: `C.to.F`. We give the function a name so that we can use it later during a function call.
+
+## Questions
+1. The following is an equation for exponential population growth with a constant immigration rate, $m>0$, into the population:
+
+\[
+\frac{dN(t)}{dt}= rN(t) + m
+\]
+
+where $r$ is the net reproductive rate, and $N(t)$ is the population size at time, $t$.
+
+Is this equation an ordinary differential equation (ODE)? Give 1 sentence explaining your reasoning [2 marks].
+
+2. Write a function that adds 123 to a user supplied argument, and then write the line of code that calls the function to evaluate 123+1, and assigns the result the variable name `y`. You are to hand in your R script. [5 marks]
+
+## Writing the func argument for ode()
+
+The `func` argument of `ode()` has the following constraints:
+
+- The `arglist` must include `t`, `y`, and `parms`.
+- The value returned must be a _list_ of the rates of change in the dependent variable(s).
+
+Note that if your ODE comprises of more than one variable that is changing over time, then `y` will be a vector (this means it is a list of numbers). Below is an example of how `func` might be coded for exponential growth. Remember that the ODE for exponential growth is:
+
+\begin{equation}
+\frac{dN(t)}{dt} = rN(t) 
+(\#eq:Exp99)
+\end{equation}
+
+Below equation \@ref(eq:Exp99) is coded in the appropriate syntax for eventual use in the `ode()` function:
+
+```{r, eval=F}
+# Write a function that returns a list of the rate of change in your dependent variables.
+model = function(t,y,parms){
+  # It's a personal perference of mine to switch the symbols
+  # to be consistent with the equation.
+  N <- y[1]
+  # This is this equation for dN/dt
+  dN <- r*N
+  # The function returns the value of the change in N.
+return(list(c(dN)))
+}
+```
+
+Let's try out the function to make sure it works. Copy and paste the function into your `Console` and then type:
+
+```{r, eval=F}
+r<-1
+model(1,2,parms=NULL)
+```
+
+Did you get `2`? Does it make sense to you that the returned value is `2`? Try some other values. Are the values making sense?
+
+Now that the `func` argument of `ode()` has been demonstrated, the remaining arguments for the `ode()` function are not so bad.
+
+```{r, eval=F}
+# The initial value of N
+yini<- c(N = 1)
+
+# the times for the numerical integration
+times <- seq(0, 1, by = .1)
+```
+
+Remember to assign a value for `r`:
+
+```{r, eval=F}
+# Asign a value to the parameter:
+r <- 2
+```
+
+And then once all the arguments are set, call the function, and plot the results:
+
+```{r, eval = F}
+# performing the numerical integration
+out <- ode(y = yini, parms = NULL, times = times, func = model)
+out <- data.frame(out)
+head(out)
+
+# this line overrides a multipanel plot. I had tried plot(out) # and was having conflicts with a small plotting window on my
+# laptop. Generally, the below line isn't necessary.
+par(mfrow=c(1,1))
+
+# Make the graph
+plot(out$time, out$N, typ = "l")
+```
+
+
+## Questions
+
+3. For the code `model(1,2,parms=NULL)` (where the function `model` is defined above), what do `1` and `2` correspond to? One of these quantities does not affect the value that the `model()` function returns. Which quantity does not affect the value the function returns? [2 marks]
+
+4. Write an R Script that numerically integrates the logistic growth function (equation \@ref(eq:Log1)). Choose a value of $r$ such that the population size increases over time. Remember to use good practices for writing your script - see \@ref(RScript). Your script should produce a graph with $N(t)$ on the y-axis and time on the x-axis [10 marks]
+
+5. Add to your script from 4. such that another graph is produced, this time where the population size decreases over time. Note that this should just require adding new lines to the bottom of your question 1 script such that you: a) set a new value of `r`; b) run the `ode()` command; and c) make the graph. In other words, it is not necessary to define the logistic growth function, `model`, again because that has not changed. Further, if you are happy to use the same values of `times` as for question 1, you do not need to restate this either. Answer this question by adding a few lines of code to your answer to 1. You are to hand in your R script. You should answer both questions 4. and 5. in the same R script. [5 marks]
+
+6. An ordinary differential equation for logistic growth (continuous time) with immigration and emigration is:
+
+\[\frac{dN(t)}{dt} = rN(t)\left(1-\frac{N(t)}{K}\right) + m_1 - m_2N(t)  \]
+
+where $N(t) \geq 0$ is the population size (units: number), $K>0$ is the carrying capacity (units: number), $r$ is the net reproductive rate (units: 1/time), $m_1>0$ is the immigration rate (units: number/time), and $m_2>0$ is the emigration rate (units: 1/time).
+
+You are to numerically integrate this equation and make a graph for $N(t)$ (y-axis) versus time, $t$ (x-axis). You are free to choose the parameter values for $r, K, m_1$ and $m_2$, the initial value of $N(0)$, and the `times` over which you integrate.  Add your code that solves this question to your R Script answering 4. and 5. [10 marks]
