@@ -1,0 +1,21 @@
+# Tues Mar 1: Evolutionary ecology 
+
+DUE: Tues Mar 8
+
+## Required Reading
+Otto, Sarah P., and Troy Day. 2007. A Biologist's Guide to Mathematical Modeling in Ecology and Evolution, Princeton University Press. Beginning at 3.3 on p76 and ending at p82.  [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551).
+
+## Questions
+1. What is evolution? [1 mark] (i.e., see a textbook from a previous course you have taken, or [Wikipedia](https://en.wikipedia.org/wiki/Evolution#CITEREFHallHallgr%C3%ADmsson2008))
+
+2. What are population-genetic models? [1 mark]
+
+3. Consider the definition of [population dynamics](https://en.wikipedia.org/wiki/Population_dynamics). How are population dynamics related to population-genetic models? You will need to mention inheritance in your answer. [2 marks]
+
+4. What type of population growth is described by equations 3.6a and 3.6b? [1 mark]
+
+5. Typically, in this course, we have used $\lambda$ to be the geometric growth rate. What are $W_A$ and $W_a$ in equations 3.6a and b, and for what values of $W_A$ and $W_a$ is the number of individuals with the $A$ and $a$ alleles increasing? [2 marks]
+
+6. What are $n_A(t)$ and $n_a(t)$ in equations 3.6a and b? [1 mark]
+
+7. What formula would you use to calculate the frequency of the $A$ allele at time, $t+1$ (discrete time) or $t$ (continuous time)? [1 mark]

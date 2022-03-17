@@ -1,0 +1,37 @@
+# Tues Feb 15: Age-structured population dynamics
+
+DUE DATE: Feb 22
+
+## Required Reading
+Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p45-48. [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619)
+
+## Questions
+
+1. What is the name of the information that can be determined from the left eigenvector of a population matrix? [1 mark]
+
+2. What is the name of the information that can be determined from the right eigenvector of a population matrix? [1 mark]
+
+3. What is a reason to calculate elasticity rather than sensitivity? [1 mark] 
+
+4. What is sensitivity? [1 mark]
+
+5. What elasticity? [1 mark]
+
+6. For the matrix:
+
+\begin{equation}
+\mathbb{A}=
+\left[
+\begin{array}{cc}
+1 & 2\\
+0.5 & 0.2\\
+\end{array}
+\right]
+\end{equation}
+
+the dominant eigenvalue is 1.67, the left eigenvector is [1,1.35] and the right eigenvector is [0.75,0.25]. Calculate the sensitivities and elasticities of $\mathbb{A}$. [3 marks]
+
+5. If you wanted to eradicate the population whose growth is described by $\mathbb{A}$, what aspect of the organisms life history might be most cost effective to target? Explain your reasoning. [2 marks]
+
+
+

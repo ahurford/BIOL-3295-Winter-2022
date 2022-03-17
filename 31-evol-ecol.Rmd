@@ -1,0 +1,20 @@
+# Thurs Mar 10: Evolutionary ecology 
+
+DUE: Tues Mar 17
+
+The most relevant material for today's class is the lecture which is available on the Brightspace.
+
+## Relevant Reading
+Otto, Sarah P., and Troy Day. 2007. A Biologist's Guide to Mathematical Modeling in Ecology and Evolution, Princeton University Press. Section 12.3 p506-512 and Section 12.4 p521-525 (**Example: Evolution of pathogen virulence**).  [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551).
+
+
+## Questions
+1. What is an evolutionarily stable strategy (or trait)? [1 mark]
+
+2. Write down a system of equations that describes the number of individuals with a mutant and a resident trait. [1 mark]
+
+3. Describe the equilibrium that we are interested in, when determining if a strategy (or trait) is evolutionarily stable. How many individuals are each of the resident and mutant trait at the equilibrium of interest? [1 mark]
+
+4. In absence of any life history trade-offs, how will viral disease severity evolve?
+
+

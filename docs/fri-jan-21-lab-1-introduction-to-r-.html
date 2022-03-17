@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Fri Jan 21: LAB 1 - Introduction to R. | BIOL-3295.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Fri Jan 21: LAB 1 - Introduction to R. | BIOL-3295.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Fri Jan 21: LAB 1 - Introduction to R. | BIOL-3295.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="thurs-jan-20-lab-1-introduction-to-r-.html"/>
+
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Tues Jan 11: Syllabus</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#instructor-information"><i class="fa fa-check"></i><b>1.1</b> Instructor Information</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-information"><i class="fa fa-check"></i><b>1.2</b> Course Information</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#method-of-evaluation"><i class="fa fa-check"></i><b>1.3</b> Method of Evaluation</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#additional-policies"><i class="fa fa-check"></i><b>1.4</b> Additional Policies</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#accommodation-of-students-with-disabilities"><i class="fa fa-check"></i><b>1.4.1</b> Accommodation of students with disabilities</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#academic-misconduct"><i class="fa fa-check"></i><b>1.4.2</b> Academic misconduct</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#equity-and-diversity"><i class="fa fa-check"></i><b>1.4.3</b> Equity and Diversity</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#additional-supports"><i class="fa fa-check"></i><b>1.5</b> Additional Supports</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#tentative-course-schedule"><i class="fa fa-check"></i><b>1.6</b> Tentative course schedule</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#handing-in-your-work"><i class="fa fa-check"></i><b>1.7</b> Handing in your work</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#figures"><i class="fa fa-check"></i><b>1.7.1</b> Making figures to hand-in</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#RScript"><i class="fa fa-check"></i><b>1.7.2</b> Writing R scripts to hand-in</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="thurs-jan-13-what-is-a-population.html"><a href="thurs-jan-13-what-is-a-population.html"><i class="fa fa-check"></i><b>2</b> Thurs Jan 13: What is a population?</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="thurs-jan-13-what-is-a-population.html"><a href="thurs-jan-13-what-is-a-population.html#questions"><i class="fa fa-check"></i><b>2.1</b> Questions</a></li>
+<li class="chapter" data-level="2.2" data-path="thurs-jan-13-what-is-a-population.html"><a href="thurs-jan-13-what-is-a-population.html#resources"><i class="fa fa-check"></i><b>2.2</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html"><i class="fa fa-check"></i><b>3</b> Fri Jan 14: Exponential growth - discrete time</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html#required-reading"><i class="fa fa-check"></i><b>3.1</b> Required reading</a></li>
+<li class="chapter" data-level="3.2" data-path="fri-jan-14-exponential-growth-discrete-time.html"><a href="fri-jan-14-exponential-growth-discrete-time.html#questions-1"><i class="fa fa-check"></i><b>3.2</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="PE1.html"><a href="PE1.html"><i class="fa fa-check"></i><b>4</b> Tues Jan 18: Exponential growth - discrete time 2</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="PE1.html"><a href="PE1.html#required-reading-1"><i class="fa fa-check"></i><b>4.1</b> Required reading</a></li>
+<li class="chapter" data-level="4.2" data-path="PE1.html"><a href="PE1.html#questions-2"><i class="fa fa-check"></i><b>4.2</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="PE3.html"><a href="PE3.html"><i class="fa fa-check"></i><b>5</b> Thurs Jan 20: Exponential growth - discrete time 3</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="PE3.html"><a href="PE3.html#required-reading-2"><i class="fa fa-check"></i><b>5.1</b> Required reading</a></li>
+<li class="chapter" data-level="5.2" data-path="PE3.html"><a href="PE3.html#questions-3"><i class="fa fa-check"></i><b>5.2</b> Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="thurs-jan-20-lab-1-introduction-to-r-.html"><a href="thurs-jan-20-lab-1-introduction-to-r-.html"><i class="fa fa-check"></i><b>6</b> Thurs Jan 20: LAB 1 - Introduction to R.</a></li>
+<li class="chapter" data-level="7" data-path="fri-jan-21-lab-1-introduction-to-r-.html"><a href="fri-jan-21-lab-1-introduction-to-r-.html"><i class="fa fa-check"></i><b>7</b> Fri Jan 21: LAB 1 - Introduction to R.</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="fri-jan-21-lab-1-introduction-to-r-.html"><a href="fri-jan-21-lab-1-introduction-to-r-.html#required-reading-3"><i class="fa fa-check"></i><b>7.1</b> Required reading</a></li>
+<li class="chapter" data-level="7.2" data-path="fri-jan-21-lab-1-introduction-to-r-.html"><a href="fri-jan-21-lab-1-introduction-to-r-.html#discrete-or-continuous-time-formulations"><i class="fa fa-check"></i><b>7.2</b> Discrete or continuous time formulations</a></li>
+<li class="chapter" data-level="7.3" data-path="fri-jan-21-lab-1-introduction-to-r-.html"><a href="fri-jan-21-lab-1-introduction-to-r-.html#questions-4"><i class="fa fa-check"></i><b>7.3</b> Questions</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="fri-jan-21-lab-1---introduction-to-r." class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Fri Jan 21: LAB 1 - Introduction to R.</h1>
+<p>The deadline to submit your answers is Fri Jan 28.</p>
+<div id="required-reading-3" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Required reading</h2>
+<p>Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p4-8. <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619">Link</a></p>
+<p>We now have two ways of describing how population size changes with time whereby each individual has the same average number of offspring per unit time and the same probability of dying.</p>
+<ol style="list-style-type: decimal">
+<li>Discrete time geometric growth:</li>
+</ol>
+<p><span class="math display" id="eq:Geo">\[\begin{equation}
+N_t = N_0\lambda^t
+\tag{7.1}
+\end{equation}\]</span></p>
+<p>and,</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Continuous time exponential growth:</li>
+</ol>
+<p><span class="math display" id="eq:Exp">\[\begin{equation}
+N(t) = N(0)e^{rt}
+\tag{7.2}
+\end{equation}\]</span></p>
+<p>Notably, for both these models the per capita birth and death rates do not change change over time, and do not change with density or age.</p>
+<p>The notation <span class="math inline">\(N_t\)</span> and <span class="math inline">\(N(t)\)</span> is conventional for discrete time versus continuous time formulations respectively, however, these notations both mean the same: the population size at a particular time, <span class="math inline">\(t\)</span>. When <span class="math inline">\(t=0\)</span> we have the population size at time 0: <span class="math inline">\(N_0\)</span> or <span class="math inline">\(N(0)\)</span>.</p>
+<p>As noted in the reading, when <span class="math inline">\(\lambda = e^{r}\)</span> the equations are the same.</p>
+<p>Note that <span class="math inline">\(e\)</span> is the exponential function, <code>exp()</code> or <span class="math inline">\(e^x\)</span>.</p>
+</div>
+<div id="discrete-or-continuous-time-formulations" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Discrete or continuous time formulations</h2>
+<p>Whether it is appropriate to model a population in a discrete time or continous time formulation depends on whether births and deaths are overlapping or neatly partitioned into a distinct time period. For example, for many animals there is a distinct breeding season: a short proportion of the year when offspring are born. As such, there is very little temporal overlap between the times of year when births and deaths occur. Humans are an example of a species that might reasonably be modelled as continuous time because babies are born year round.</p>
+</div>
+<div id="questions-4" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Questions</h2>
+<ol start="2" style="list-style-type: decimal">
+<li><p>For what values of <span class="math inline">\(r\)</span> does the population size increase over time? [1 mark]</p></li>
+<li><p>As described in the reading, <span class="math inline">\(b\)</span> is a per capita birth rate, and <span class="math inline">\(d\)</span> is a per capita death rate. For continuous time exponential growth, both <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> must be non-negative and can take values bigger than 1. Note that this differs from the discrete time model formulation where <span class="math inline">\(0 \leq d \leq 1\)</span>. When <span class="math inline">\(d &gt; 1\)</span> in the continuous time formulation, this means that the average lifespan is less than one time step. For example, when <span class="math inline">\(d = 2\)</span> this means that the average life expectancy for an individual is 1/2 a time step (i.e., days or year, however, the time unit is defined in the model). When the population size increases over time, what is true of <span class="math inline">\(b\)</span> relative to <span class="math inline">\(d\)</span>? [1 mark]</p></li>
+<li><p>For what value of <span class="math inline">\(r\)</span> does <span class="math inline">\(N(t)\)</span> not change over time? Hint: if <span class="math inline">\(N(t)\)</span> is not changing then <span class="math inline">\(N(t)=N(0)\)</span> for all <span class="math inline">\(t\)</span>. [1 mark]</p></li>
+<li><p>Consider the equation:
+<span class="math display">\[
+\frac{dN(t)}{dt} = rN(t).
+\]</span>
+As described in the reading, this is an alternative way to write the continuous time exponential growth equation. The quantity <span class="math inline">\(\frac{dN(t)}{dt}\)</span> can be understood as the slope of a graph where population size is on the vertical axis and time is on the horizontal axis. As such, if the slope is zero, <span class="math inline">\(\frac{dN(t)}{dt}=0\)</span>, then the population size is not changing. If <span class="math inline">\(\frac{dN(t)}{dt}&lt;0\)</span>, then the population size is decreasing. For what value of <span class="math inline">\(r\)</span> does the population size decrease? What is true about <span class="math inline">\(b\)</span> relative to <span class="math inline">\(d\)</span> in this instance? [2 marks]</p></li>
+<li><p>Which population would be more appropriate to be modelled as a continuous time formulation: <em>E. coli</em> bacteria or moose? [1 mark]</p></li>
+<li><p>Calculate the formula for the doubling time for continuous time exponential growth (equation <a href="fri-jan-21-lab-1-introduction-to-r-.html#eq:Exp">(7.2)</a>). This is the time for the population to double in size. The value of <span class="math inline">\(N(0)\)</span>, the population size at <span class="math inline">\(t=0\)</span> doesn’t matter as long as it is a positive number. When the population has doubled, <span class="math inline">\(N(t) = 2N(0)\)</span>. To answer this question you need to find <span class="math inline">\(t\)</span> such that <span class="math inline">\(N(t) = 2N(0)\)</span>. You may need to revisit some rules about working with logarithms to complete this question (i.e. see <a href="https://en.wikipedia.org/wiki/Logarithm">here</a>, specifically the <em>Product, Quotient, Power, and Root</em> table. Also recall, <span class="math inline">\(Ln(e^x) = x\)</span>). Please show your work. [2 marks]</p></li>
+<li><p>Consider the following plot:</p>
+<div class="figure"><span id="fig:doublingtime"></span>
+<img src="figures/doublingtime.jpg" alt="An example of a very well thought out data visualation where the data might demonstrate exponential growth" width="95%" />
+<p class="caption">
+Figure 7.1: An example of a very well thought out data visualation where the data might demonstrate exponential growth
+</p>
+</div></li>
+</ol>
+<p>In this question, we will find the equation for ‘doubles every day’. Our model is equation <a href="fri-jan-21-lab-1-introduction-to-r-.html#eq:Exp">(7.2)</a>. This means that we will calculate the equation for ‘doubles every day’ under the assumption that cumulative COVID-19 deaths grow exponentially over time.</p>
+<p>To begin, we choose the time step for our model as days. The first problem we should consider is what is the value of <span class="math inline">\(r\)</span> if the population doubles every 1 day? Make the appropriate substitutions and re-arrange equation <a href="fri-jan-21-lab-1-introduction-to-r-.html#eq:Exp">(7.2)</a> to find the value of <span class="math inline">\(r\)</span>.</p>
+<p>Now, note that the y-axis on the above graph is on a logarithmic scale. We will assume this is a base <span class="math inline">\(e\)</span> logarithmic scale. Take the natural logarithm of both sides of equation <a href="fri-jan-21-lab-1-introduction-to-r-.html#eq:Exp">(7.2)</a>. Note that the result should be the formula for a straight line, i.e., <span class="math inline">\(y = mx + c\)</span>, but where <span class="math inline">\(y\)</span> is <span class="math inline">\(Ln(N(t))\)</span> and <span class="math inline">\(x\)</span> is <span class="math inline">\(t\)</span> (to match the axes of Figure <a href="fri-jan-21-lab-1-introduction-to-r-.html#fig:doublingtime">7.1</a>). The questions we are left to solve are: what is the slope of the line (i.e., <span class="math inline">\(m\)</span>, or the value of the coefficient that multiplies <span class="math inline">\(t\)</span>), and what is the value of the intercept (i.e., <span class="math inline">\(c\)</span> or the remaining terms on the opposite side of the equals to <span class="math inline">\(Ln(N(t))\)</span> and which are not multiplied by <span class="math inline">\(t\)</span>)?</p>
+<p>Show all your work. Your answer is complete when you provide the numerical values of the slope and the intercept for the straight line corresponding to a doubling time of 1 day. Assume <span class="math inline">\(N(0)=10\)</span>. Your answers must be numbers - you will need to substitute the value of <span class="math inline">\(r\)</span> that you calculated in the early part of this question. [2 marks]</p>
+<ol start="9" style="list-style-type: decimal">
+<li>Provide the values of the slope and the intercept for doubling times of 2, 3, and 7 days. Again assume <span class="math inline">\(N(0)=10\)</span>. You do not need to show your work. [2 marks]</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="thurs-jan-20-lab-1-introduction-to-r-.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

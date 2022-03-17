@@ -1,0 +1,33 @@
+# Tues Oct 27: Data for stage-structured population dynamics
+
+DUE DATE: Tues Nov 3
+
+Install and load the package `popbio`.
+
+```{r, eval=F}
+install.packages("popbio")
+require(popbio)
+```
+
+Click on the `popbio` package in the Package tab, or click [here](https://cran.r-project.org/web/packages/popbio/popbio.pdf)
+
+Today, you will explore some of the data that is available through the `popbio` package.
+
+## Questions
+1. After reading the documentation about the `popbio` package, select one of the datasets. Do not select _Aquilegia chrysantha_ as this will be used as the example. For the dataset that you have selected, give the details of the source of the data, ideally, a peer-reviewed publication, or permanent online repository with document. For _Aquilegia chrysantha_ I did an internet search to find a [technical report](https://www.fs.fed.us/rm/pubs/rmrs_p023/rmrs_p023_070_077.pdf) that nicely describes the `aq.trans` dataset. For my answer to this question I will provide the full citation:
+
+Stubben, Chris J.; Milligan, Brook G. 2001. The demography of a small population of yellow columbines in the Organ Mountains. In: Maschinski, Joyce; Holter, Louella, tech. eds. Southwestern rare and endangered plants: Proceedings of the Third Conference; 2000 September 25-28; Flagstaff, AZ. Proceedings RMRS-P-23. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. p. 70-77.
+
+and the link: https://www.fs.fed.us/rm/pubs/rmrs_p023/rmrs_p023_070_077.pdf
+
+For your dataset you might not be able to find all these details. For your answer please provide 1 sentence describing your search strategy and what you found. [2 marks]
+
+2. View your dataset. For _Aquilegia chrysantha_ this is completed as:
+
+```{r, eval=F}
+head(aq.trans)
+```
+
+List the column headings of your dataset and provide their meaning. [2 marks] (for some datasets this is a lot of work, for others it's less work)
+
+3. Visit the section of the `popbio` package description describing the `grizzly` data. Cut and paste the example code into an R script. Run the example code and produce the figures. Hand in the figure with the title _'Grizzly log population growth rates'_ with a figure caption (see Section \@ref(figures) for expectations). Note that $\log(1)=0$. As an aside, to be consistent with the y-axis, the x-axis would better be labelled as _Number of females in year $t$, $N_t$_. It is fine to leave this error uncorrected. [2 marks]
