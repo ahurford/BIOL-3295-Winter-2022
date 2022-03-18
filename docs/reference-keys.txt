@@ -110,10 +110,11 @@ some-relevant-textbooks
 tues-mar-15-evolutionary-ecology
 required-readingviewing
 questions-24
-thurs-mar-17-evolutionary-ecology
+thurs-mar-17-life-history-trade-offs
 questions-25
-thurs-mar-17-lab-5
+thurs-mar-17-lab-5---final-project-proposal
 fri-mar-18-evolution-of-body-size
+questions-26
 final
 option-1-review-paper
 option-2-analysis

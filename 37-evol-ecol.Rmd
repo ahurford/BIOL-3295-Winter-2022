@@ -1,5 +1,14 @@
-# Fri Mar 18 Evolution of body size
+# Fri Mar 18: Evolution of body size
 
+DUE DATE: Thurs Mar 25.
+
+The code below follows up on the previous lecture. We will investigate the evolutionary dynamics of _Drosphohila_ using a simulation. You should copy and past the code into an R script. Read the comments and run the R script.
+
+## Questions
+
+1. The script produces 3 graphs. Hand in all these graphs. [1 mark]
+
+2. Explain in your own words the simulation rules that determine how gene frequencies change over time. [2 marks]
 
 
 ```{r, fig.show="hide"}
