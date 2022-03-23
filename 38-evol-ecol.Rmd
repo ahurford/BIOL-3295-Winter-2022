@@ -8,7 +8,13 @@ The code below follows up on the previous lecture. We will investigate the evolu
 
 1. The script produces 3 graphs. Hand in all these graphs. You should change at least one variable or parameter in the code from the default settings, while still producing a graph that illustrates the dominance of the genotype that is expected to have higest fitness based on [Fox et al., beginning p107](https://ebookcentral.proquest.com/lib/mun/detail.action?docID=430289) [1 mark]
 
-2. Explain in your own words the simulation rules that determine how gene frequencies change over time. [2 marks]
+2. Explain in your own words the simulation rules that determine how gene frequencies change over time. Specifically,
+
+- Does the population change in size over time?
+- How many births and deaths occur in each time step?
+- What determines the chance of death or birth for an individual?
+
+[2 marks]
 
 
 ```{r, fig.show="hide"}

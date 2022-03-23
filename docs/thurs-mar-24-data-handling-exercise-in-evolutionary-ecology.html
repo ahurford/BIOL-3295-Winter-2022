@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 13 Thurs Feb 3: LAB 2 - Logistic and exponential growth | BIOL-3295.knit</title>
+  <title>Chapter 35 Thurs Mar 24: Data handling exercise in evolutionary ecology | BIOL-3295.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 13 Thurs Feb 3: LAB 2 - Logistic and exponential growth | BIOL-3295.knit" />
+  <meta property="og:title" content="Chapter 35 Thurs Mar 24: Data handling exercise in evolutionary ecology | BIOL-3295.knit" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 13 Thurs Feb 3: LAB 2 - Logistic and exponential growth | BIOL-3295.knit" />
+  <meta name="twitter:title" content="Chapter 35 Thurs Mar 24: Data handling exercise in evolutionary ecology | BIOL-3295.knit" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="thurs-feb-3-density-yield-and-the-discrete-time-density-dependence.html"/>
-<link rel="next" href="fri-feb-4-age-structured-population-dynamics.html"/>
+<link rel="prev" href="fri-mar-18-evolution-of-body-size.html"/>
+<link rel="next" href="final.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -327,183 +327,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lab-2" class="section level1" number="13">
-<h1><span class="header-section-number">Chapter 13</span> Thurs Feb 3: LAB 2 - Logistic and exponential growth</h1>
-<p>The deadline to submit your answers is Thurs Feb 10.</p>
-<p>The goal of Lab 2 is to understand exponential growth and logistic growth in more depth and to solve ordinary differential equations using a computer.</p>
-<div id="change-in-population-size-and-population-size" class="section level2" number="13.1">
-<h2><span class="header-section-number">13.1</span> Change in population size, and population size</h2>
-<p>Recall that for continuous time exponential growth there were two ways that the equation might be written. Firstly, as a <em>change</em> in population size over time,</p>
-<p><span class="math display" id="eq:Exp1">\[\begin{equation}
-\frac{dN(t)}{dt} = rN(t),
-\tag{13.1}
-\end{equation}\]</span></p>
-<p>such that if <span class="math inline">\(\frac{dN(t)}{dt}&gt;0\)</span>, the population size, <span class="math inline">\(N(t)\)</span> is increasing over time, and if <span class="math inline">\(\frac{dN(t)}{dt}&lt;0\)</span>, the population size is decreasing over time. Alternatively, we can write continuous time exponential growth as,</p>
-<p><span class="math display" id="eq:Exp2">\[\begin{equation}
-N(t) = N(0)e^{rt},
-\tag{13.2}
-\end{equation}\]</span></p>
-<p>where the lefthand side of equation <a href="lab-2.html#eq:Exp2">(13.2)</a> states the <em>size</em> of the population, <span class="math inline">\(N(t)\)</span>, at time <span class="math inline">\(t\)</span>, rather than the <em>change</em> in the size of the population, as it did in equation <a href="lab-2.html#eq:Exp1">(13.1)</a>.</p>
-<p>For logistic growth, we have:</p>
-<p><span class="math display" id="eq:Log1">\[\begin{equation}
-\frac{dN(t)}{dt} = rN(t)\left(1 - \frac{N(t)}{K} \right).
-\tag{13.3}
-\end{equation}\]</span></p>
-<p>How might we find the equivalent of equation <a href="lab-2.html#eq:Exp2">(13.2)</a> for logistic growth? i.e., for logistic growth, what is the equation for the <em>size</em> of the population at a particular time, <span class="math inline">\(t\)</span>? If you are great at math, you might integrate equation <a href="lab-2.html#eq:Log1">(13.3)</a> using <a href="https://math.usu.edu/~powell/ysa-html/node8.html">separation of variables</a>. However, another option is to numerically integrate equation <a href="lab-2.html#eq:Log1">(13.3)</a> using a computer.</p>
-</div>
-<div id="what-is-an-ordinary-differential-equation" class="section level2" number="13.2">
-<h2><span class="header-section-number">13.2</span> What is an ordinary differential equation?</h2>
-<p>In an introductory calculus course that covers integration, most often you are solving problems of the type:</p>
-<p><span class="math display" id="eq:e1">\[\begin{eqnarray}
-\frac{dy(x)}{dx} &amp;=&amp; x^2, \\
-\int \frac{dy(x)}{dx} &amp;=&amp; \int x^2 \ dx, \\
-y(x) &amp;=&amp; \frac{1}{3}x^3 + c.
-\tag{13.4}
-\end{eqnarray}\]</span></p>
-<p>Note that in the above calculations, we are able to use integration to find <span class="math inline">\(y(x)\)</span> when we are given the rate of change equation, <span class="math inline">\(\frac{dy(x)}{dx}\)</span>. In the above equations:</p>
-<ul>
-<li><span class="math inline">\(x\)</span> is the independent variable, and</li>
-<li><span class="math inline">\(y(x)\)</span> is the dependent variable.</li>
-</ul>
-<p>The derivative of <span class="math inline">\(y(x)\)</span> is with respect to <span class="math inline">\(x\)</span>, and <span class="math inline">\(x\)</span> appears on the opposite side of the <code>=</code> to the derivative of the dependent variable. In the notation of population biology, where <span class="math inline">\(N(t)\)</span> is conventional for the dependent variable, a similar problem might look like this:</p>
-<p><span class="math display" id="eq:e2">\[\begin{eqnarray}
-\int \frac{dN(t)}{dt} &amp;=&amp; \int rt \ dt, \\ \nonumber
-N(t) &amp;=&amp; \frac{1}{2}rt^2 + c. 
-\tag{13.5}
-\end{eqnarray}\]</span></p>
-<p>We have not seen any equations like equation <a href="lab-2.html#eq:e2">(13.5)</a> in BIOL 3295 so far: usually, our equations for the <em>change</em> in the population size, <span class="math inline">\(\frac{dN(t)}{dt}\)</span>, have a dependency on the population size, <span class="math inline">\(N(t)\)</span> (the dependent variable), rather than a sole dependency on <span class="math inline">\(t\)</span> (the independent variable).</p>
-<p>The equations that are models for population biology are sometimes ODEs. While some ODEs can be solved using math, commonly the ODEs that are used to model population dynamics need to be integrated numerically; that is, using a computer.</p>
-</div>
-<div id="numerically-integrating-an-ordinary-differential-equation-in-r" class="section level2" number="13.3">
-<h2><span class="header-section-number">13.3</span> Numerically integrating an ordinary differential equation in R</h2>
-<p>Numerical integration in <code>R</code> can be performed by installing this package:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="lab-2.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;deSolve&quot;</span>)</span></code></pre></div>
-<p>Alternatively, you might install the package using the <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages">Packages tab</a>. To integrate our ODE, we use the function <code>ode()</code> from the <code>deSolve</code> package. Let’s look at the structure of this function. The mandatory arguments to the function are:</p>
-<p><code>ode(y,times,parms,func)</code></p>
-<p>where,</p>
-<p><code>y</code> is a vector of the initial values of the dependent variable (i.e., those which correspond to the initial time).</p>
-<p><code>times</code> is a sequence of time points that we will calculate the values of the variables; the first value of times is the initial time.</p>
-<p><code>func</code> is a function that computes the values of the derivatives of the dependent variables. <code>func</code> must be defined as: <code>func &lt;- function(t, y, parms,...)</code>. <code>t</code> is the current time point in the integration, and <code>y</code> is the current estimate of the variables in the ODE system.</p>
-<p>Given what we have learned in BIOL 3295 so far, <code>y</code> and <code>times</code> are not so tricky, but the <code>func</code> argument requires us to write our own function, and so far we have only used functions written by other people (i.e., the <code>plot()</code> function): we have yet to write our own custom functions. In preparation for numerically integrating the logistic growth equation, we will now learn how to write custom functions.</p>
-</div>
-<div id="writing-custom-functions" class="section level2" number="13.4">
-<h2><span class="header-section-number">13.4</span> Writing custom functions</h2>
-<p>Generally, your code can still work without writing custom functions, however writing functions makes your code modular and more organized.</p>
-<p>Consider the following code:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="lab-2.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Celcius</span></span>
-<span id="cb7-2"><a href="lab-2.html#cb7-2" aria-hidden="true" tabindex="-1"></a>temp.min.C <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb7-3"><a href="lab-2.html#cb7-3" aria-hidden="true" tabindex="-1"></a>temp.max.C <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb7-4"><a href="lab-2.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="lab-2.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Farenheit</span></span>
-<span id="cb7-6"><a href="lab-2.html#cb7-6" aria-hidden="true" tabindex="-1"></a>temp.min.F <span class="ot">&lt;-</span> temp.min.C<span class="sc">*</span><span class="dv">9</span><span class="sc">/</span><span class="dv">5</span><span class="sc">+</span><span class="dv">32</span></span>
-<span id="cb7-7"><a href="lab-2.html#cb7-7" aria-hidden="true" tabindex="-1"></a>temp.max.F <span class="ot">&lt;-</span> temp.max.C<span class="sc">*</span><span class="dv">9</span><span class="sc">/</span><span class="dv">5</span><span class="sc">+</span><span class="dv">32</span> </span></code></pre></div>
-<p>The above code is fine, but since the same calculation is performed twice (conversion of Celcius to Farenheit), just with a different number, we might consider writing a custom function. Let’s re-write the above code so that it now uses a custom function:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="lab-2.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A function that converts Celcius to Farenheit</span></span>
-<span id="cb8-2"><a href="lab-2.html#cb8-2" aria-hidden="true" tabindex="-1"></a>C.to.F <span class="ot">&lt;-</span> <span class="cf">function</span>(C){</span>
-<span id="cb8-3"><a href="lab-2.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  F <span class="ot">&lt;-</span> C<span class="sc">*</span><span class="dv">9</span><span class="sc">/</span><span class="dv">5</span> <span class="sc">+</span><span class="dv">32</span></span>
-<span id="cb8-4"><a href="lab-2.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(F)</span>
-<span id="cb8-5"><a href="lab-2.html#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-6"><a href="lab-2.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="lab-2.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Celcius</span></span>
-<span id="cb8-8"><a href="lab-2.html#cb8-8" aria-hidden="true" tabindex="-1"></a>temp.min.C <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb8-9"><a href="lab-2.html#cb8-9" aria-hidden="true" tabindex="-1"></a>temp.max.C <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb8-10"><a href="lab-2.html#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="lab-2.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperatures in Farenheit</span></span>
-<span id="cb8-12"><a href="lab-2.html#cb8-12" aria-hidden="true" tabindex="-1"></a>temp.min.F <span class="ot">&lt;-</span> <span class="fu">C.to.F</span>(temp.min.C)</span>
-<span id="cb8-13"><a href="lab-2.html#cb8-13" aria-hidden="true" tabindex="-1"></a>temp.max.F <span class="ot">&lt;-</span> <span class="fu">C.to.F</span>(temp.max.C)</span></code></pre></div>
-<p>Note that the above code consists of the <em>function definition</em> and the <em>function call</em>. The function definition uses the function <code>function()</code>.</p>
-<p><img src="figures/function.png" width="120%" /></p>
-<p>In the example, note the following:</p>
-<ul>
-<li><p><code>arglist</code> is just one value: <code>C</code>. Generally, several values might be provided to the function where each should be separated by commas and enclosed within the <code>()</code>.</p></li>
-<li><p><code>expression</code> can be any set of commands and should be enclosed within the <code>{}</code>.</p></li>
-<li><p>The function is assigned a name: <code>C.to.F</code>. We give the function a name so that we can use it later during a function call.</p></li>
-</ul>
-</div>
-<div id="questions-10" class="section level2" number="13.5">
-<h2><span class="header-section-number">13.5</span> Questions</h2>
-<ol style="list-style-type: decimal">
-<li>The following is an equation for exponential population growth with a constant immigration rate, <span class="math inline">\(m&gt;0\)</span>, into the population:</li>
-</ol>
-<p><span class="math display">\[
-\frac{dN(t)}{dt}= rN(t) + m
-\]</span></p>
-<p>where <span class="math inline">\(r\)</span> is the net reproductive rate, and <span class="math inline">\(N(t)\)</span> is the population size at time, <span class="math inline">\(t\)</span>.</p>
-<p>Is this equation an ordinary differential equation (ODE)? Give 1 sentence explaining your reasoning [2 marks].</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Write a function that adds 123 to a user supplied argument, and then write the line of code that calls the function to evaluate 123+1, and assigns the result the variable name <code>y</code>. You are to hand in your R script. [5 marks]</li>
-</ol>
-</div>
-<div id="writing-the-func-argument-for-ode" class="section level2" number="13.6">
-<h2><span class="header-section-number">13.6</span> Writing the func argument for ode()</h2>
-<p>The <code>func</code> argument of <code>ode()</code> has the following constraints:</p>
-<ul>
-<li>The <code>arglist</code> must include <code>t</code>, <code>y</code>, and <code>parms</code>.</li>
-<li>The value returned must be a <em>list</em> of the rates of change in the dependent variable(s).</li>
-</ul>
-<p>Note that if your ODE comprises of more than one variable that is changing over time, then <code>y</code> will be a vector (this means it is a list of numbers). Below is an example of how <code>func</code> might be coded for exponential growth. Remember that the ODE for exponential growth is:</p>
-<p><span class="math display" id="eq:Exp99">\[\begin{equation}
-\frac{dN(t)}{dt} = rN(t) 
-\tag{13.6}
-\end{equation}\]</span></p>
-<p>Below equation <a href="lab-2.html#eq:Exp99">(13.6)</a> is coded in the appropriate syntax for eventual use in the <code>ode()</code> function:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="lab-2.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write a function that returns a list of the rate of change in your dependent variables.</span></span>
-<span id="cb9-2"><a href="lab-2.html#cb9-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">=</span> <span class="cf">function</span>(t,y,parms){</span>
-<span id="cb9-3"><a href="lab-2.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># It&#39;s a personal perference of mine to switch the symbols</span></span>
-<span id="cb9-4"><a href="lab-2.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># to be consistent with the equation.</span></span>
-<span id="cb9-5"><a href="lab-2.html#cb9-5" aria-hidden="true" tabindex="-1"></a>  N <span class="ot">&lt;-</span> y[<span class="dv">1</span>]</span>
-<span id="cb9-6"><a href="lab-2.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This is this equation for dN/dt</span></span>
-<span id="cb9-7"><a href="lab-2.html#cb9-7" aria-hidden="true" tabindex="-1"></a>  dN <span class="ot">&lt;-</span> r<span class="sc">*</span>N</span>
-<span id="cb9-8"><a href="lab-2.html#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># The function returns the value of the change in N.</span></span>
-<span id="cb9-9"><a href="lab-2.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(<span class="fu">list</span>(<span class="fu">c</span>(dN)))</span>
-<span id="cb9-10"><a href="lab-2.html#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>Let’s try out the function to make sure it works. Copy and paste the function into your <code>Console</code> and then type:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="lab-2.html#cb10-1" aria-hidden="true" tabindex="-1"></a>r<span class="ot">&lt;-</span><span class="dv">1</span></span>
-<span id="cb10-2"><a href="lab-2.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">model</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="at">parms=</span><span class="cn">NULL</span>)</span></code></pre></div>
-<p>Did you get <code>2</code>? Does it make sense to you that the returned value is <code>2</code>? Try some other values. Are the values making sense?</p>
-<p>Now that the <code>func</code> argument of <code>ode()</code> has been demonstrated, the remaining arguments for the <code>ode()</code> function are not so bad.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="lab-2.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The initial value of N</span></span>
-<span id="cb11-2"><a href="lab-2.html#cb11-2" aria-hidden="true" tabindex="-1"></a>yini<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">N =</span> <span class="dv">1</span>)</span>
-<span id="cb11-3"><a href="lab-2.html#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="lab-2.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># the times for the numerical integration</span></span>
-<span id="cb11-5"><a href="lab-2.html#cb11-5" aria-hidden="true" tabindex="-1"></a>times <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> .<span class="dv">1</span>)</span></code></pre></div>
-<p>Remember to assign a value for <code>r</code>:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="lab-2.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Asign a value to the parameter:</span></span>
-<span id="cb12-2"><a href="lab-2.html#cb12-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="dv">2</span></span></code></pre></div>
-<p>And then once all the arguments are set, call the function, and plot the results:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="lab-2.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># performing the numerical integration</span></span>
-<span id="cb13-2"><a href="lab-2.html#cb13-2" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">ode</span>(<span class="at">y =</span> yini, <span class="at">parms =</span> <span class="cn">NULL</span>, <span class="at">times =</span> times, <span class="at">func =</span> model)</span>
-<span id="cb13-3"><a href="lab-2.html#cb13-3" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(out)</span>
-<span id="cb13-4"><a href="lab-2.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(out)</span>
-<span id="cb13-5"><a href="lab-2.html#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="lab-2.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># this line overrides a multipanel plot. I had tried plot(out) # and was having conflicts with a small plotting window on my</span></span>
-<span id="cb13-7"><a href="lab-2.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># laptop. Generally, the below line isn&#39;t necessary.</span></span>
-<span id="cb13-8"><a href="lab-2.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb13-9"><a href="lab-2.html#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="lab-2.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the graph</span></span>
-<span id="cb13-11"><a href="lab-2.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(out<span class="sc">$</span>time, out<span class="sc">$</span>N, <span class="at">typ =</span> <span class="st">&quot;l&quot;</span>)</span></code></pre></div>
-</div>
-<div id="questions-11" class="section level2" number="13.7">
-<h2><span class="header-section-number">13.7</span> Questions</h2>
-<ol start="3" style="list-style-type: decimal">
-<li><p>For the code <code>model(1,2,parms=NULL)</code> (where the function <code>model</code> is defined above), what do <code>1</code> and <code>2</code> correspond to? One of these quantities does not affect the value that the <code>model()</code> function returns. Which quantity does not affect the value the function returns? [2 marks]</p></li>
-<li><p>Write an R Script that numerically integrates the logistic growth function (equation <a href="lab-2.html#eq:Log1">(13.3)</a>). Choose a value of <span class="math inline">\(r\)</span> such that the population size increases over time. Remember to use good practices for writing your script - see <a href="index.html#RScript">1.7.2</a>. Your script should produce a graph with <span class="math inline">\(N(t)\)</span> on the y-axis and time on the x-axis [10 marks]</p></li>
-<li><p>Add to your script from 4. such that another graph is produced, this time where the population size decreases over time. Note that this should just require adding new lines to the bottom of your question 1 script such that you: a) set a new value of <code>r</code>; b) run the <code>ode()</code> command; and c) make the graph. In other words, it is not necessary to define the logistic growth function, <code>model</code>, again because that has not changed. Further, if you are happy to use the same values of <code>times</code> as for question 1, you do not need to restate this either. Answer this question by adding a few lines of code to your answer to 1. You are to hand in your R script. You should answer both questions 4. and 5. in the same R script. [5 marks]</p></li>
-<li><p>An ordinary differential equation for logistic growth (continuous time) with immigration and emigration is:</p></li>
-</ol>
-<p><span class="math display">\[\frac{dN(t)}{dt} = rN(t)\left(1-\frac{N(t)}{K}\right) + m_1 - m_2N(t)  \]</span></p>
-<p>where <span class="math inline">\(N(t) \geq 0\)</span> is the population size (units: number), <span class="math inline">\(K&gt;0\)</span> is the carrying capacity (units: number), <span class="math inline">\(r\)</span> is the net reproductive rate (units: 1/time), <span class="math inline">\(m_1&gt;0\)</span> is the immigration rate (units: number/time), and <span class="math inline">\(m_2&gt;0\)</span> is the emigration rate (units: 1/time).</p>
-<p>You are to numerically integrate this equation and make a graph for <span class="math inline">\(N(t)\)</span> (y-axis) versus time, <span class="math inline">\(t\)</span> (x-axis). You are free to choose the parameter values for <span class="math inline">\(r, K, m_1\)</span> and <span class="math inline">\(m_2\)</span>, the initial value of <span class="math inline">\(N(0)\)</span>, and the <code>times</code> over which you integrate. Add your code that solves this question to your R Script answering 4. and 5. [10 marks]</p>
+<div id="thurs-mar-24-data-handling-exercise-in-evolutionary-ecology" class="section level1" number="35">
+<h1><span class="header-section-number">Chapter 35</span> Thurs Mar 24: Data handling exercise in evolutionary ecology</h1>
+<p>To complete this exercise you will need to have access to a computer with R.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="thurs-feb-3-density-yield-and-the-discrete-time-density-dependence.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fri-feb-4-age-structured-population-dynamics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="fri-mar-18-evolution-of-body-size.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

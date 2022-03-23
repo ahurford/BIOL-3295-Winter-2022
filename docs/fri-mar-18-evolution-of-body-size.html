@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="tues-mar-21-work-on-lab-5final-project-catch-up-day.html"/>
-<link rel="next" href="final.html"/>
+<link rel="next" href="thurs-mar-24-data-handling-exercise-in-evolutionary-ecology.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -298,15 +298,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="34.1" data-path="fri-mar-18-evolution-of-body-size.html"><a href="fri-mar-18-evolution-of-body-size.html#questions-26"><i class="fa fa-check"></i><b>34.1</b> Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="35" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>35</b> Final project</a>
+<li class="chapter" data-level="35" data-path="thurs-mar-24-data-handling-exercise-in-evolutionary-ecology.html"><a href="thurs-mar-24-data-handling-exercise-in-evolutionary-ecology.html"><i class="fa fa-check"></i><b>35</b> Thurs Mar 24: Data handling exercise in evolutionary ecology</a></li>
+<li class="chapter" data-level="36" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>36</b> Final project</a>
 <ul>
-<li class="chapter" data-level="35.1" data-path="final.html"><a href="final.html#option-1-review-paper"><i class="fa fa-check"></i><b>35.1</b> Option 1: Review paper</a></li>
-<li class="chapter" data-level="35.2" data-path="final.html"><a href="final.html#option-2-analysis"><i class="fa fa-check"></i><b>35.2</b> Option 2: Analysis</a></li>
-<li class="chapter" data-level="35.3" data-path="final.html"><a href="final.html#how-to-read-scientific-papers"><i class="fa fa-check"></i><b>35.3</b> How to read scientific papers</a></li>
-<li class="chapter" data-level="35.4" data-path="final.html"><a href="final.html#grading-rubric-both-review-and-analysis-55-marks"><i class="fa fa-check"></i><b>35.4</b> Grading Rubric: Both Review and Analysis [55 marks]</a>
+<li class="chapter" data-level="36.1" data-path="final.html"><a href="final.html#option-1-review-paper"><i class="fa fa-check"></i><b>36.1</b> Option 1: Review paper</a></li>
+<li class="chapter" data-level="36.2" data-path="final.html"><a href="final.html#option-2-analysis"><i class="fa fa-check"></i><b>36.2</b> Option 2: Analysis</a></li>
+<li class="chapter" data-level="36.3" data-path="final.html"><a href="final.html#how-to-read-scientific-papers"><i class="fa fa-check"></i><b>36.3</b> How to read scientific papers</a></li>
+<li class="chapter" data-level="36.4" data-path="final.html"><a href="final.html#grading-rubric-both-review-and-analysis-55-marks"><i class="fa fa-check"></i><b>36.4</b> Grading Rubric: Both Review and Analysis [55 marks]</a>
 <ul>
-<li class="chapter" data-level="35.4.1" data-path="final.html"><a href="final.html#review"><i class="fa fa-check"></i><b>35.4.1</b> Grading Rubric: Review only [55 marks]</a></li>
-<li class="chapter" data-level="35.4.2" data-path="final.html"><a href="final.html#grading-rubric-analysis-only-55-marks"><i class="fa fa-check"></i><b>35.4.2</b> Grading Rubric: Analysis only [55 marks]</a></li>
+<li class="chapter" data-level="36.4.1" data-path="final.html"><a href="final.html#review"><i class="fa fa-check"></i><b>36.4.1</b> Grading Rubric: Review only [55 marks]</a></li>
+<li class="chapter" data-level="36.4.2" data-path="final.html"><a href="final.html#grading-rubric-analysis-only-55-marks"><i class="fa fa-check"></i><b>36.4.2</b> Grading Rubric: Analysis only [55 marks]</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -334,8 +335,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">34.1</span> Questions</h2>
 <ol style="list-style-type: decimal">
 <li><p>The script produces 3 graphs. Hand in all these graphs. You should change at least one variable or parameter in the code from the default settings, while still producing a graph that illustrates the dominance of the genotype that is expected to have higest fitness based on <a href="https://ebookcentral.proquest.com/lib/mun/detail.action?docID=430289">Fox et al., beginning p107</a> [1 mark]</p></li>
-<li><p>Explain in your own words the simulation rules that determine how gene frequencies change over time. [2 marks]</p></li>
+<li><p>Explain in your own words the simulation rules that determine how gene frequencies change over time. Specifically,</p></li>
 </ol>
+<ul>
+<li>Does the population change in size over time?</li>
+<li>How many births and deaths occur in each time step?</li>
+<li>What determines the chance of death or birth for an individual?</li>
+</ul>
+<p>[2 marks]</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="fri-mar-18-evolution-of-body-size.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># EVOLUTION OF AGE AND SIZE AT MATURITY IN DROSOPHILA</span></span>
 <span id="cb18-2"><a href="fri-mar-18-evolution-of-body-size.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">#__________________________</span></span>
 <span id="cb18-3"><a href="fri-mar-18-evolution-of-body-size.html#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -624,7 +631,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="tues-mar-21-work-on-lab-5final-project-catch-up-day.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="final.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="thurs-mar-24-data-handling-exercise-in-evolutionary-ecology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,3 @@
+# Thurs Mar 24: Data handling exercise in evolutionary ecology
+
+To complete this exercise you will need to have access to a computer with R.
