@@ -1,3 +1,6 @@
-# Thurs Mar 24: Data handling exercise in evolutionary ecology
+# Thurs Mar 24: Evolution of senescence
 
-To complete this exercise you will need to have access to a computer with R.
+## Required reading & listening
+Bronikowski et al. 2011. Aging in the Natural World: Comparative Data Reveal Similar Mortality Patterns Across Primates. Science [Link](https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3396421&blobtype=pdf)
+
+Alberts interview (on BrightSpace)

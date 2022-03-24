@@ -116,7 +116,8 @@ thurs-mar-17-lab-5---final-project-proposal
 fri-mar-18-evolution-of-body-size
 questions-26
 tues-mar-21-work-on-lab-5final-project-catch-up-day
-thurs-mar-24-data-handling-exercise-in-evolutionary-ecology
+thurs-mar-24-evolution-of-senescence
+required-reading-listening
 final
 option-1-review-paper
 option-2-analysis
