@@ -1,6 +1,24 @@
 # Thurs Mar 24: Evolution of senescence
 
-## Required reading & listening
-Bronikowski et al. 2011. Aging in the Natural World: Comparative Data Reveal Similar Mortality Patterns Across Primates. Science [Link](https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3396421&blobtype=pdf)
+Due Thurs Mar 31
 
-Alberts interview (on BrightSpace)
+## Required reading & listening
+
+- Listen to Alberts interview (on BrightSpace)
+
+- Lecture slides on Brightspace: _March 24 Evolution of Senescense_
+
+The lecture slides on Brightspace are based on Fox et al. Evolutionary ecology, p128-132. [Link](https://ebookcentral.proquest.com/lib/mun/reader.action?docID=430289&ppg=141)
+
+## Questions
+
+1. Write 1 sentence describing the message of the Alberts interview [1 mark]
+
+2. In R, make a plot of the Gompertz-Markham mortality model. See the figure caption of 10.2 in Fox et al. and use the parameter values for either Case A, B, or C. You are to hand in your plot. Do this by: 1. making a vector of age values, i.e., `t -> seq(0,50,.1)`; 2. assigning values for `c`, `lambda` and `gamma`; 3. calculating `mu = c + lambda*exp(gamma*t)`, and then 4. plotting `plot(t,mu)`.  [1 mark]
+
+3. Given your choice of Case A, B, or C,  in question 2, what are the assumptions about age-dependent mortality? [1 mark]
+
+4. Fox et al. also mentions the Weibull distribution for age-specific mortality: $\mu_t = \lambda^\beta \beta t^{\beta - 1}$. Choose your own values of  `lambda` and  `beta` and make a plot similar to question 2. [1 mark]
+
+5. What does your graph from 4. show with regard to the pattern of age-specific mortality? [1 mark]
+

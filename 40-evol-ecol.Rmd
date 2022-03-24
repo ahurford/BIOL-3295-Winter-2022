@@ -1,0 +1,10 @@
+# Tues Mar 29: Evolution of senescence
+
+Due Fri April 1.
+
+## Required reading
+
+Bronikowski et al. 2011. Aging in the Natural World: Comparative Data Reveal Similar Mortality Patterns Across Primates. Science [Link](https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3396421&blobtype=pdf)
+
+Today's exercises will use R.
+
