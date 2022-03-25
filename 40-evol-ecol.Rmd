@@ -8,3 +8,44 @@ Bronikowski et al. 2011. Aging in the Natural World: Comparative Data Reveal Sim
 
 Today's exercises will use R.
 
+For this lab we will study the article Bronikowski et al. (2011) Aging in the natural world: comparative data reveal similar mortality patterns across primates in detail.
+
+- You will use R to recreate Figure 1 of Bronikowski et al. (2011). Open a primate dataset provided on the D2L in Microsoft Excel or similar software. Below is a description of the dataset entries:
+
+-	The values in the columns represent the number of animals in each study that ever lived, died and/or were censored at a given age (see below for a definition of `censored`). In other words, over the course of a 30-year study, an animal that was born in the first year of the study and died 15 years later will contribute to the sample in each one of the age classes it lived through. 
+
+- The columns called 'begin' and 'end' mark the beginning and ending of each age interval. All age intervals are in years. So the first age class for each species, age class 1, spans the interval from birth (age 0) to 1 (age 1 year).
+
+- The column “deaths” is the number of observed deaths in the age interval.
+
+- The column “censors” is the number of censored observations in the interval.
+
+- Censored cases occur in two circumstances. 
+
+-	First if an individual disappeared in age interval and we don’t know what happened to it, it may have died but it may have emigrated. So, we can’t count it fully as a death. It is censored at that age. 
+
+-	Second, all of the data sets are updated through the end of 2008, but at that time some animals in each population were still alive  (of course). We want to include them in the study, and give them “credit” for having contributed to survival through all the age classes they lived through, but we don’t know when they are going to die. Statistically, we treat these the same way that we treat an animal that has disappeared. They appear as censored in the age interval they were in by Dec 2008.
+
+- The column “entries” is the number of individuals that entered the population at that age. Typically, the first age class (the 0 to 1 interval) will have the largest number of entries because most individuals enter a population at birth. However, other age classes may sometimes have positive values for entry. This happens for one of two reasons.
+
+-	If an individual immigrates into the study population at a given age, it appears as an entry in that age class.
+
+-	If an individual was already alive when the study began, then they appear as entries in the appropriate age class. For instance, if a study began in 1983, some animals were 1-year olds, or 2-year olds, or 3-year olds, etc, when the observers began the research. These animals appear as entries in 1-year old age class or the 2-year old age class or the 3-year old age class. 
+
+- To recreate Figure 1 in Bronikowsi et al. (2011), we need to calculate the mortality rate, $u_x$. To calculate $u_x$ it is helpful to calculate several other quantities.
+
+-	$N_x$ is the total number of animals in each age class, $x$. Remember, this is the total number of individuals that ever lived through part or all of that age interval. For the first age interval, this is simply the total number of 'entries'. For the second age interval, this is $N_x$ for the first age interval, minus deaths and censors in the first age interval, plus entries in the second interval. And so on.
+
+-	$N_x$-adjusted does not have a true biological meaning. It is calculated to provide a denominator for $Q_x$ (mortality), which is the next column. The magnitude of $N_x$-adjusted reflects uncertainty about censored individuals. 
+
+-	$Q_x$ is the age-specific mortality. This is the number of deaths divided by $N_x$-adjusted.
+
+-	Age-specific survivorship, $L_x$ is $(1-Q_x-1)*L_x-1$.
+
+-	The mortality rate, $u_x$ can be calculated by the approximation $u_x \approx –Ln[1-Q_x]$ (Fox et al. 2001, p129).
+
+Download the file Sensence.R and following the instructions contained within the file.
+
+## HAND-IN (Note you will have time on Tuesday to complete this exercise too)
+You should hand in your two graphs for the primate species that you chose (not female baboons) and include a descriptive figure caption with each. [10 marks]
+

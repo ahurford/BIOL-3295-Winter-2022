@@ -306,6 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="36" data-path="fri-mar-25-evolution-of-senescence.html"><a href="fri-mar-25-evolution-of-senescence.html"><i class="fa fa-check"></i><b>36</b> Fri Mar 25: Evolution of senescence</a>
 <ul>
 <li class="chapter" data-level="36.1" data-path="fri-mar-25-evolution-of-senescence.html"><a href="fri-mar-25-evolution-of-senescence.html#required-reading-18"><i class="fa fa-check"></i><b>36.1</b> Required reading</a></li>
+<li class="chapter" data-level="36.2" data-path="fri-mar-25-evolution-of-senescence.html"><a href="fri-mar-25-evolution-of-senescence.html#hand-in-note-you-will-have-time-on-tuesday-to-complete-this-exercise-too"><i class="fa fa-check"></i><b>36.2</b> HAND-IN (Note you will have time on Tuesday to complete this exercise too)</a></li>
 </ul></li>
 <li class="chapter" data-level="37" data-path="tues-mar-29-catch-up-day.html"><a href="tues-mar-29-catch-up-day.html"><i class="fa fa-check"></i><b>37</b> Tues Mar 29: Catch-up day</a></li>
 <li class="chapter" data-level="38" data-path="final.html"><a href="final.html"><i class="fa fa-check"></i><b>38</b> Final project</a>
@@ -343,6 +344,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">36.1</span> Required reading</h2>
 <p>Bronikowski et al. 2011. Aging in the Natural World: Comparative Data Reveal Similar Mortality Patterns Across Primates. Science <a href="https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC3396421&amp;blobtype=pdf">Link</a></p>
 <p>Today’s exercises will use R.</p>
+<p>For this lab we will study the article Bronikowski et al. (2011) Aging in the natural world: comparative data reveal similar mortality patterns across primates in detail.</p>
+<ul>
+<li><p>You will use R to recreate Figure 1 of Bronikowski et al. (2011). Open a primate dataset provided on the D2L in Microsoft Excel or similar software. Below is a description of the dataset entries:</p></li>
+<li><p>The values in the columns represent the number of animals in each study that ever lived, died and/or were censored at a given age (see below for a definition of <code>censored</code>). In other words, over the course of a 30-year study, an animal that was born in the first year of the study and died 15 years later will contribute to the sample in each one of the age classes it lived through.</p></li>
+<li><p>The columns called ‘begin’ and ‘end’ mark the beginning and ending of each age interval. All age intervals are in years. So the first age class for each species, age class 1, spans the interval from birth (age 0) to 1 (age 1 year).</p></li>
+<li><p>The column “deaths” is the number of observed deaths in the age interval.</p></li>
+<li><p>The column “censors” is the number of censored observations in the interval.</p></li>
+<li><p>Censored cases occur in two circumstances.</p></li>
+<li><p>First if an individual disappeared in age interval and we don’t know what happened to it, it may have died but it may have emigrated. So, we can’t count it fully as a death. It is censored at that age.</p></li>
+<li><p>Second, all of the data sets are updated through the end of 2008, but at that time some animals in each population were still alive (of course). We want to include them in the study, and give them “credit” for having contributed to survival through all the age classes they lived through, but we don’t know when they are going to die. Statistically, we treat these the same way that we treat an animal that has disappeared. They appear as censored in the age interval they were in by Dec 2008.</p></li>
+<li><p>The column “entries” is the number of individuals that entered the population at that age. Typically, the first age class (the 0 to 1 interval) will have the largest number of entries because most individuals enter a population at birth. However, other age classes may sometimes have positive values for entry. This happens for one of two reasons.</p></li>
+<li><p>If an individual immigrates into the study population at a given age, it appears as an entry in that age class.</p></li>
+<li><p>If an individual was already alive when the study began, then they appear as entries in the appropriate age class. For instance, if a study began in 1983, some animals were 1-year olds, or 2-year olds, or 3-year olds, etc, when the observers began the research. These animals appear as entries in 1-year old age class or the 2-year old age class or the 3-year old age class.</p></li>
+<li><p>To recreate Figure 1 in Bronikowsi et al. (2011), we need to calculate the mortality rate, <span class="math inline">\(u_x\)</span>. To calculate <span class="math inline">\(u_x\)</span> it is helpful to calculate several other quantities.</p></li>
+<li><p><span class="math inline">\(N_x\)</span> is the total number of animals in each age class, <span class="math inline">\(x\)</span>. Remember, this is the total number of individuals that ever lived through part or all of that age interval. For the first age interval, this is simply the total number of ‘entries’. For the second age interval, this is <span class="math inline">\(N_x\)</span> for the first age interval, minus deaths and censors in the first age interval, plus entries in the second interval. And so on.</p></li>
+<li><p><span class="math inline">\(N_x\)</span>-adjusted does not have a true biological meaning. It is calculated to provide a denominator for <span class="math inline">\(Q_x\)</span> (mortality), which is the next column. The magnitude of <span class="math inline">\(N_x\)</span>-adjusted reflects uncertainty about censored individuals.</p></li>
+<li><p><span class="math inline">\(Q_x\)</span> is the age-specific mortality. This is the number of deaths divided by <span class="math inline">\(N_x\)</span>-adjusted.</p></li>
+<li><p>Age-specific survivorship, <span class="math inline">\(L_x\)</span> is <span class="math inline">\((1-Q_x-1)*L_x-1\)</span>.</p></li>
+<li><p>The mortality rate, <span class="math inline">\(u_x\)</span> can be calculated by the approximation <span class="math inline">\(u_x \approx –Ln[1-Q_x]\)</span> (Fox et al. 2001, p129).</p></li>
+</ul>
+<p>Download the file Sensence.R and following the instructions contained within the file.</p>
+</div>
+<div id="hand-in-note-you-will-have-time-on-tuesday-to-complete-this-exercise-too" class="section level2" number="36.2">
+<h2><span class="header-section-number">36.2</span> HAND-IN (Note you will have time on Tuesday to complete this exercise too)</h2>
+<p>You should hand in your two graphs for the primate species that you chose (not female baboons) and include a descriptive figure caption with each. [10 marks]</p>
 
 </div>
 </div>
