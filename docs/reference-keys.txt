@@ -123,6 +123,7 @@ fri-mar-25-evolution-of-senescence
 required-reading-18
 hand-in-note-you-will-have-time-on-tuesday-to-complete-this-exercise-too
 tues-mar-29-catch-up-day
+thurs-mar-31-rmarkdown
 final
 option-1-review-paper
 option-2-analysis
