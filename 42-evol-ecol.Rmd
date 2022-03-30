@@ -1,11 +1,24 @@
 # Thurs Mar 31: Rmarkdown
 
-Assigned March 31, due April 5
+Assigned March 31, due April 7
 
 Today we are going to learn how to do word processing in R. This gives you another option for word processing, even though you might ultimately still prefer Microsoft Word or another software.
 
 Some advantages of Rmarkdown are the ability to integrate your figures, code, and text. It is also easy to write in-text math, and you have a variety of output options including .html, .pdf, and .docx. The goal for the next two classes is to redo the assignment from Friday March 25, but to do the write-up in Rmarkdown. 
 
-1. You will need to install the Rmarkdown package, related packages pandoc, and tinytex. For instructions see [here](https://bookdown.org/yihui/rmarkdown/installation.html).
+- You will need to install the Rmarkdown package, related packages pandoc, and tinytex. For instructions see [here](https://bookdown.org/yihui/rmarkdown/installation.html).
 
-2. Read the basics for Rmarkdown [here](https://bookdown.org/yihui/rmarkdown/basics.html)
+- Read the basics for Rmarkdown [here](https://bookdown.org/yihui/rmarkdown/basics.html)
+
+- Read about how to compile your Rmarkdown (here)[https://bookdown.org/yihui/rmarkdown/compile.html]
+
+- Read about markdown syntax [here](https://bookdown.org/yihui/rmarkdown/markdown-syntax.html#inline-formatting)
+
+- Read about making an R code block [here](https://bookdown.org/yihui/rmarkdown/r-code.html)
+
+## Questions
+1. Make a section _Question 1_. Redo your last assignment (assigned on Fri March 25), but use Rmarkdown to compile a .pdf. Include the code in your output. Add the figure caption by writing underneath the figure. 
+
+2. Make a section _Question 2_. Write the following: $R_0 = \frac{\beta}{v+\gamma}$.
+
+3. Make a section _Question 3_. Redo question 1, but this time do not include the code in the .pdf file.

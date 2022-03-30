@@ -124,6 +124,8 @@ required-reading-18
 hand-in-note-you-will-have-time-on-tuesday-to-complete-this-exercise-too
 tues-mar-29-catch-up-day
 thurs-mar-31-rmarkdown
+questions-28
+thurs-mar-31-lab-6---annotated-bibliography
 final
 option-1-review-paper
 option-2-analysis
