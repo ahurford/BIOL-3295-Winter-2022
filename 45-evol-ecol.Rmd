@@ -1,0 +1,20 @@
+# Fri April 1: Rmarkdown
+
+Assigned April 1, due April 8
+
+Today we will continue learning how to use Rmarkdown. In Rmarkdown you can write in a variety of languages including markdown, .html, .R, and latex.
+
+Some useful websites:
+
+- [Making a box](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html)
+
+- [Latex](https://bookdown.org/yihui/rmarkdown-cookbook/latex-output.html) and [here](https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols) and [here](https://detexify.kirelabs.org/classify.html)
+
+- [Markdown](https://en.wikipedia.org/wiki/Markdown)
+
+
+## Questions
+1. Submit a .pdf or .html showing some new things you learned to do in Rmarkdown. [3 marks]
+
+2. In teaching Rmarkdown, what advice do you have for making the instructions most helpful to future students? [3 mark]
+
