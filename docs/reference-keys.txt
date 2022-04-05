@@ -126,9 +126,9 @@ tues-mar-29-catch-up-day
 thurs-mar-31-rmarkdown
 questions-28
 thurs-mar-31-lab-6---annotated-bibliography
-tues-april-5-catch-up-day
 fri-april-1-rmarkdown
 questions-29
+tues-april-5-catch-up-day
 final
 option-1-review-paper
 option-2-analysis
