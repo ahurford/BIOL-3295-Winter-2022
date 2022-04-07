@@ -1,0 +1,21 @@
+# Thurs April 8: rphylopic and advanced graphing
+
+Note that today's class in online only.
+
+## Required reading
+
+Read about the [`rphylopic`](https://cran.r-project.org/web/packages/rphylopic/readme/README.html) package.
+
+Optional. View visualizations that can be produced with some advanced geometries: [`ggridges`](https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html), [`ggviolin`](https://rpkgs.datanovia.com/ggpubr/reference/ggviolin.html), [`ggmarginal`](https://r-graph-gallery.com/277-marginal-histogram-for-ggplot2.html). _The key to getting any of these advanced visualizations to work is to have the right information formatted correctly in a dataframe._ Of course you should also consider that visualization best communicates the important information. 
+
+## Questions
+1. Hand in an Rmarkdown file that makes a graph with an image added to it. [5 marks]
+
+Happy last day of class! Please remember that your final projects are due April 20 at 9am. Please email me with any questions you have.
+
+
+
+
+
+
+

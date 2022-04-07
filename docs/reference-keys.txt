@@ -132,6 +132,9 @@ tues-april-5-catch-up-day
 thurs-april-7-ggplot
 required-reading-19
 questions-30
+thurs-april-8-rphylopic-and-advanced-graphing
+required-reading-20
+questions-31
 final
 option-1-review-paper
 option-2-analysis
