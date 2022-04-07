@@ -1,0 +1,31 @@
+# Thurs April 7: ggplot
+
+Note that today's class in online only.
+
+## Required reading
+
+Read the instructions for making graphs with [ggplot](https://ahurford.github.io/quant-guide-all-courses/ggplot.html).
+
+## Questions
+
+Answer all of these questions and hand in an .html or .pdf produced by Rmarkdown showing your code and graph.
+
+1. Using one of the primate datasets on BrightSpace, load the .csv file, i.e., `data = read.csv()`. Make a dataframe, i.e., `df = data.frame(year = data$BeginYr, deaths = data$deaths)`. [2 marks]
+
+2. Make a scatter plot with `ggplot` and `geom_point()`.  [2 marks]
+
+3. Repeat question 1, but make a line plot. [2 marks]
+
+4. Add on to question 1, by making a graph with dots _and_ lines. You can do this by labelling your answer to question 1, i.e., `g1 = ggplot() + geom_points()`. Then, add the lines as `g1 + geom_line()`. [1 mark]
+
+5. Apply a different theme to one of your graphs. i.e., `g1 + theme_classic()`. For theme options, see [here](https://ggplot2.tidyverse.org/reference/ggtheme.html). Note you do not need to put anything inside `()`.  [1 mark]
+
+6. Change the y-axis limits on your graph. Note you do not need to make the graph all over again. If you have assigned a label to a graph, i.e., `g1`, you can just add a layer as `g1 + ylim(c(0,2))`. [1 mark]
+
+7. Add a vertical line to one of your graphs, i.e., `+ geom_vline(xintercept = 5)`. [1 mark]
+
+8. Add some text to your graphs, i.e. `+ annotate(geom = "text", x = 1, y = 1, label = "Some text\nSome more text"`. Note that `\n` is how you start a new line. [1 mark]
+
+
+
+
