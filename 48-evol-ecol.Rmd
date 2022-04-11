@@ -6,6 +6,8 @@ Note that today's class in online only.
 
 Read about the [`rphylopic`](https://cran.r-project.org/web/packages/rphylopic/readme/README.html) package.
 
+Read about the function [`add_phylopic()`](https://www.rdocumentation.org/packages/rphylopic/versions/0.3.0/topics/add_phylopic)
+
 Optional. View visualizations that can be produced with some advanced geometries: [`ggridges`](https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html), [`ggviolin`](https://rpkgs.datanovia.com/ggpubr/reference/ggviolin.html), [`ggmarginal`](https://r-graph-gallery.com/277-marginal-histogram-for-ggplot2.html). _The key to getting any of these advanced visualizations to work is to have the right information formatted correctly in a dataframe._ Of course you should also consider that visualization best communicates the important information. 
 
 ## Questions
